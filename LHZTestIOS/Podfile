@@ -1,0 +1,16 @@
+#source 'https://github.com/CocoaPods/Specs.git'
+#project 'LHZTestIOS.xcodeproj'
+target 'LHZTestIOS' do
+   platform:ios,'8.0'
+#   xcodeproj 'LHZTestIOS.xcodeproj'
+     #自动布局
+    pod 'Masonry'
+    #网络请求
+    pod 'AFNetworking','2.5.4'
+    #图片下载
+    pod 'SDWebImage','3.7.1'
+    #YYKIT
+    pod 'YYKit'
+    #HUD
+    pod 'SVProgressHUD'
+end
