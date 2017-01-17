@@ -60,7 +60,7 @@
     return self.frame.origin.x+self.frame.size.width;
 }
 
-#pragma --- X中心
+#pragma mark --- X中心
 - (void)setCenterX:(CGFloat)centerX{
     CGPoint center = self.center;
     center.x = centerX;
