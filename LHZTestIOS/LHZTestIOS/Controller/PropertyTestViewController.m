@@ -52,7 +52,7 @@
 
 -(NSString *)isMyGetter
 {
-    return @"更改了getter方法\n@property (nonatomic,strong,getter=isMyGetter)NSString* testGetter;";
+    return @"更改了getter方法:\n@property (nonatomic,strong,getter=isMyGetter)NSString* testGetter;";
 }
 
 -(void)isMySetter:(NSString*)testSetter
