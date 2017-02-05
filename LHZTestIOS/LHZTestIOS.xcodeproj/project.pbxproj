@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		530F5DC41E1B335200AED3F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530F5DC31E1B335200AED3F6 /* Main.storyboard */; };
 		530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */; };
+		5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5362356D1E45C35000B0CEDF /* ShoppingViewController.m */; };
+		536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235701E45C44500B0CEDF /* ShoppingCell.m */; };
+		536235741E45C79700B0CEDF /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235731E45C79700B0CEDF /* ShopModel.m */; };
+		536235771E45CE0B00B0CEDF /* ShopViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235761E45CE0B00B0CEDF /* ShopViewModel.m */; };
 		5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390441D1E0D0FB600004040 /* MasonryViewController.m */; };
 		53A7610C1E1350CB005DB357 /* LZTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7610B1E1350CB005DB357 /* LZTCoreDataManager.m */; };
 		53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A761131E136498005DB357 /* CoreDataViewcontroller.m */; };
@@ -69,6 +73,14 @@
 		530F5DC31E1B335200AED3F6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		530F5DC81E1B77B700AED3F6 /* MutilThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutilThreadVC.h; sourceTree = "<group>"; };
 		530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutilThreadVC.m; sourceTree = "<group>"; };
+		5362356C1E45C35000B0CEDF /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
+		5362356D1E45C35000B0CEDF /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
+		5362356F1E45C44500B0CEDF /* ShoppingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCell.h; sourceTree = "<group>"; };
+		536235701E45C44500B0CEDF /* ShoppingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCell.m; sourceTree = "<group>"; };
+		536235721E45C79700B0CEDF /* ShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopModel.h; sourceTree = "<group>"; };
+		536235731E45C79700B0CEDF /* ShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopModel.m; sourceTree = "<group>"; };
+		536235751E45CE0B00B0CEDF /* ShopViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewModel.h; sourceTree = "<group>"; };
+		536235761E45CE0B00B0CEDF /* ShopViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewModel.m; sourceTree = "<group>"; };
 		5390441C1E0D0FB600004040 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		5390441D1E0D0FB600004040 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		53A7610A1E1350CB005DB357 /* LZTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTCoreDataManager.h; sourceTree = "<group>"; };
@@ -174,6 +186,21 @@
 				53E73F751E1DD2E600F786CC /* JZTHealthTestView.m */,
 			);
 			name = "多线程";
+			sourceTree = "<group>";
+		};
+		5362356B1E45C32B00B0CEDF /* 购物车 */ = {
+			isa = PBXGroup;
+			children = (
+				5362356C1E45C35000B0CEDF /* ShoppingViewController.h */,
+				5362356D1E45C35000B0CEDF /* ShoppingViewController.m */,
+				5362356F1E45C44500B0CEDF /* ShoppingCell.h */,
+				536235701E45C44500B0CEDF /* ShoppingCell.m */,
+				536235751E45CE0B00B0CEDF /* ShopViewModel.h */,
+				536235761E45CE0B00B0CEDF /* ShopViewModel.m */,
+				536235721E45C79700B0CEDF /* ShopModel.h */,
+				536235731E45C79700B0CEDF /* ShopModel.m */,
+			);
+			name = "购物车";
 			sourceTree = "<group>";
 		};
 		5390441B1E0D0F7600004040 /* Masonry约束 */ = {
@@ -293,6 +320,7 @@
 				53BFC9961E0B6765005217BB /* ViewController.m */,
 				53BFC9D31E0B7D48005217BB /* MyBaseViewController.h */,
 				53BFC9D41E0B7D48005217BB /* MyBaseViewController.m */,
+				5362356B1E45C32B00B0CEDF /* 购物车 */,
 				53D7D0371E23377100A97664 /* 动画 */,
 				530F5DC71E1B762700AED3F6 /* 多线程 */,
 				53E61C111E14E5D9007CFAE6 /* 下拉刷新 */,
@@ -584,18 +612,22 @@
 				53BFC9971E0B6765005217BB /* ViewController.m in Sources */,
 				5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */,
 				53BFC9D51E0B7D48005217BB /* MyBaseViewController.m in Sources */,
+				536235771E45CE0B00B0CEDF /* ShopViewModel.m in Sources */,
 				53D7D03D1E23421400A97664 /* CircleView.m in Sources */,
 				53BFC9941E0B6765005217BB /* AppDelegate.m in Sources */,
 				53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */,
+				536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */,
 				53D7D03A1E2337A000A97664 /* CoreAnimationVC.m in Sources */,
 				53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */,
 				53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */,
 				53BFC9CA1E0B7117005217BB /* UIView+Extension.m in Sources */,
 				53E73F761E1DD2E600F786CC /* JZTHealthTestView.m in Sources */,
+				536235741E45C79700B0CEDF /* ShopModel.m in Sources */,
 				53BFC9911E0B6765005217BB /* main.m in Sources */,
 				53BFC9D21E0B776F005217BB /* PropertyTestViewController.m in Sources */,
 				530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */,
 				53F70D4A1E126B9A009F1CC6 /* UserModel.xcdatamodeld in Sources */,
+				5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */,
 				53E61C051E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m in Sources */,
 				53A761321E13B581005DB357 /* UserInfo+CoreDataClass.m in Sources */,
 				53E61C2A1E14EAFE007CFAE6 /* UIScrollView+RefreshView.m in Sources */,

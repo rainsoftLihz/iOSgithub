@@ -18,6 +18,8 @@
 
 #import "TableRefreshViewController.h"
 
+#import "ShoppingViewController.h"
+
 #import "MutilThreadVC.h"
 
 #import "CoreAnimationVC.h"
@@ -43,7 +45,7 @@
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation"];
+    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车"];
 }
 
 -(NSArray *)pushVcArr
@@ -54,7 +56,8 @@
              [CoreDataViewcontroller class],
              [TableRefreshViewController class],
              [MutilThreadVC class],
-             [CoreAnimationVC class]];
+             [CoreAnimationVC class],
+             [ShoppingViewController class]];
 }
 
 #pragma mark ---  tableView
