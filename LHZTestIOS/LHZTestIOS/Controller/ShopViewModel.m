@@ -31,7 +31,7 @@
     ShopModel* model2 = [[ShopModel alloc] init];
     model2.prices = 11.0;
     model2.nums = 5;
-    model2.titleStr = @"就是劳动节放假似的牌电风扇，势均力敌加夫里什的加夫里什的";
+    model2.titleStr = @"高逼格的电冰箱";
     model2.subTitleStr = @"全新系列";
     
     self.dataArr = @[model1,model2];

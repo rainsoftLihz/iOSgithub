@@ -47,6 +47,14 @@
     [self GCDTimer];
 }
 
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    dispatch_cancel(self.timer);
+}
+
 -(void)delayMel
 {
     //1.performSelector方法

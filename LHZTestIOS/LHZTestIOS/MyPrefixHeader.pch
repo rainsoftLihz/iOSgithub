@@ -26,4 +26,8 @@
 
 #import "NSObject+Properties.h"
 
+#import <AFNetworking/AFNetworking.h>
+
+#import <YYKit/YYKit.h>
+
 #endif /* MyPrefixHeader_pch */

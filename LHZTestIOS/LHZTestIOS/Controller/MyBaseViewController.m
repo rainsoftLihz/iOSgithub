@@ -22,6 +22,22 @@
     
     /* 坐标系从navigationBar开始 */
     self.navigationController.navigationBar.translucent = NO;
+    
+    //self.navigationController.navigationBar.hidden = YES;
+    
+    
+}
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

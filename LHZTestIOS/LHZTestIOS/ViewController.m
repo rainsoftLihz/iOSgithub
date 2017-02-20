@@ -24,6 +24,12 @@
 
 #import "CoreAnimationVC.h"
 
+#import "NetWorkViewController.h"
+
+#import "UITestViewController.h"
+
+#import "KeyBoardShowVController.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView* tableView;
@@ -31,6 +37,8 @@
 @property (nonatomic,strong)NSArray* titleArr;
 
 @property (nonatomic,strong)NSArray* pushVcArr;
+
+@property (nonatomic,strong)UIImageView* barImageView;
 
 @end
 
@@ -41,11 +49,22 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.tableView];
     self.navigationItem.title = @"IOS";
+    
+    
+    //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsCompact];
+    
+    _barImageView =
+    //[[UIImageView alloc] initWithImage:[UIImage imageWithColor:[UIColor yellowColor]]];
+    //_barImageView.frame = CGRectMake(0, -64, Screen_Width, 64);
+    self.navigationController.navigationBar.subviews.firstObject;
+    _barImageView.backgroundColor = [UIColor redColor];
+    
+    //self.navigationController.navigationBar.barTintColor = [UIColor redColor];
 }
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车"];
+    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理",@"键盘弹出动画"];
 }
 
 -(NSArray *)pushVcArr
@@ -57,7 +76,10 @@
              [TableRefreshViewController class],
              [MutilThreadVC class],
              [CoreAnimationVC class],
-             [ShoppingViewController class]];
+             [ShoppingViewController class],
+             [NetWorkViewController class],
+             [UITestViewController class],
+             [KeyBoardShowVController class]];
 }
 
 #pragma mark ---  tableView
@@ -74,6 +96,29 @@
         _tableView.showsVerticalScrollIndicator = NO;
     }
     return _tableView;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat maxAlphaOffset = 100;
+    CGFloat offset = scrollView.contentOffset.y;
+    CGFloat alpha =  offset / maxAlphaOffset;
+    self.navigationController.navigationBar.alpha = alpha;
+    
+    NSLog(@"offset=======%lf",offset);
+    NSLog(@"alpha=======%lf",alpha);
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
 }
 
 #pragma mark --- UITableViewDataSource
@@ -108,6 +153,41 @@
     
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+
+#pragma mark --- 等比压缩图片
++(UIImage *)compressImageWith:(UIImage *)image
+{
+    float imageWidth = image.size.width;
+    float imageHeight = image.size.height;
+    float width = 320;
+    float height = image.size.height/(image.size.width/width);
+    
+    float widthScale = imageWidth /width;
+    float heightScale = imageHeight /height;
+    
+    // 创建一个bitmap的context
+    // 并把它设置成为当前正在使用的context
+    UIGraphicsBeginImageContext(CGSizeMake(width, height));
+    
+    if (widthScale > heightScale) {
+        [image drawInRect:CGRectMake(0, 0, imageWidth /heightScale , height)];
+    }
+    else {
+        [image drawInRect:CGRectMake(0, 0, width , imageHeight /widthScale)];
+    }
+    
+    // 从当前context中创建一个改变大小后的图片
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    // 使当前的context出堆栈
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

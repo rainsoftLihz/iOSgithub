@@ -32,6 +32,9 @@
 		53BFC9D91E0B7E2E005217BB /* WeakAndStrongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BFC9D81E0B7E2E005217BB /* WeakAndStrongViewController.m */; };
 		53D7D03A1E2337A000A97664 /* CoreAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D7D0391E2337A000A97664 /* CoreAnimationVC.m */; };
 		53D7D03D1E23421400A97664 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D7D03C1E23421400A97664 /* CircleView.m */; };
+		53DB29FE1E55459900C9BF7B /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DB29FD1E55459900C9BF7B /* UIView+Corner.m */; };
+		53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DB2A011E55465F00C9BF7B /* UITestViewController.m */; };
+		53DB2A041E55549800C9BF7B /* sy_jktt.png in Resources */ = {isa = PBXBuildFile; fileRef = 53DB2A031E55549800C9BF7B /* sy_jktt.png */; };
 		53E61C051E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C021E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m */; };
 		53E61C061E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C041E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.m */; };
 		53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C261E14E9F7007CFAE6 /* TableRefreshViewController.m */; };
@@ -46,6 +49,10 @@
 		53E9A3021E28BECF00362CAE /* wu2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53E9A3011E28BECF00362CAE /* wu2.gif */; };
 		53E9A3041E28BED800362CAE /* wu1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53E9A3031E28BED800362CAE /* wu1.gif */; };
 		53E9A3061E28C04600362CAE /* 1111.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53E9A3051E28C04600362CAE /* 1111.gif */; };
+		53F2982C1E46CCC8005DA8C4 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */; };
+		53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */; };
+		53F3F00F1E5ABE2B009BC824 /* KeyBoardShowVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F00E1E5ABE2B009BC824 /* KeyBoardShowVController.m */; };
+		53F3F0121E5ABE9F009BC824 /* WirteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F0111E5ABE9F009BC824 /* WirteView.m */; };
 		53F70D4A1E126B9A009F1CC6 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53F70D481E126B9A009F1CC6 /* UserModel.xcdatamodeld */; };
 		7AF3CA78EF344C641D6EA10E /* libPods-LHZTestIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB43408CA40C88AB631FA93 /* libPods-LHZTestIOS.a */; };
 /* End PBXBuildFile section */
@@ -122,6 +129,11 @@
 		53D7D0391E2337A000A97664 /* CoreAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationVC.m; sourceTree = "<group>"; };
 		53D7D03B1E23421400A97664 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		53D7D03C1E23421400A97664 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		53DB29FC1E55459900C9BF7B /* UIView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner.h"; sourceTree = "<group>"; };
+		53DB29FD1E55459900C9BF7B /* UIView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner.m"; sourceTree = "<group>"; };
+		53DB2A001E55465F00C9BF7B /* UITestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITestViewController.h; sourceTree = "<group>"; };
+		53DB2A011E55465F00C9BF7B /* UITestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITestViewController.m; sourceTree = "<group>"; };
+		53DB2A031E55549800C9BF7B /* sy_jktt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sy_jktt.png; sourceTree = "<group>"; };
 		53E61C011E149ED9007CFAE6 /* AuthInfo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AuthInfo+CoreDataClass.h"; sourceTree = "<group>"; };
 		53E61C021E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AuthInfo+CoreDataClass.m"; sourceTree = "<group>"; };
 		53E61C031E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AuthInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -141,6 +153,14 @@
 		53E9A3011E28BECF00362CAE /* wu2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wu2.gif; sourceTree = "<group>"; };
 		53E9A3031E28BED800362CAE /* wu1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wu1.gif; sourceTree = "<group>"; };
 		53E9A3051E28C04600362CAE /* 1111.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1111.gif; sourceTree = "<group>"; };
+		53F2982A1E46CCC8005DA8C4 /* NetWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkViewController.h; sourceTree = "<group>"; };
+		53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkViewController.m; sourceTree = "<group>"; };
+		53F2982D1E46D398005DA8C4 /* LHZHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZHttpManager.h; sourceTree = "<group>"; };
+		53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHZHttpManager.m; sourceTree = "<group>"; };
+		53F3F00D1E5ABE2B009BC824 /* KeyBoardShowVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardShowVController.h; sourceTree = "<group>"; };
+		53F3F00E1E5ABE2B009BC824 /* KeyBoardShowVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardShowVController.m; sourceTree = "<group>"; };
+		53F3F0101E5ABE9F009BC824 /* WirteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WirteView.h; sourceTree = "<group>"; };
+		53F3F0111E5ABE9F009BC824 /* WirteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WirteView.m; sourceTree = "<group>"; };
 		53F70D491E126B9A009F1CC6 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		B8AD014F7FE8A75970E3EBFB /* Pods-LHZTestIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHZTestIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHZTestIOS/Pods-LHZTestIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -300,6 +320,8 @@
 		53BFC9C51E0B6BB5005217BB /* MyLib */ = {
 			isa = PBXGroup;
 			children = (
+				53DB29FC1E55459900C9BF7B /* UIView+Corner.h */,
+				53DB29FD1E55459900C9BF7B /* UIView+Corner.m */,
 			);
 			path = MyLib;
 			sourceTree = "<group>";
@@ -320,6 +342,9 @@
 				53BFC9961E0B6765005217BB /* ViewController.m */,
 				53BFC9D31E0B7D48005217BB /* MyBaseViewController.h */,
 				53BFC9D41E0B7D48005217BB /* MyBaseViewController.m */,
+				53F3F00C1E5ABDF5009BC824 /* 键盘弹出视图动画 */,
+				53DB29FF1E55461C00C9BF7B /* UI扩展 */,
+				53F298291E46CB3B005DA8C4 /* 网络请求 */,
 				5362356B1E45C32B00B0CEDF /* 购物车 */,
 				53D7D0371E23377100A97664 /* 动画 */,
 				530F5DC71E1B762700AED3F6 /* 多线程 */,
@@ -361,6 +386,16 @@
 			name = "动画";
 			sourceTree = "<group>";
 		};
+		53DB29FF1E55461C00C9BF7B /* UI扩展 */ = {
+			isa = PBXGroup;
+			children = (
+				53DB2A031E55549800C9BF7B /* sy_jktt.png */,
+				53DB2A001E55465F00C9BF7B /* UITestViewController.h */,
+				53DB2A011E55465F00C9BF7B /* UITestViewController.m */,
+			);
+			name = "UI扩展";
+			sourceTree = "<group>";
+		};
 		53E61C111E14E5D9007CFAE6 /* 下拉刷新 */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +408,28 @@
 				53E61C291E14EAFE007CFAE6 /* UIScrollView+RefreshView.m */,
 			);
 			name = "下拉刷新";
+			sourceTree = "<group>";
+		};
+		53F298291E46CB3B005DA8C4 /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				53F2982A1E46CCC8005DA8C4 /* NetWorkViewController.h */,
+				53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */,
+				53F2982D1E46D398005DA8C4 /* LHZHttpManager.h */,
+				53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */,
+			);
+			name = "网络请求";
+			sourceTree = "<group>";
+		};
+		53F3F00C1E5ABDF5009BC824 /* 键盘弹出视图动画 */ = {
+			isa = PBXGroup;
+			children = (
+				53F3F00D1E5ABE2B009BC824 /* KeyBoardShowVController.h */,
+				53F3F00E1E5ABE2B009BC824 /* KeyBoardShowVController.m */,
+				53F3F0101E5ABE9F009BC824 /* WirteView.h */,
+				53F3F0111E5ABE9F009BC824 /* WirteView.m */,
+			);
+			name = "键盘弹出视图动画";
 			sourceTree = "<group>";
 		};
 		53F70D2E1E126683009F1CC6 /* MyModel */ = {
@@ -525,6 +582,7 @@
 				53E9A3041E28BED800362CAE /* wu1.gif in Resources */,
 				53E73F801E1DDE9F00F786CC /* sy_jkcs_4.png in Resources */,
 				53E73F7F1E1DDE9F00F786CC /* sy_jkcs_3.png in Resources */,
+				53DB2A041E55549800C9BF7B /* sy_jktt.png in Resources */,
 				53BFC99F1E0B6765005217BB /* LaunchScreen.storyboard in Resources */,
 				53BFC99C1E0B6765005217BB /* Assets.xcassets in Resources */,
 				53E73F7E1E1DDE9F00F786CC /* sy_jkcs_2.png in Resources */,
@@ -616,21 +674,27 @@
 				53D7D03D1E23421400A97664 /* CircleView.m in Sources */,
 				53BFC9941E0B6765005217BB /* AppDelegate.m in Sources */,
 				53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */,
+				53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */,
 				536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */,
+				53F3F0121E5ABE9F009BC824 /* WirteView.m in Sources */,
 				53D7D03A1E2337A000A97664 /* CoreAnimationVC.m in Sources */,
 				53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */,
 				53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */,
+				53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */,
 				53BFC9CA1E0B7117005217BB /* UIView+Extension.m in Sources */,
+				53DB29FE1E55459900C9BF7B /* UIView+Corner.m in Sources */,
 				53E73F761E1DD2E600F786CC /* JZTHealthTestView.m in Sources */,
 				536235741E45C79700B0CEDF /* ShopModel.m in Sources */,
 				53BFC9911E0B6765005217BB /* main.m in Sources */,
 				53BFC9D21E0B776F005217BB /* PropertyTestViewController.m in Sources */,
 				530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */,
+				53F3F00F1E5ABE2B009BC824 /* KeyBoardShowVController.m in Sources */,
 				53F70D4A1E126B9A009F1CC6 /* UserModel.xcdatamodeld in Sources */,
 				5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */,
 				53E61C051E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m in Sources */,
 				53A761321E13B581005DB357 /* UserInfo+CoreDataClass.m in Sources */,
 				53E61C2A1E14EAFE007CFAE6 /* UIScrollView+RefreshView.m in Sources */,
+				53F2982C1E46CCC8005DA8C4 /* NetWorkViewController.m in Sources */,
 				53A7610C1E1350CB005DB357 /* LZTCoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

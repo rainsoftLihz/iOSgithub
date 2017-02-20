@@ -18,13 +18,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [UINavigationBar appearance].alpha = 0;
+    [UINavigationBar appearance].backgroundColor = [UIColor clearColor];
+    
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
-    self.window.backgroundColor = [UIColor blackColor];
     
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
+    
+    
+    
+    self.window.backgroundColor = [UIColor whiteColor];
     
     return YES;
 }
