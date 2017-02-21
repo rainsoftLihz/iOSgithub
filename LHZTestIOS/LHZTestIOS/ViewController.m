@@ -30,6 +30,8 @@
 
 #import "KeyBoardShowVController.h"
 
+#import "BlueViewController.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView* tableView;
@@ -64,7 +66,7 @@
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理",@"键盘弹出动画"];
+    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理",@"键盘弹出动画",@"蓝牙连接"];
 }
 
 -(NSArray *)pushVcArr
@@ -79,7 +81,8 @@
              [ShoppingViewController class],
              [NetWorkViewController class],
              [UITestViewController class],
-             [KeyBoardShowVController class]];
+             [KeyBoardShowVController class],
+             [BlueViewController class]];
 }
 
 #pragma mark ---  tableView

@@ -68,12 +68,12 @@
                   moduleName = "LHZTestIOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rainsoft/Desktop/WORKSpace/iOSTest/LHZTestIOS/LHZTestIOS/Controller/NetWorkViewController.m"
-                  timestampString = "509267180.825643"
+                  timestampString = "509359355.912242"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "56"
                   endingLineNumber = "56"
-                  offsetFromSymbolStart = "169">
+                  offsetFromSymbolStart = "204">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -83,12 +83,12 @@
                   moduleName = "LHZTestIOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rainsoft/Desktop/WORKSpace/iOSTest/LHZTestIOS/LHZTestIOS/Controller/NetWorkViewController.m"
-                  timestampString = "509267180.828345"
+                  timestampString = "509359355.91746"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
                   endingLineNumber = "58"
-                  offsetFromSymbolStart = "110">
+                  offsetFromSymbolStart = "112">
                </Location>
             </Locations>
          </BreakpointContent>
