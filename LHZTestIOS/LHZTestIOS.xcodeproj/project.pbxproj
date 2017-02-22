@@ -10,6 +10,7 @@
 		530F5DC41E1B335200AED3F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530F5DC31E1B335200AED3F6 /* Main.storyboard */; };
 		530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */; };
 		5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5342925C1E5C25C7008AEE1D /* BlueViewController.m */; };
+		534956AB1E5D2A410093A5AC /* PanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956AA1E5D2A410093A5AC /* PanView.m */; };
 		5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5362356D1E45C35000B0CEDF /* ShoppingViewController.m */; };
 		536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235701E45C44500B0CEDF /* ShoppingCell.m */; };
 		536235741E45C79700B0CEDF /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235731E45C79700B0CEDF /* ShopModel.m */; };
@@ -83,6 +84,8 @@
 		530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutilThreadVC.m; sourceTree = "<group>"; };
 		5342925B1E5C25C7008AEE1D /* BlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueViewController.h; sourceTree = "<group>"; };
 		5342925C1E5C25C7008AEE1D /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
+		534956A91E5D2A410093A5AC /* PanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanView.h; sourceTree = "<group>"; };
+		534956AA1E5D2A410093A5AC /* PanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanView.m; sourceTree = "<group>"; };
 		5362356C1E45C35000B0CEDF /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
 		5362356D1E45C35000B0CEDF /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
 		5362356F1E45C44500B0CEDF /* ShoppingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCell.h; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				53DB2A031E55549800C9BF7B /* sy_jktt.png */,
 				53DB2A001E55465F00C9BF7B /* UITestViewController.h */,
 				53DB2A011E55465F00C9BF7B /* UITestViewController.m */,
+				534956A91E5D2A410093A5AC /* PanView.h */,
+				534956AA1E5D2A410093A5AC /* PanView.m */,
 			);
 			name = "UI扩展";
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 				53F3F00F1E5ABE2B009BC824 /* KeyBoardShowVController.m in Sources */,
 				53F70D4A1E126B9A009F1CC6 /* UserModel.xcdatamodeld in Sources */,
 				5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */,
+				534956AB1E5D2A410093A5AC /* PanView.m in Sources */,
 				53E61C051E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m in Sources */,
 				53A761321E13B581005DB357 /* UserInfo+CoreDataClass.m in Sources */,
 				53E61C2A1E14EAFE007CFAE6 /* UIScrollView+RefreshView.m in Sources */,

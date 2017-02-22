@@ -17,8 +17,8 @@
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 //宽高比
-#define kProportion (SCREEN_WIDTH/1242)
-#define kHProportion (SCREEN_HEIGHT/2208)
+#define kProportion (Screen_Width/1242)
+#define kHProportion (Screen_Height/2208)
 
 //机型
 #define IS_IPHONE5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)

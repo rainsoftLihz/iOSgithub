@@ -10,7 +10,11 @@
 
 #import "UIView+Corner.h"
 
+#import "PanView.h"
+
 @interface UITestViewController ()
+
+@property (nonatomic,strong)PanView* panView;
 
 @end
 
@@ -25,25 +29,27 @@
     NSLog(@"2>>1===%d",2>>1);
     NSLog(@"2<<1===%d",2<<1);
     
-    UIImageView* img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sy_jktt"]];
-    img.center = CGPointMake(180, 80);
-    [self.view addSubview:img];
-    
-    UIBlurEffect * blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    UIVisualEffectView * effe = [[UIVisualEffectView alloc]initWithEffect:blur];
-    effe.frame = img.frame;
-    // 添加毛玻璃
-    [img addSubview:effe];
+//    UIImageView* img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sy_jktt"]];
+//    img.center = CGPointMake(180, 80);
+//    [self.view addSubview:img];
+//    
+//    UIBlurEffect * blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+//    UIVisualEffectView * effe = [[UIVisualEffectView alloc]initWithEffect:blur];
+//    effe.frame = img.frame;
+//    // 添加毛玻璃
+//    [img addSubview:effe];
     
     
     /* 调整tableview cell 系统img大小 */
-    CGSize itemSize = CGSizeMake(40, 40);
-    UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
-    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-//    [cell.imageView.image drawInRect:imageRect];
-//    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+//    CGSize itemSize = CGSizeMake(40, 40);
+//    UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
+//    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+////    [cell.imageView.image drawInRect:imageRect];
+////    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
 
+    self.panView = [[PanView alloc] initWithFrame:CGRectMake(80, 80, 100, 100)];
+    [self.view addSubview:self.panView];
     
     [self cornerTest];
 }

@@ -66,7 +66,7 @@
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理",@"键盘弹出动画",@"蓝牙连接"];
+    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接"];
 }
 
 -(NSArray *)pushVcArr
