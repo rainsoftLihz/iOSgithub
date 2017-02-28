@@ -32,6 +32,8 @@
 
 #import "BlueViewController.h"
 
+#import "JZTTabBarVC.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView* tableView;
@@ -66,7 +68,7 @@
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接"];
+    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar"];
 }
 
 -(NSArray *)pushVcArr
@@ -82,7 +84,8 @@
              [NetWorkViewController class],
              [UITestViewController class],
              [KeyBoardShowVController class],
-             [BlueViewController class]];
+             [BlueViewController class],
+             [JZTTabBarVC class]];
 }
 
 #pragma mark ---  tableView
@@ -112,10 +115,10 @@
     NSLog(@"alpha=======%lf",alpha);
 }
 
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
 }
 
 
@@ -150,6 +153,25 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    NSString* str = self.titleArr[indexPath.row];
+    
+    if ([str isEqualToString:@"TabBar"]) {
+        JZTTabBarVC* vc = [[JZTTabBarVC alloc] init];
+        //[vc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+          /* 动画 */
+//        CATransition *animation = [CATransition animation];
+//        animation.duration = 1.0;
+//        animation.timingFunction = UIViewAnimationCurveEaseInOut;
+//        animation.type = @"rippleEffect";
+////        animation.type = kCATransitionMoveIn;
+//        //animation.subtype = kCATransitionFromRight;
+//        [self.view.window.layer addAnimation:animation forKey:nil];
+//        [self presentViewController:vc animated:NO completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
+    
     MyBaseViewController* vc = [[self.pushVcArr[indexPath.row] alloc] init];
     
     vc.titleStr = self.titleArr[indexPath.row];

@@ -11,6 +11,15 @@
 		530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */; };
 		5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5342925C1E5C25C7008AEE1D /* BlueViewController.m */; };
 		534956AB1E5D2A410093A5AC /* PanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956AA1E5D2A410093A5AC /* PanView.m */; };
+		534956B41E5D79EE0093A5AC /* JZTNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956AF1E5D79EE0093A5AC /* JZTNavigationVC.m */; };
+		534956B51E5D79EE0093A5AC /* JZTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956B11E5D79EE0093A5AC /* JZTTabBar.m */; };
+		534956B61E5D79EE0093A5AC /* JZTTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956B31E5D79EE0093A5AC /* JZTTabBarVC.m */; };
+		534956B91E5D7A1F0093A5AC /* UIColor+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956B81E5D7A1F0093A5AC /* UIColor+Common.m */; };
+		534956C51E5D7A550093A5AC /* JZTAnchorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956BC1E5D7A550093A5AC /* JZTAnchorVC.m */; };
+		534956C61E5D7A550093A5AC /* JZTBangDanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956BE1E5D7A550093A5AC /* JZTBangDanVC.m */; };
+		534956C71E5D7A550093A5AC /* JZTCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956C01E5D7A550093A5AC /* JZTCategoryVC.m */; };
+		534956C81E5D7A550093A5AC /* JZTHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956C21E5D7A550093A5AC /* JZTHomeVC.m */; };
+		534956C91E5D7A550093A5AC /* JZTRecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956C41E5D7A550093A5AC /* JZTRecommendVC.m */; };
 		5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5362356D1E45C35000B0CEDF /* ShoppingViewController.m */; };
 		536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235701E45C44500B0CEDF /* ShoppingCell.m */; };
 		536235741E45C79700B0CEDF /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235731E45C79700B0CEDF /* ShopModel.m */; };
@@ -86,6 +95,24 @@
 		5342925C1E5C25C7008AEE1D /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
 		534956A91E5D2A410093A5AC /* PanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanView.h; sourceTree = "<group>"; };
 		534956AA1E5D2A410093A5AC /* PanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanView.m; sourceTree = "<group>"; };
+		534956AE1E5D79EE0093A5AC /* JZTNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTNavigationVC.h; sourceTree = "<group>"; };
+		534956AF1E5D79EE0093A5AC /* JZTNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTNavigationVC.m; sourceTree = "<group>"; };
+		534956B01E5D79EE0093A5AC /* JZTTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTTabBar.h; sourceTree = "<group>"; };
+		534956B11E5D79EE0093A5AC /* JZTTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTTabBar.m; sourceTree = "<group>"; };
+		534956B21E5D79EE0093A5AC /* JZTTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTTabBarVC.h; sourceTree = "<group>"; };
+		534956B31E5D79EE0093A5AC /* JZTTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTTabBarVC.m; sourceTree = "<group>"; };
+		534956B71E5D7A1F0093A5AC /* UIColor+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Common.h"; sourceTree = "<group>"; };
+		534956B81E5D7A1F0093A5AC /* UIColor+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Common.m"; sourceTree = "<group>"; };
+		534956BB1E5D7A550093A5AC /* JZTAnchorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTAnchorVC.h; sourceTree = "<group>"; };
+		534956BC1E5D7A550093A5AC /* JZTAnchorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTAnchorVC.m; sourceTree = "<group>"; };
+		534956BD1E5D7A550093A5AC /* JZTBangDanVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTBangDanVC.h; sourceTree = "<group>"; };
+		534956BE1E5D7A550093A5AC /* JZTBangDanVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTBangDanVC.m; sourceTree = "<group>"; };
+		534956BF1E5D7A550093A5AC /* JZTCategoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTCategoryVC.h; sourceTree = "<group>"; };
+		534956C01E5D7A550093A5AC /* JZTCategoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTCategoryVC.m; sourceTree = "<group>"; };
+		534956C11E5D7A550093A5AC /* JZTHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTHomeVC.h; sourceTree = "<group>"; };
+		534956C21E5D7A550093A5AC /* JZTHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTHomeVC.m; sourceTree = "<group>"; };
+		534956C31E5D7A550093A5AC /* JZTRecommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRecommendVC.h; sourceTree = "<group>"; };
+		534956C41E5D7A550093A5AC /* JZTRecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRecommendVC.m; sourceTree = "<group>"; };
 		5362356C1E45C35000B0CEDF /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
 		5362356D1E45C35000B0CEDF /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
 		5362356F1E45C44500B0CEDF /* ShoppingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCell.h; sourceTree = "<group>"; };
@@ -223,6 +250,45 @@
 			name = "蓝牙连接";
 			sourceTree = "<group>";
 		};
+		534956AC1E5D79C40093A5AC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				534956BA1E5D7A550093A5AC /* 首页 */,
+				534956AD1E5D79EE0093A5AC /* BaseVC */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		534956AD1E5D79EE0093A5AC /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				534956AE1E5D79EE0093A5AC /* JZTNavigationVC.h */,
+				534956AF1E5D79EE0093A5AC /* JZTNavigationVC.m */,
+				534956B01E5D79EE0093A5AC /* JZTTabBar.h */,
+				534956B11E5D79EE0093A5AC /* JZTTabBar.m */,
+				534956B21E5D79EE0093A5AC /* JZTTabBarVC.h */,
+				534956B31E5D79EE0093A5AC /* JZTTabBarVC.m */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		534956BA1E5D7A550093A5AC /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				534956BB1E5D7A550093A5AC /* JZTAnchorVC.h */,
+				534956BC1E5D7A550093A5AC /* JZTAnchorVC.m */,
+				534956BD1E5D7A550093A5AC /* JZTBangDanVC.h */,
+				534956BE1E5D7A550093A5AC /* JZTBangDanVC.m */,
+				534956BF1E5D7A550093A5AC /* JZTCategoryVC.h */,
+				534956C01E5D7A550093A5AC /* JZTCategoryVC.m */,
+				534956C11E5D7A550093A5AC /* JZTHomeVC.h */,
+				534956C21E5D7A550093A5AC /* JZTHomeVC.m */,
+				534956C31E5D7A550093A5AC /* JZTRecommendVC.h */,
+				534956C41E5D7A550093A5AC /* JZTRecommendVC.m */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
 		5362356B1E45C32B00B0CEDF /* 购物车 */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +410,8 @@
 		53BFC9C71E0B70F3005217BB /* MyCategroy */ = {
 			isa = PBXGroup;
 			children = (
+				534956B71E5D7A1F0093A5AC /* UIColor+Common.h */,
+				534956B81E5D7A1F0093A5AC /* UIColor+Common.m */,
 				53BFC9C81E0B7117005217BB /* UIView+Extension.h */,
 				53BFC9C91E0B7117005217BB /* UIView+Extension.m */,
 			);
@@ -357,6 +425,7 @@
 				53BFC9961E0B6765005217BB /* ViewController.m */,
 				53BFC9D31E0B7D48005217BB /* MyBaseViewController.h */,
 				53BFC9D41E0B7D48005217BB /* MyBaseViewController.m */,
+				534956AC1E5D79C40093A5AC /* TabBar */,
 				5342925A1E5C256D008AEE1D /* 蓝牙连接 */,
 				53F3F00C1E5ABDF5009BC824 /* 键盘弹出视图动画 */,
 				53DB29FF1E55461C00C9BF7B /* UI扩展 */,
@@ -686,22 +755,30 @@
 				53E61C061E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.m in Sources */,
 				53BFC9D91E0B7E2E005217BB /* WeakAndStrongViewController.m in Sources */,
 				53BFC9971E0B6765005217BB /* ViewController.m in Sources */,
+				534956C51E5D7A550093A5AC /* JZTAnchorVC.m in Sources */,
 				5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */,
+				534956B61E5D79EE0093A5AC /* JZTTabBarVC.m in Sources */,
 				5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */,
+				534956C71E5D7A550093A5AC /* JZTCategoryVC.m in Sources */,
 				53BFC9D51E0B7D48005217BB /* MyBaseViewController.m in Sources */,
+				534956C81E5D7A550093A5AC /* JZTHomeVC.m in Sources */,
 				536235771E45CE0B00B0CEDF /* ShopViewModel.m in Sources */,
 				53D7D03D1E23421400A97664 /* CircleView.m in Sources */,
+				534956B41E5D79EE0093A5AC /* JZTNavigationVC.m in Sources */,
 				53BFC9941E0B6765005217BB /* AppDelegate.m in Sources */,
 				53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */,
 				53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */,
 				536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */,
 				53F3F0121E5ABE9F009BC824 /* WirteView.m in Sources */,
+				534956B91E5D7A1F0093A5AC /* UIColor+Common.m in Sources */,
 				53D7D03A1E2337A000A97664 /* CoreAnimationVC.m in Sources */,
 				53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */,
 				53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */,
+				534956B51E5D79EE0093A5AC /* JZTTabBar.m in Sources */,
 				53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */,
 				53BFC9CA1E0B7117005217BB /* UIView+Extension.m in Sources */,
 				53DB29FE1E55459900C9BF7B /* UIView+Corner.m in Sources */,
+				534956C91E5D7A550093A5AC /* JZTRecommendVC.m in Sources */,
 				53E73F761E1DD2E600F786CC /* JZTHealthTestView.m in Sources */,
 				536235741E45C79700B0CEDF /* ShopModel.m in Sources */,
 				53BFC9911E0B6765005217BB /* main.m in Sources */,
@@ -714,6 +791,7 @@
 				53E61C051E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m in Sources */,
 				53A761321E13B581005DB357 /* UserInfo+CoreDataClass.m in Sources */,
 				53E61C2A1E14EAFE007CFAE6 /* UIScrollView+RefreshView.m in Sources */,
+				534956C61E5D7A550093A5AC /* JZTBangDanVC.m in Sources */,
 				53F2982C1E46CCC8005DA8C4 /* NetWorkViewController.m in Sources */,
 				53A7610C1E1350CB005DB357 /* LZTCoreDataManager.m in Sources */,
 			);
