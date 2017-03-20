@@ -34,6 +34,8 @@
 
 #import "JZTTabBarVC.h"
 
+#import "BiaoChiViewController.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView* tableView;
@@ -53,22 +55,37 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.tableView];
     self.navigationItem.title = @"IOS";
+  
+    NSMutableString *url = [@"https://test-m.998pz.cn/view/index.html?ch=1&par=5&userId=10000000000@qq.com" mutableCopy];
     
+    //NSLog(@"%@",[self lz_OriginUrl:url StringdeleteParameter:@"userId"]);
     
-    //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsCompact];
-    
-    _barImageView =
-    //[[UIImageView alloc] initWithImage:[UIImage imageWithColor:[UIColor yellowColor]]];
-    //_barImageView.frame = CGRectMake(0, -64, Screen_Width, 64);
-    self.navigationController.navigationBar.subviews.firstObject;
-    _barImageView.backgroundColor = [UIColor redColor];
-    
-    //self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    NSError *error;
+    // 创建NSRegularExpression对象并指定正则表达式
+    NSRegularExpression *regex = [NSRegularExpression
+                        regularExpressionWithPattern:@"userId=[\\w@\\.]*&*"
+                                  options:0
+                                  error:&error];
+    if (!error) { // 如果没有错误
+        // 获取特特定字符串的范围
+        NSTextCheckingResult *match = [regex firstMatchInString:url
+                options:0 range:NSMakeRange(0, [url length])];
+        if (match) {
+            // 截获特定的字符串
+            NSString *result = [url substringWithRange:match.range];
+            NSLog(@"result====%@",result);
+            [url deleteCharactersInRange:match.range];
+            NSLog(@"url=====%@",url);
+        }
+        
+        
+    }
+
 }
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar"];
+    return @[@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
 }
 
 -(NSArray *)pushVcArr
@@ -85,14 +102,15 @@
              [UITestViewController class],
              [KeyBoardShowVController class],
              [BlueViewController class],
-             [JZTTabBarVC class]];
+             [JZTTabBarVC class],
+             [BiaoChiViewController class]];
 }
 
 #pragma mark ---  tableView
 -(UITableView *)tableView
 {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height-64.0) style:UITableViewStylePlain];
         _tableView.backgroundColor = UIColorFromRGB(0xf2f2f2);
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
@@ -104,28 +122,6 @@
     return _tableView;
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    CGFloat maxAlphaOffset = 100;
-    CGFloat offset = scrollView.contentOffset.y;
-    CGFloat alpha =  offset / maxAlphaOffset;
-    self.navigationController.navigationBar.alpha = alpha;
-    
-    NSLog(@"offset=======%lf",offset);
-    NSLog(@"alpha=======%lf",alpha);
-}
-
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
 
 #pragma mark --- UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -219,5 +215,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSString *)lz_OriginUrl:(NSString*)originUrl StringdeleteParameter:(NSString *)parameter;{
+    NSString *finalStr = @"";
+    NSMutableString * mutStr = originUrl.mutableCopy;
+    NSArray *strArray = [mutStr componentsSeparatedByString:parameter];
+    NSMutableString *firstStr = [strArray firstObject];
+    NSMutableString *lastStr = [strArray lastObject];
+    NSRange characterRange = [lastStr rangeOfString:@"&"];
+    if (characterRange.location != NSNotFound) {
+        NSArray *lastArray = [lastStr componentsSeparatedByString:@"&"];
+        NSMutableArray *mutArray = lastArray.mutableCopy;
+        [mutArray removeObjectAtIndex:0];
+        NSString *modifiedStr = [mutArray componentsJoinedByString:@"&"];
+        finalStr = [firstStr stringByAppendingString:modifiedStr];
+    } else {
+        //以'?'、'&'结尾
+        finalStr = [firstStr substringToIndex:[firstStr length] -1];
+    }
+    return finalStr;
+}
 
 @end

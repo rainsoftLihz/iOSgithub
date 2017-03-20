@@ -68,7 +68,7 @@
                   moduleName = "LHZTestIOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rainsoft/Desktop/WORKSpace/iOSTest/LHZTestIOS/LHZTestIOS/Controller/NetWorkViewController.m"
-                  timestampString = "509949169.176327"
+                  timestampString = "511686993.256844"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "56"
@@ -83,7 +83,7 @@
                   moduleName = "LHZTestIOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rainsoft/Desktop/WORKSpace/iOSTest/LHZTestIOS/LHZTestIOS/Controller/NetWorkViewController.m"
-                  timestampString = "509949169.178322"
+                  timestampString = "511686993.258702"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
@@ -91,6 +91,22 @@
                   offsetFromSymbolStart = "110">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LHZTestIOS/Controller/BiaoChiViewController.m"
+            timestampString = "511684523.82121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-saveData"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

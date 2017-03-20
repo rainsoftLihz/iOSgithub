@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5304381D1E71235E00C849A3 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304381C1E71235E00C849A3 /* libicucore.tbd */; };
+		5304381F1E71236F00C849A3 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304381E1E71236F00C849A3 /* libicucore.A.tbd */; };
 		530F5DC41E1B335200AED3F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530F5DC31E1B335200AED3F6 /* Main.storyboard */; };
 		530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */; };
 		5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5342925C1E5C25C7008AEE1D /* BlueViewController.m */; };
@@ -24,6 +26,7 @@
 		536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235701E45C44500B0CEDF /* ShoppingCell.m */; };
 		536235741E45C79700B0CEDF /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235731E45C79700B0CEDF /* ShopModel.m */; };
 		536235771E45CE0B00B0CEDF /* ShopViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235761E45CE0B00B0CEDF /* ShopViewModel.m */; };
+		5382951F1E65611100BBCA3D /* BiaoChiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5382951E1E65611100BBCA3D /* BiaoChiViewController.m */; };
 		5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390441D1E0D0FB600004040 /* MasonryViewController.m */; };
 		53A7610C1E1350CB005DB357 /* LZTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7610B1E1350CB005DB357 /* LZTCoreDataManager.m */; };
 		53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A761131E136498005DB357 /* CoreDataViewcontroller.m */; };
@@ -62,6 +65,10 @@
 		53E9A3061E28C04600362CAE /* 1111.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53E9A3051E28C04600362CAE /* 1111.gif */; };
 		53F2982C1E46CCC8005DA8C4 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */; };
 		53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */; };
+		53F3EE8D1E7FA53100ABFBFD /* JZTRulerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE8A1E7FA53100ABFBFD /* JZTRulerScrollView.m */; };
+		53F3EE8E1E7FA53100ABFBFD /* JZTRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE8C1E7FA53100ABFBFD /* JZTRulerView.m */; };
+		53F3EE911E7FA59C00ABFBFD /* JZTRulerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE901E7FA59C00ABFBFD /* JZTRulerCell.m */; };
+		53F3EE941E7FA5C200ABFBFD /* JZTRulerCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE931E7FA5C200ABFBFD /* JZTRulerCellModel.m */; };
 		53F3F00F1E5ABE2B009BC824 /* KeyBoardShowVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F00E1E5ABE2B009BC824 /* KeyBoardShowVController.m */; };
 		53F3F0121E5ABE9F009BC824 /* WirteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F0111E5ABE9F009BC824 /* WirteView.m */; };
 		53F70D4A1E126B9A009F1CC6 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53F70D481E126B9A009F1CC6 /* UserModel.xcdatamodeld */; };
@@ -88,6 +95,8 @@
 /* Begin PBXFileReference section */
 		1C5EC96DB6839DA9B1D7CAD6 /* Pods-LHZTestIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHZTestIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LHZTestIOS/Pods-LHZTestIOS.release.xcconfig"; sourceTree = "<group>"; };
 		4DB43408CA40C88AB631FA93 /* libPods-LHZTestIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHZTestIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5304381C1E71235E00C849A3 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		5304381E1E71236F00C849A3 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
 		530F5DC31E1B335200AED3F6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		530F5DC81E1B77B700AED3F6 /* MutilThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutilThreadVC.h; sourceTree = "<group>"; };
 		530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutilThreadVC.m; sourceTree = "<group>"; };
@@ -121,6 +130,8 @@
 		536235731E45C79700B0CEDF /* ShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopModel.m; sourceTree = "<group>"; };
 		536235751E45CE0B00B0CEDF /* ShopViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewModel.h; sourceTree = "<group>"; };
 		536235761E45CE0B00B0CEDF /* ShopViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewModel.m; sourceTree = "<group>"; };
+		5382951D1E65611100BBCA3D /* BiaoChiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiaoChiViewController.h; sourceTree = "<group>"; };
+		5382951E1E65611100BBCA3D /* BiaoChiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiaoChiViewController.m; sourceTree = "<group>"; };
 		5390441C1E0D0FB600004040 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		5390441D1E0D0FB600004040 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		53A7610A1E1350CB005DB357 /* LZTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTCoreDataManager.h; sourceTree = "<group>"; };
@@ -190,6 +201,14 @@
 		53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkViewController.m; sourceTree = "<group>"; };
 		53F2982D1E46D398005DA8C4 /* LHZHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZHttpManager.h; sourceTree = "<group>"; };
 		53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHZHttpManager.m; sourceTree = "<group>"; };
+		53F3EE891E7FA53100ABFBFD /* JZTRulerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRulerScrollView.h; sourceTree = "<group>"; };
+		53F3EE8A1E7FA53100ABFBFD /* JZTRulerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRulerScrollView.m; sourceTree = "<group>"; };
+		53F3EE8B1E7FA53100ABFBFD /* JZTRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRulerView.h; sourceTree = "<group>"; };
+		53F3EE8C1E7FA53100ABFBFD /* JZTRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRulerView.m; sourceTree = "<group>"; };
+		53F3EE8F1E7FA59C00ABFBFD /* JZTRulerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRulerCell.h; sourceTree = "<group>"; };
+		53F3EE901E7FA59C00ABFBFD /* JZTRulerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRulerCell.m; sourceTree = "<group>"; };
+		53F3EE921E7FA5C200ABFBFD /* JZTRulerCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRulerCellModel.h; sourceTree = "<group>"; };
+		53F3EE931E7FA5C200ABFBFD /* JZTRulerCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRulerCellModel.m; sourceTree = "<group>"; };
 		53F3F00D1E5ABE2B009BC824 /* KeyBoardShowVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardShowVController.h; sourceTree = "<group>"; };
 		53F3F00E1E5ABE2B009BC824 /* KeyBoardShowVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardShowVController.m; sourceTree = "<group>"; };
 		53F3F0101E5ABE9F009BC824 /* WirteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WirteView.h; sourceTree = "<group>"; };
@@ -203,6 +222,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5304381F1E71236F00C849A3 /* libicucore.A.tbd in Frameworks */,
+				5304381D1E71235E00C849A3 /* libicucore.tbd in Frameworks */,
 				7AF3CA78EF344C641D6EA10E /* libPods-LHZTestIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +323,23 @@
 				536235731E45C79700B0CEDF /* ShopModel.m */,
 			);
 			name = "购物车";
+			sourceTree = "<group>";
+		};
+		5382951C1E6560EE00BBCA3D /* 标尺 */ = {
+			isa = PBXGroup;
+			children = (
+				5382951D1E65611100BBCA3D /* BiaoChiViewController.h */,
+				5382951E1E65611100BBCA3D /* BiaoChiViewController.m */,
+				53F3EE891E7FA53100ABFBFD /* JZTRulerScrollView.h */,
+				53F3EE8A1E7FA53100ABFBFD /* JZTRulerScrollView.m */,
+				53F3EE8B1E7FA53100ABFBFD /* JZTRulerView.h */,
+				53F3EE8C1E7FA53100ABFBFD /* JZTRulerView.m */,
+				53F3EE8F1E7FA59C00ABFBFD /* JZTRulerCell.h */,
+				53F3EE921E7FA5C200ABFBFD /* JZTRulerCellModel.h */,
+				53F3EE931E7FA5C200ABFBFD /* JZTRulerCellModel.m */,
+				53F3EE901E7FA59C00ABFBFD /* JZTRulerCell.m */,
+			);
+			name = "标尺";
 			sourceTree = "<group>";
 		};
 		5390441B1E0D0F7600004040 /* Masonry约束 */ = {
@@ -425,6 +463,7 @@
 				53BFC9961E0B6765005217BB /* ViewController.m */,
 				53BFC9D31E0B7D48005217BB /* MyBaseViewController.h */,
 				53BFC9D41E0B7D48005217BB /* MyBaseViewController.m */,
+				5382951C1E6560EE00BBCA3D /* 标尺 */,
 				534956AC1E5D79C40093A5AC /* TabBar */,
 				5342925A1E5C256D008AEE1D /* 蓝牙连接 */,
 				53F3F00C1E5ABDF5009BC824 /* 键盘弹出视图动画 */,
@@ -542,6 +581,8 @@
 		648CF866C7A340E23573FCBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5304381E1E71236F00C849A3 /* libicucore.A.tbd */,
+				5304381C1E71235E00C849A3 /* libicucore.tbd */,
 				4DB43408CA40C88AB631FA93 /* libPods-LHZTestIOS.a */,
 			);
 			name = Frameworks;
@@ -752,6 +793,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53A761331E13B581005DB357 /* UserInfo+CoreDataProperties.m in Sources */,
+				53F3EE8D1E7FA53100ABFBFD /* JZTRulerScrollView.m in Sources */,
 				53E61C061E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.m in Sources */,
 				53BFC9D91E0B7E2E005217BB /* WeakAndStrongViewController.m in Sources */,
 				53BFC9971E0B6765005217BB /* ViewController.m in Sources */,
@@ -766,6 +808,7 @@
 				53D7D03D1E23421400A97664 /* CircleView.m in Sources */,
 				534956B41E5D79EE0093A5AC /* JZTNavigationVC.m in Sources */,
 				53BFC9941E0B6765005217BB /* AppDelegate.m in Sources */,
+				53F3EE8E1E7FA53100ABFBFD /* JZTRulerView.m in Sources */,
 				53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */,
 				53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */,
 				536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */,
@@ -774,6 +817,7 @@
 				53D7D03A1E2337A000A97664 /* CoreAnimationVC.m in Sources */,
 				53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */,
 				53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */,
+				53F3EE941E7FA5C200ABFBFD /* JZTRulerCellModel.m in Sources */,
 				534956B51E5D79EE0093A5AC /* JZTTabBar.m in Sources */,
 				53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */,
 				53BFC9CA1E0B7117005217BB /* UIView+Extension.m in Sources */,
@@ -787,9 +831,11 @@
 				53F3F00F1E5ABE2B009BC824 /* KeyBoardShowVController.m in Sources */,
 				53F70D4A1E126B9A009F1CC6 /* UserModel.xcdatamodeld in Sources */,
 				5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */,
+				5382951F1E65611100BBCA3D /* BiaoChiViewController.m in Sources */,
 				534956AB1E5D2A410093A5AC /* PanView.m in Sources */,
 				53E61C051E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m in Sources */,
 				53A761321E13B581005DB357 /* UserInfo+CoreDataClass.m in Sources */,
+				53F3EE911E7FA59C00ABFBFD /* JZTRulerCell.m in Sources */,
 				53E61C2A1E14EAFE007CFAE6 /* UIScrollView+RefreshView.m in Sources */,
 				534956C61E5D7A550093A5AC /* JZTBangDanVC.m in Sources */,
 				53F2982C1E46CCC8005DA8C4 /* NetWorkViewController.m in Sources */,
@@ -942,7 +988,7 @@
 				INFOPLIST_FILE = LHZTestIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rainsoft.com.LHZTestIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.hookapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -959,7 +1005,7 @@
 				INFOPLIST_FILE = LHZTestIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rainsoft.com.LHZTestIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.hookapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

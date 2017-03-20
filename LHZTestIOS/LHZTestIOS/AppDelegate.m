@@ -18,8 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [UINavigationBar appearance].alpha = 0;
-    [UINavigationBar appearance].backgroundColor = [UIColor clearColor];
+//    [UINavigationBar appearance].alpha = 0;
+//    [UINavigationBar appearance].backgroundColor = [UIColor clearColor];
     
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
     

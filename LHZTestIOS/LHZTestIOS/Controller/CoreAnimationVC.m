@@ -15,6 +15,8 @@
 @interface CoreAnimationVC ()
 {
     UIView* _demoView;
+    
+    UILabel* _testLab;
 }
 @end
 
@@ -53,6 +55,20 @@
     shapeLayer.strokeColor = [UIColor redColor].CGColor;
     shapeLayer.lineWidth = 1;
     [self.view.layer addSublayer:shapeLayer];
+    
+    
+    _testLab = [[UILabel alloc] init];
+    _testLab.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_testLab];
+    _testLab.text = @"122";
+    _testLab.textAlignment = NSTextAlignmentCenter;
+    _testLab.textColor = [UIColor redColor];
+    
+    [_testLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(60, 25));
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+        make.centerY.mas_equalTo(self.view.mas_centerY).offset(150);
+    }];
 
 }
 
@@ -132,6 +148,14 @@
     
     anima.repeatCount = MAXFLOAT;
     [_demoView.layer addAnimation:anima forKey:@"pathAnimation"];
+    
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 1.0f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    _testLab.text = @"111";
+    [_testLab.layer addAnimation:transition forKey:@"animation"];
 }
 
 #pragma mark --- 缩放动画
@@ -146,6 +170,13 @@
     /* 动画结束时是否执行逆动画 */
     anima.autoreverses = YES;
     [_demoView.layer addAnimation:anima forKey:@"scaleAnimation"];
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 1.0f;
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromTop;
+    _testLab.text = @"222";
+    [_testLab.layer addAnimation:transition forKey:@"animation"];
 }
 
 #pragma mark --- 旋转动画
@@ -155,11 +186,27 @@
     anima.toValue = [NSNumber numberWithFloat:M_PI*4];
     anima.duration = 1.0;
     [_demoView.layer addAnimation:anima forKey:@"rotationAnimation"];
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 1.0f;
+    transition.type = kCATransitionReveal;
+    transition.subtype = kCATransitionFromTop;
+    _testLab.text = @"333";
+    [_testLab.layer addAnimation:transition forKey:@"animation"];
 }
 
 #pragma mark --- 组合动画
 -(void)groupAnimation
 {
+    CATransition *transition = [CATransition animation];
+    transition.duration = 1.0f;
+    transition.type = @"suckEffect";
+    transition.subtype = kCATransitionFromTop;
+    _testLab.text = @"444";
+    [_testLab.layer addAnimation:transition forKey:@"animation"];
+    
+    
+    
     CABasicAnimation* anima = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     anima.toValue = [NSNumber numberWithFloat:3.0f];
     anima.duration = 2.0f;
