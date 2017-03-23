@@ -84,7 +84,7 @@
                            NSFontAttributeName   : [UIFont systemFontOfSize:13],
                            };
     for (int a = 0; a <= self.rulerCount + 2*self.rulerPlaceholderCount; a++) {
-        int i = a - self.rulerPlaceholderCount;
+        NSInteger i = a - self.rulerPlaceholderCount;
         CGFloat x = DistanceLeftAndRight + DistanceTick * i;//所有刻度线 线上的x坐标一样
         if (i % 10 == 0) {
             CGPathMoveToPoint(pathRef, NULL, x, DistanceTop);
