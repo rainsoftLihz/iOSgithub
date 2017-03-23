@@ -139,18 +139,13 @@
     }
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+- (void)scrollViewDidEndDecelerating:(JZTRulerScrollView *)scrollView{
     if (self.onlyStopMark) {
         [self animationBounce:scrollView];
     }
     
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (self.onlyStopMark) {
-        [self animationBounce:scrollView];
-    }
-}
 #pragma mark - privateMethods
 - (void)animationBounce:(JZTRulerScrollView*)scrollView{
     CGFloat offsetX = scrollView.contentOffset.x + self.frame.size.width/2 - DistanceLeftAndRight;
