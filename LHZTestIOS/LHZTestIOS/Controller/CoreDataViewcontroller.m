@@ -12,7 +12,7 @@
 
 #import "AuthInfo+CoreDataClass.h"
 
-@interface CoreDataViewcontroller ()<UITableViewDelegate,UITableViewDataSource>
+@interface CoreDataViewcontroller ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
 @property (nonatomic,strong)UITableView* tableView;
 
@@ -225,6 +225,9 @@
     textI.placeholder = @"输入手机号";
     [bottomView addSubview:textI];
     
+    textI.delegate = self;
+    textF.delegate = self;
+    
     [iconLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(textF.mas_right).offset(10.0);
         make.centerY.mas_equalTo(bottomView.mas_centerY);
@@ -252,6 +255,12 @@
     
     [addBtn addTarget:self action:@selector(addDataToSQL) forControlEvents:UIControlEventTouchUpInside];
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField endEditing:YES];
+    return YES;
 }
 
 -(void)deleteData
@@ -302,7 +311,7 @@
     
     cell.textLabel.font = [UIFont systemFontOfSize:14.0];
     
-    cell.detailTextLabel.text = [[self.modelDataArr[indexPath.row] authInfo] email];
+    cell.detailTextLabel.text = [self.modelDataArr[indexPath.row] phoneNo];//[[self.modelDataArr[indexPath.row] authInfo] email];
     
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
     

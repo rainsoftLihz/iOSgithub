@@ -14,7 +14,7 @@
 #define kRefreshViewHeight 120
 
 /* 触发的高度 */
-#define kRefreshTriggerHeight 50
+#define kRefreshTriggerHeight 120
 
 static char kRefreshView;
 

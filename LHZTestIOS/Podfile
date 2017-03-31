@@ -6,11 +6,12 @@ target 'LHZTestIOS' do
      #自动布局
     pod 'Masonry'
     #网络请求
-    pod 'AFNetworking','2.5.4'
+    pod 'AFNetworking','3.1.0'
     #图片下载
     pod 'SDWebImage','3.7.1'
     #YYKIT
     pod 'YYKit'
     #HUD
     pod 'SVProgressHUD'
+    pod 'IQKeyboardManager'
 end

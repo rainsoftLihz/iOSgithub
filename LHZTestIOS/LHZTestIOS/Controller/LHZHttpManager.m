@@ -8,6 +8,9 @@
 
 #import "LHZHttpManager.h"
 
+/* 任务组 */
+static NSMutableArray *tasks;
+
 @implementation LHZHttpManager
 
 +(LHZHttpManager*)shareManager
@@ -17,11 +20,19 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[LHZHttpManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://restapi.amap.com"]];
-//        manager = [LHZHttpManager manager];
-//        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     });
     
     return manager;
+}
+
+
++(NSMutableArray *)tasks{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //NSLog(@"创建数组");
+        tasks = [[NSMutableArray alloc] init];
+    });
+    return tasks;
 }
 
 -(instancetype)initWithBaseURL:(NSURL *)url
@@ -33,22 +44,28 @@
     return self;
 }
 
-- (NSURLSessionDataTask *) GET:(NSString *)URLString parameters:(id)parameters completion:(void(^)(NSURLSessionDataTask *task, id JSON, NSError* anError))completion{
+- (LHZURLSessionTask*) GET:(NSString *)URLString parameters:(id)parameters completion:(LHZHttpResponseBlock)completion{
     
-    NSURLSessionDataTask *task = [self GET:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    LHZURLSessionTask *sessionTask = [self GET:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         
         if (completion) {
-            completion(task,responseObject,nil);
+            completion(responseObject,nil);
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
         if (completion) {
-            completion(task,nil,error);
+            completion(nil,error);
         }
     }];
     
-    return task;
+    if (sessionTask) {
+        //[[self tasks] addObject:sessionTask];
+    }
     
+    return sessionTask;
 }
+
+
+
 
 @end
