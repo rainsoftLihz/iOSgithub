@@ -58,6 +58,13 @@
     [self.view addSubview:self.tableView];
     self.navigationItem.title = @"IOS";
   
+    [self fileTest];
+
+}
+
+#pragma mark --- 正则表达式
+-(void)regularTest
+{
     NSMutableString *url = [@"https://test-m.998pz.cn/view/index.html?ch=1&par=5&userId=10000000000@qq.com" mutableCopy];
     
     //NSLog(@"%@",[self lz_OriginUrl:url StringdeleteParameter:@"userId"]);
@@ -65,13 +72,13 @@
     NSError *error;
     // 创建NSRegularExpression对象并指定正则表达式
     NSRegularExpression *regex = [NSRegularExpression
-                        regularExpressionWithPattern:@"userId=[\\w@\\.]*&*"
+                                  regularExpressionWithPattern:@"userId=[\\w@\\.]*&*"
                                   options:0
                                   error:&error];
     if (!error) { // 如果没有错误
         // 获取特特定字符串的范围
         NSTextCheckingResult *match = [regex firstMatchInString:url
-                options:0 range:NSMakeRange(0, [url length])];
+                                                        options:0 range:NSMakeRange(0, [url length])];
         if (match) {
             // 截获特定的字符串
             NSString *result = [url substringWithRange:match.range];
@@ -82,12 +89,29 @@
         
         
     }
+}
 
+#pragma mark --- 文件名获取
+-(void)fileTest
+{
+    NSString *filePath = @"http://www.baidu.com/img/baidu_logo_fqj_10.gif";
+    
+    //从路径中获得完整的文件名（带后缀）
+    NSString* exestr = [filePath lastPathComponent];
+    NSLog(@"lastPathComponent:%@",exestr);
+    
+    //获得文件名（不带后缀）
+    exestr = [exestr stringByDeletingPathExtension];
+    NSLog(@"stringByDeletingPathExtension:%@",exestr);
+    
+    //获得文件的后缀名（不带'.'）
+    exestr = [filePath pathExtension];
+    NSLog(@"pathExtension:%@",exestr);
 }
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"递归算法",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
+    return @[@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
 }
 
 -(NSArray *)pushVcArr

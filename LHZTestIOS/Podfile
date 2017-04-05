@@ -3,8 +3,8 @@
 target 'LHZTestIOS' do
    platform:ios,'8.0'
 #   xcodeproj 'LHZTestIOS.xcodeproj'
-     #自动布局
-    pod 'Masonry'
+    #自动布局
+    pod 'Masonry','1.0.2'
     #网络请求
     pod 'AFNetworking','3.1.0'
     #图片下载

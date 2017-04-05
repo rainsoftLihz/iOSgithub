@@ -49,6 +49,7 @@
 		53DB29FE1E55459900C9BF7B /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DB29FD1E55459900C9BF7B /* UIView+Corner.m */; };
 		53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DB2A011E55465F00C9BF7B /* UITestViewController.m */; };
 		53DB2A041E55549800C9BF7B /* sy_jktt.png in Resources */ = {isa = PBXBuildFile; fileRef = 53DB2A031E55549800C9BF7B /* sy_jktt.png */; };
+		53E5083F1E8E25ED0064985D /* UIDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E5083E1E8E25ED0064985D /* UIDynamicViewController.m */; };
 		53E61C051E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C021E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m */; };
 		53E61C061E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C041E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.m */; };
 		53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E61C261E14E9F7007CFAE6 /* TableRefreshViewController.m */; };
@@ -65,6 +66,8 @@
 		53E9A3061E28C04600362CAE /* 1111.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53E9A3051E28C04600362CAE /* 1111.gif */; };
 		53F2982C1E46CCC8005DA8C4 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */; };
 		53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */; };
+		53F3D4E21E9489F3001DA83A /* LHZDownLoadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3D4E11E9489F3001DA83A /* LHZDownLoadStore.m */; };
+		53F3D4E61E948DC3001DA83A /* FileOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3D4E51E948DC3001DA83A /* FileOperationVC.m */; };
 		53F3EE8D1E7FA53100ABFBFD /* JZTRulerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE8A1E7FA53100ABFBFD /* JZTRulerScrollView.m */; };
 		53F3EE8E1E7FA53100ABFBFD /* JZTRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE8C1E7FA53100ABFBFD /* JZTRulerView.m */; };
 		53F3EE911E7FA59C00ABFBFD /* JZTRulerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE901E7FA59C00ABFBFD /* JZTRulerCell.m */; };
@@ -178,6 +181,8 @@
 		53DB2A001E55465F00C9BF7B /* UITestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITestViewController.h; sourceTree = "<group>"; };
 		53DB2A011E55465F00C9BF7B /* UITestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITestViewController.m; sourceTree = "<group>"; };
 		53DB2A031E55549800C9BF7B /* sy_jktt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sy_jktt.png; sourceTree = "<group>"; };
+		53E5083D1E8E25ED0064985D /* UIDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDynamicViewController.h; sourceTree = "<group>"; };
+		53E5083E1E8E25ED0064985D /* UIDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDynamicViewController.m; sourceTree = "<group>"; };
 		53E61C011E149ED9007CFAE6 /* AuthInfo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AuthInfo+CoreDataClass.h"; sourceTree = "<group>"; };
 		53E61C021E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AuthInfo+CoreDataClass.m"; sourceTree = "<group>"; };
 		53E61C031E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AuthInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -201,6 +206,10 @@
 		53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkViewController.m; sourceTree = "<group>"; };
 		53F2982D1E46D398005DA8C4 /* LHZHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZHttpManager.h; sourceTree = "<group>"; };
 		53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHZHttpManager.m; sourceTree = "<group>"; };
+		53F3D4E01E9489F3001DA83A /* LHZDownLoadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZDownLoadStore.h; sourceTree = "<group>"; };
+		53F3D4E11E9489F3001DA83A /* LHZDownLoadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHZDownLoadStore.m; sourceTree = "<group>"; };
+		53F3D4E41E948DC3001DA83A /* FileOperationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileOperationVC.h; sourceTree = "<group>"; };
+		53F3D4E51E948DC3001DA83A /* FileOperationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileOperationVC.m; sourceTree = "<group>"; };
 		53F3EE891E7FA53100ABFBFD /* JZTRulerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRulerScrollView.h; sourceTree = "<group>"; };
 		53F3EE8A1E7FA53100ABFBFD /* JZTRulerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRulerScrollView.m; sourceTree = "<group>"; };
 		53F3EE8B1E7FA53100ABFBFD /* JZTRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRulerView.h; sourceTree = "<group>"; };
@@ -463,6 +472,8 @@
 				53BFC9961E0B6765005217BB /* ViewController.m */,
 				53BFC9D31E0B7D48005217BB /* MyBaseViewController.h */,
 				53BFC9D41E0B7D48005217BB /* MyBaseViewController.m */,
+				53F3D4E31E948D7E001DA83A /* 文件读写操作 */,
+				53E508401E8E53280064985D /* 动力行为 */,
 				5382951C1E6560EE00BBCA3D /* 标尺 */,
 				534956AC1E5D79C40093A5AC /* TabBar */,
 				5342925A1E5C256D008AEE1D /* 蓝牙连接 */,
@@ -522,6 +533,15 @@
 			name = "UI扩展";
 			sourceTree = "<group>";
 		};
+		53E508401E8E53280064985D /* 动力行为 */ = {
+			isa = PBXGroup;
+			children = (
+				53E5083D1E8E25ED0064985D /* UIDynamicViewController.h */,
+				53E5083E1E8E25ED0064985D /* UIDynamicViewController.m */,
+			);
+			name = "动力行为";
+			sourceTree = "<group>";
+		};
 		53E61C111E14E5D9007CFAE6 /* 下拉刷新 */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,8 +563,19 @@
 				53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */,
 				53F2982D1E46D398005DA8C4 /* LHZHttpManager.h */,
 				53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */,
+				53F3D4E01E9489F3001DA83A /* LHZDownLoadStore.h */,
+				53F3D4E11E9489F3001DA83A /* LHZDownLoadStore.m */,
 			);
 			name = "网络请求";
+			sourceTree = "<group>";
+		};
+		53F3D4E31E948D7E001DA83A /* 文件读写操作 */ = {
+			isa = PBXGroup;
+			children = (
+				53F3D4E41E948DC3001DA83A /* FileOperationVC.h */,
+				53F3D4E51E948DC3001DA83A /* FileOperationVC.m */,
+			);
+			name = "文件读写操作";
 			sourceTree = "<group>";
 		};
 		53F3F00C1E5ABDF5009BC824 /* 键盘弹出视图动画 */ = {
@@ -798,6 +829,7 @@
 				53BFC9D91E0B7E2E005217BB /* WeakAndStrongViewController.m in Sources */,
 				53BFC9971E0B6765005217BB /* ViewController.m in Sources */,
 				534956C51E5D7A550093A5AC /* JZTAnchorVC.m in Sources */,
+				53F3D4E61E948DC3001DA83A /* FileOperationVC.m in Sources */,
 				5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */,
 				534956B61E5D79EE0093A5AC /* JZTTabBarVC.m in Sources */,
 				5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */,
@@ -810,10 +842,12 @@
 				53BFC9941E0B6765005217BB /* AppDelegate.m in Sources */,
 				53F3EE8E1E7FA53100ABFBFD /* JZTRulerView.m in Sources */,
 				53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */,
+				53F3D4E21E9489F3001DA83A /* LHZDownLoadStore.m in Sources */,
 				53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */,
 				536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */,
 				53F3F0121E5ABE9F009BC824 /* WirteView.m in Sources */,
 				534956B91E5D7A1F0093A5AC /* UIColor+Common.m in Sources */,
+				53E5083F1E8E25ED0064985D /* UIDynamicViewController.m in Sources */,
 				53D7D03A1E2337A000A97664 /* CoreAnimationVC.m in Sources */,
 				53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */,
 				53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */,

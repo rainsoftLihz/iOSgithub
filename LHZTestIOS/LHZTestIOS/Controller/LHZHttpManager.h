@@ -34,4 +34,9 @@ typedef NSURLSessionTask LHZURLSessionTask;
 /* GET */
 - (LHZURLSessionTask *) GET:(NSString *)URLString parameters:(id)parameters completion:(LHZHttpResponseBlock)completion;
 
+/* downLoad */
+- (LHZURLSessionTask*) downLoadWithUrl:(NSString *)URLString parameters:(id)parameters saveToPath:(NSString *)saveToPath progress:(LHZDownloadProgress)progressBlock completion:(LHZHttpResponseBlock)completion;
+
+- (LHZURLSessionTask*)breakpointResume:(BOOL)breakPoint downLoadWithUrl:(NSString *)URLString parameters:(id)parameters saveToPath:(NSString *)saveToPath progress:(LHZDownloadProgress)progressBlock completion:(LHZHttpResponseBlock)completion;
+
 @end
