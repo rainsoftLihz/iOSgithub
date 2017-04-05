@@ -11,6 +11,9 @@ target 'LHZTestIOS' do
     pod 'SDWebImage','3.7.1'
     #YYKIT
     pod 'YYKit'
+    pod 'YYModel'
+    pod 'YYCategories'
+    pod 'YYCache'
     #HUD
     pod 'SVProgressHUD'
     pod 'IQKeyboardManager'

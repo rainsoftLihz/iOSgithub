@@ -30,4 +30,10 @@
 
 #import <YYKit/YYKit.h>
 
+#import <YYCategories/YYCategories.h>
+
+#import <YYCache/YYCache.h>
+
+#import <YYModel/YYModel.h>
+
 #endif /* MyPrefixHeader_pch */

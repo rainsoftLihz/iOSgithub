@@ -12,8 +12,11 @@
 typedef void (^ LHZHttpResponseBlock)(id response, NSError* anError);
 
 /* 下载进度block */
-typedef void( ^ LHZDownloadProgress)(int64_t bytesProgress,
-int64_t totalBytesProgress);
+typedef void( ^ LHZDownloadProgress)(NSProgress *progress);
+//(int64_t bytesProgress,int64_t totalBytesProgress);
+
+/* 下载完成block */
+typedef void (^ LHZDownLoadCompletion)(NSURLResponse *response, NSURL * filePath, NSError *error);
 
 /* 上传进度block */
 typedef void (^ LHZUpLoadProgress)(int64_t byteProgress,int64_t totlytesProgress);
@@ -35,8 +38,6 @@ typedef NSURLSessionTask LHZURLSessionTask;
 - (LHZURLSessionTask *) GET:(NSString *)URLString parameters:(id)parameters completion:(LHZHttpResponseBlock)completion;
 
 /* downLoad */
-- (LHZURLSessionTask*) downLoadWithUrl:(NSString *)URLString parameters:(id)parameters saveToPath:(NSString *)saveToPath progress:(LHZDownloadProgress)progressBlock completion:(LHZHttpResponseBlock)completion;
-
-- (LHZURLSessionTask*)breakpointResume:(BOOL)breakPoint downLoadWithUrl:(NSString *)URLString parameters:(id)parameters saveToPath:(NSString *)saveToPath progress:(LHZDownloadProgress)progressBlock completion:(LHZHttpResponseBlock)completion;
+//- (LHZURLSessionTask*) downLoadWithUrl:(NSString *)URLString parameters:(id)parameters saveToPath:(NSString *)saveToPath progress:(LHZDownloadProgress)progressBlock completion:(LHZDownLoadCompletion)completion;
 
 @end

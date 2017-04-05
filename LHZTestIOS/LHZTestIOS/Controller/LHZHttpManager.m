@@ -8,6 +8,8 @@
 
 #import "LHZHttpManager.h"
 
+#import "LHZDownLoadStore.h"
+
 /* 任务组 */
 static NSMutableArray *tasks;
 
@@ -69,128 +71,121 @@ static NSMutableArray *tasks;
 }
 
 #pragma mark ---- downLoad
-- (LHZURLSessionTask*) downLoadWithUrl:(NSString *)URLString parameters:(id)parameters saveToPath:(NSString *)saveToPath progress:(LHZDownloadProgress)progressBlock completion:(LHZHttpResponseBlock)completion{
+- (LHZURLSessionTask*) downLoadWithUrl:(NSString *)URLString parameters:(id)parameters progress:(LHZDownloadProgress)progressBlock completion:(LHZDownLoadCompletion)completion{
+    
+    /* 如果文件存在 表示已经是下载过的 无需创建task */
+    if ([LHZDownLoadStore fileExistWithURL:URLString]) {
+        if (progressBlock) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSProgress *progress = [[NSProgress alloc]init];
+                unsigned long long size = [LHZDownLoadStore fileSizeWithURL:URLString]*(1024.*1024.);
+                progress.totalUnitCount = size;
+                progress.completedUnitCount = size;
+                progressBlock(progress);
+            });
+        }
+        if (completion) {
+            completion(nil,[LHZDownLoadStore downLoadPathWithURL:URLString],nil);
+        }
+        return nil;
+    }
     
     NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
+    NSData *resumeData = [LHZDownLoadStore resumeDataWithKey:URLString];
+    
+    if (resumeData) {
+        return [self downLoadWithResumedata:resumeData withUrl:URLString progress:progressBlock completion:completion];
+    }
     
     LHZURLSessionTask *sessionTask = [self downloadTaskWithRequest:downloadRequest progress:^(NSProgress * _Nonnull downloadProgress) {
         
         if (progressBlock) {
-            progressBlock(downloadProgress.completedUnitCount,downloadProgress.totalUnitCount);
+            progressBlock(downloadProgress);
         }
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         
-        if (!saveToPath) {
-            
-            NSURL *downloadURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-            NSLog(@"默认路径--%@",downloadURL);
-            return [downloadURL URLByAppendingPathComponent:[response suggestedFilename]];
-            
-        }else{
-            return [NSURL fileURLWithPath:saveToPath];
-            
-        }
+        NSURL *localUrl = [LHZDownLoadStore downLoadPathWithURL:URLString];
+        return localUrl;
 
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         
-        if (!error) {
-            if (completion) {
-                /* 返回文件保存的地址 */
-                completion(filePath,nil);
-            }
+        NSURL *localUrl = [LHZDownLoadStore downLoadPathWithURL:URLString];
+        BOOL result = NO;
+        if ([localUrl isEqual:filePath]) {
+            result = YES;
+            [LHZDownLoadStore removeResumeDataWithKey:URLString];
+        }
+        if (result && completion) {
+            completion(response,filePath,error);
         }
         else {
             if (completion) {
-                completion(nil,error);
+                completion(nil,nil,error);
             }
         }
         
     }];
     
+    [sessionTask resume];
+    
     return sessionTask;
 }
 
 
-- (LHZURLSessionTask*)breakPointResumeDownLoadWithUrl:(NSString *)URLString parameters:(id)parameters saveToPath:(NSString *)saveToPath progress:(LHZDownloadProgress)progressBlock completion:(LHZHttpResponseBlock)completion{
+- (LHZURLSessionTask*)downLoadWithResumedata:(NSData *)resumeData withUrl:(NSString *)URLString progress:(LHZDownloadProgress)progressBlock completion:(LHZDownLoadCompletion)completion{
     
-    NSURLRequest *downloadRequest = [self downLoatdUrl:URLString anddownPath:saveToPath];
-    unsigned long long downLoadSize = [self fileSizeForPath:saveToPath];
-    
-    LHZURLSessionTask *sessionTask = [self downloadTaskWithResumeData:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    LHZURLSessionTask *sessionTask = [self downloadTaskWithResumeData:resumeData progress:^(NSProgress * _Nonnull downloadProgress) {
         
         if (progressBlock) {
-            progressBlock(downloadProgress.completedUnitCount+downLoadSize,downloadProgress.totalUnitCount);
+            progressBlock(downloadProgress);
         }
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         
-        if (!saveToPath) {
-            
-            NSURL *downloadURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-            NSLog(@"默认路径--%@",downloadURL);
-            return [downloadURL URLByAppendingPathComponent:[response suggestedFilename]];
-            
-        }else{
-            return [NSURL fileURLWithPath:saveToPath];
-            
-        }
+        NSURL *localUrl = [LHZDownLoadStore downLoadPathWithURL:URLString];
+        return localUrl;
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         
-        if (!error) {
-            if (completion) {
-                /* 返回文件保存的地址 */
-                completion(filePath,nil);
-            }
+        NSURL *localUrl = [LHZDownLoadStore downLoadPathWithURL:URLString];
+        BOOL result = NO;
+        if ([localUrl isEqual:filePath]) {
+            result = YES;
+            [LHZDownLoadStore removeResumeDataWithKey:URLString];
+        }
+        if (result && completion) {
+            completion(response,filePath,error);
         }
         else {
             if (completion) {
-                completion(nil,error);
+                completion(nil,nil,error);
             }
         }
         
     }];
     
+    [sessionTask resume];
+    
     return sessionTask;
 }
 
-#pragma mark --- 断点续传
-//获取已下载的文件大小
-- (unsigned long long)fileSizeForPath:(NSString *)path {
-    signed long long fileSize = 0;
-    NSFileManager *fileManager = [NSFileManager new];
-    // default is not thread safe
-    if ([fileManager fileExistsAtPath:path]) {
-        NSError *error = nil;
-        NSDictionary *fileDict = [fileManager attributesOfItemAtPath:path error:&error];
-        if (!error && fileDict) {
-            fileSize = [fileDict fileSize];
-        }
+
+- (LHZURLSessionTask *)downloadTaskWithRequest:(NSURLRequest *)request resumeData:(NSData *)resumeData  progress:(LHZDownloadProgress)downloadProgressBlock destination:(NSURL * (^)(NSURL * targetPath, NSURLResponse * response))destination completionHandler:(LHZDownLoadCompletion) completionHandler{
+    if (![[AFNetworkReachabilityManager sharedManager] isReachable]) {
+        NSError *error = [NSError errorWithDomain:@"com.jzt.error" code:1001 userInfo:@{@"error":@"用户网络不存在"}];
+        completionHandler(nil,nil,error);
+        return nil;
     }
-    return fileSize;
-}
-
-
--(NSURLRequest *)downLoatdUrl:(NSString*)downloadUrl anddownPath:(NSString*)downloadPath
-{
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:downloadUrl]];
-    //检查文件是否已经下载了一部分
-    unsigned long long downloadedBytes = 0;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:downloadPath]) {
-        //获取已下载的文件长度
-        downloadedBytes = [self fileSizeForPath:downloadPath];
-        if (downloadedBytes > 0) {
-            NSMutableURLRequest *mutableURLRequest = [request mutableCopy];
-            NSString *requestRange = [NSString stringWithFormat:@"bytes=%llu-", downloadedBytes];
-            [mutableURLRequest setValue:requestRange forHTTPHeaderField:@"Range"];
-            request = mutableURLRequest;
-        }
+    
+    LHZURLSessionTask *downloadTask = nil;
+    if (resumeData) {
+        downloadTask = [super downloadTaskWithResumeData:resumeData progress:downloadProgressBlock destination:destination completionHandler:completionHandler];
+    }else{
+        downloadTask = [super downloadTaskWithRequest:request progress:downloadProgressBlock destination:destination completionHandler:completionHandler];
     }
-    //不使用缓存，避免断点续传出现问题
-    [[NSURLCache sharedURLCache] removeCachedResponseForRequest:request];
-    return request;
+    [downloadTask resume];
+    return downloadTask;
 }
-
 
 @end
