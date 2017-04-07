@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ttt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>53465D2B1E977AD100BFC2FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>53BFC98B1E0B6765005217BB</key>
 		<dict>
 			<key>primary</key>

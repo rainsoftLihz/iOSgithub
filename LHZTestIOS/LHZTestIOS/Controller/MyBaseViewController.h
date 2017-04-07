@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UIViewController+Tracker.h"
+
+#import "JZTTrackModel.h"
+
 @interface MyBaseViewController : UIViewController
 
 @property (nonatomic,strong)NSString* titleStr;
+
+@property (nonatomic,strong)JZTTrackModel* trackModel;
+
+-(void)configParams:(id)params;
 
 @end

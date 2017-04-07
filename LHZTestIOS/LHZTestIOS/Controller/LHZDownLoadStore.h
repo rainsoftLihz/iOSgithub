@@ -27,8 +27,11 @@
 
 + (BOOL)removeAllStoreFiles;
 
-+ (double)fileSizeWithURL:(id)URL;
++ (double)fileSizeWithURL:(id)URL;/* M单位 */
 
++ (NSString *)fileStrSizeWithURL:(id)URL;/* 动态单位 kb M*/
+
++ (NSString *)CountBytesBy:(unsigned long long)bytes;
 @end
 
 

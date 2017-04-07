@@ -8,6 +8,9 @@
 
 #import "NetWorkViewController.h"
 #import "LHZHttpManager.h"
+#import "LHZDownLoadStore.h"
+#import "LHZDownLoadModel.h"
+#import "LHZDownLoadOperationManager.h"
 @interface NetWorkViewController ()
 
 @property (nonatomic,assign)BOOL sucess;
@@ -16,9 +19,11 @@
 
 @property (nonatomic,strong)UILabel* processLab;
 
-@property (nonatomic,strong) LHZURLSessionTask *sessionTask;
+@property (nonatomic,strong) LHZURLDownloadSessionTask *sessionTask;
 
 @property (nonatomic,strong) NSURLSessionDownloadTask *task;
+
+@property (nonatomic,strong) NSMutableArray* downLoadModelsArr;
 
 @end
 
@@ -53,7 +58,29 @@
     
     [self configUI];
     
+    [self requestDataForWeb];
+    
     [self downLoadData];
+}
+
+#pragma mark --- 参数
+-(void)configParams:(id)params
+{
+    
+}
+
+#pragma mark - 网络请求
+- (void)requestDataForWeb{
+    
+    _downLoadModelsArr = [LHZDownLoadOperationManager manager].downLoadModels;
+    
+ /*
+    LHZDownLoadModel* model = [self.downLoadModelsArr firstObject];
+    model.progressHandle = ^(NSProgress* progress){
+        //NSLog(@"%@",[NSString stringWithFormat:@"文件大小:%@ 已下载:%@ %.2f%@",[LHZDownLoadStore CountBytesBy:progress.totalUnitCount],[LHZDownLoadStore CountBytesBy:progress.completedUnitCount],100.0 * progress.completedUnitCount/progress.totalUnitCount,@"%"]);
+    self.processLab.text = [NSString stringWithFormat:@"文件大小:%@ 已下载:%@ %.2f%@",[LHZDownLoadStore CountBytesBy:progress.totalUnitCount],[LHZDownLoadStore CountBytesBy:progress.completedUnitCount],100.0 * progress.completedUnitCount/progress.totalUnitCount,@"%"];
+    };
+  */
 }
 
 -(void)configUI
@@ -85,11 +112,20 @@
 -(void)btnClick:(UIButton*)sender
 {
     if ([sender.currentTitle isEqualToString:@"暂停"]) {
-        [self.sessionTask suspend];
+        [[LHZDownLoadOperationManager manager]stopWiethModel:[self.downLoadModelsArr firstObject]];
     }
     else {
-        [self.sessionTask resume];
+        [[LHZDownLoadOperationManager manager]startWithModel:[self.downLoadModelsArr firstObject]];
     }
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+//    [self.sessionTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+//        [LHZDownLoadStore saveResumeData:resumeData WithKey:@"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E5%A4%A7%E4%B8%93%E5%AE%B6.COM%E4%BB%8B%E7%BB%8D%E7%89%87118.mp4"];
+//    }];
 }
 
 #pragma mark --- GET方法
@@ -115,29 +151,28 @@
 #pragma mark --- 下载方法
 -(void)downLoadData
 {
-    NSString* urlStr = @"http://desk.fd.zol-img.com.cn/t_s960x600c5/g4/M01/0D/04/Cg-4WVP_npmIY6GRAKcKYPPMR3wAAQ8LgNIuTMApwp4015.jpg";
-    NSString* pathName = [[urlStr componentsSeparatedByString:@"/"] lastObject];
-    NSString *path=[NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/Documents/%@",pathName]];
-
-    __weak typeof(self)wkSelf = self;
-    self.sessionTask = [[LHZHttpManager manager]breakpointResume:YES downLoadWithUrl:urlStr parameters:nil saveToPath:path progress:^(int64_t bytesProgress, int64_t totalBytesProgress) {
-        
-        NSLog(@"%@",[NSString stringWithFormat:@"进度==%.2f",1.0 * bytesProgress/totalBytesProgress]);
-        
-        NSLog(@"totalBytesProgress:%lld",totalBytesProgress);
-        
-        /* 必须:主线程更新UI */
-        dispatch_async(dispatch_get_main_queue(), ^{
-            wkSelf.processLab.text = [NSString stringWithFormat:@"%.2f",1.0 *bytesProgress/totalBytesProgress];
-        });
-        
-    } completion:^(id response, NSError *anError) {
-        NSString *imgFilePath = [response path];// 将NSURL转成NSString
-        UIImage *img = [UIImage imageWithContentsOfFile:imgFilePath];
-        wkSelf.imgV.image = img;
-    }];
+    //NSString* urlStr = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E5%A4%A7%E4%B8%93%E5%AE%B6.COM%E4%BB%8B%E7%BB%8D%E7%89%87118.mp4";
     
-    [self.sessionTask resume];
+    //@"http://desk.fd.zol-img.com.cn/t_s960x600c5/g4/M01/0D/04/Cg-4WVP_npmIY6GRAKcKYPPMR3wAAQ8LgNIuTMApwp4015.jpg";
+    
+    //https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E6%88%91%E6%98%AF%E5%8C%BB%E7%94%9F%E2%80%94%E2%80%94%E9%92%9F%E5%8D%97%E5%B1%B1%C2%B7%E5%8C%BB%E8%80%85%E4%BB%81%E5%BF%83.mp4
+    
+    [[LHZDownLoadOperationManager manager]startWithModel:[self.downLoadModelsArr firstObject]];
+    
+    
+//    self.sessionTask = [[LHZHttpManager shareManager] downLoadWithUrl:urlStr parameters:nil progress:^(NSProgress *progress) {
+//        
+//        NSLog(@"%@",[NSString stringWithFormat:@"进度==%.2f",1.0 * progress.completedUnitCount/progress.totalUnitCount]);
+//        
+//        wkSelf.processLab.text = [NSString stringWithFormat:@"文件大小:%@ 已下载:%@ %.2f%@",[LHZDownLoadStore CountBytesBy:progress.totalUnitCount],[LHZDownLoadStore CountBytesBy:progress.completedUnitCount],100.0 * progress.completedUnitCount/progress.totalUnitCount,@"%"];
+//        
+//    } completion:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+//        
+////        NSString *imgFilePath = [filePath path];// 将NSURL转成NSString
+////        UIImage *img = [UIImage imageWithContentsOfFile:imgFilePath];
+////        wkSelf.imgV.image = img;
+//
+//    }];
 }
 
 
@@ -163,7 +198,7 @@ int calut(int x){
 
 -(void)dealloc
 {
-    
+    NSLog(@"dealloc");
 }
 
 - (void)didReceiveMemoryWarning {

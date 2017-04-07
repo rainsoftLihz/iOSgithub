@@ -9,9 +9,15 @@
 /* Begin PBXBuildFile section */
 		5304381D1E71235E00C849A3 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304381C1E71235E00C849A3 /* libicucore.tbd */; };
 		5304381F1E71236F00C849A3 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304381E1E71236F00C849A3 /* libicucore.A.tbd */; };
+		530857051E973CDC0050D408 /* LHZDownExampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 530857041E973CDC0050D408 /* LHZDownExampleModel.m */; };
 		530F5DC41E1B335200AED3F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530F5DC31E1B335200AED3F6 /* Main.storyboard */; };
 		530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */; };
 		5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5342925C1E5C25C7008AEE1D /* BlueViewController.m */; };
+		53465D241E97700D00BFC2FA /* UIViewController+Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D231E97700D00BFC2FA /* UIViewController+Tracker.m */; };
+		53465D271E97751100BFC2FA /* JZTTrackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D261E97751100BFC2FA /* JZTTrackModel.m */; };
+		53465D2E1E977AD100BFC2FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53465D2D1E977AD100BFC2FA /* Cocoa.framework */; };
+		53465D341E977AD100BFC2FA /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D331E977AD100BFC2FA /* SourceEditorExtension.m */; };
+		53465D371E977AD100BFC2FA /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D361E977AD100BFC2FA /* SourceEditorCommand.m */; };
 		534956AB1E5D2A410093A5AC /* PanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956AA1E5D2A410093A5AC /* PanView.m */; };
 		534956B41E5D79EE0093A5AC /* JZTNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956AF1E5D79EE0093A5AC /* JZTNavigationVC.m */; };
 		534956B51E5D79EE0093A5AC /* JZTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956B11E5D79EE0093A5AC /* JZTTabBar.m */; };
@@ -68,6 +74,9 @@
 		53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */; };
 		53F3D4E21E9489F3001DA83A /* LHZDownLoadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3D4E11E9489F3001DA83A /* LHZDownLoadStore.m */; };
 		53F3D4E61E948DC3001DA83A /* FileOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3D4E51E948DC3001DA83A /* FileOperationVC.m */; };
+		53F3D4EC1E94D740001DA83A /* LHZDownLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3D4EB1E94D740001DA83A /* LHZDownLoadOperation.m */; };
+		53F3D4EF1E94E03F001DA83A /* LHZDownLoadOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3D4EE1E94E03F001DA83A /* LHZDownLoadOperationManager.m */; };
+		53F3D4F21E94E37D001DA83A /* DownloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3D4F11E94E37D001DA83A /* DownloadCell.m */; };
 		53F3EE8D1E7FA53100ABFBFD /* JZTRulerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE8A1E7FA53100ABFBFD /* JZTRulerScrollView.m */; };
 		53F3EE8E1E7FA53100ABFBFD /* JZTRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE8C1E7FA53100ABFBFD /* JZTRulerView.m */; };
 		53F3EE911E7FA59C00ABFBFD /* JZTRulerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3EE901E7FA59C00ABFBFD /* JZTRulerCell.m */; };
@@ -100,11 +109,25 @@
 		4DB43408CA40C88AB631FA93 /* libPods-LHZTestIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHZTestIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5304381C1E71235E00C849A3 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		5304381E1E71236F00C849A3 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		530857031E973CDC0050D408 /* LHZDownExampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZDownExampleModel.h; sourceTree = "<group>"; };
+		530857041E973CDC0050D408 /* LHZDownExampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHZDownExampleModel.m; sourceTree = "<group>"; };
 		530F5DC31E1B335200AED3F6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		530F5DC81E1B77B700AED3F6 /* MutilThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutilThreadVC.h; sourceTree = "<group>"; };
 		530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutilThreadVC.m; sourceTree = "<group>"; };
 		5342925B1E5C25C7008AEE1D /* BlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueViewController.h; sourceTree = "<group>"; };
 		5342925C1E5C25C7008AEE1D /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
+		53465D221E97700D00BFC2FA /* UIViewController+Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracker.h"; sourceTree = "<group>"; };
+		53465D231E97700D00BFC2FA /* UIViewController+Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tracker.m"; sourceTree = "<group>"; };
+		53465D251E97751100BFC2FA /* JZTTrackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZTTrackModel.h; path = ../MyCategroy/JZTTrackModel.h; sourceTree = "<group>"; };
+		53465D261E97751100BFC2FA /* JZTTrackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZTTrackModel.m; path = ../MyCategroy/JZTTrackModel.m; sourceTree = "<group>"; };
+		53465D2C1E977AD100BFC2FA /* ttt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ttt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		53465D2D1E977AD100BFC2FA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		53465D311E977AD100BFC2FA /* ttt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ttt.entitlements; sourceTree = "<group>"; };
+		53465D321E977AD100BFC2FA /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		53465D331E977AD100BFC2FA /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		53465D351E977AD100BFC2FA /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
+		53465D361E977AD100BFC2FA /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
+		53465D381E977AD100BFC2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534956A91E5D2A410093A5AC /* PanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanView.h; sourceTree = "<group>"; };
 		534956AA1E5D2A410093A5AC /* PanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanView.m; sourceTree = "<group>"; };
 		534956AE1E5D79EE0093A5AC /* JZTNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTNavigationVC.h; sourceTree = "<group>"; };
@@ -210,6 +233,13 @@
 		53F3D4E11E9489F3001DA83A /* LHZDownLoadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHZDownLoadStore.m; sourceTree = "<group>"; };
 		53F3D4E41E948DC3001DA83A /* FileOperationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileOperationVC.h; sourceTree = "<group>"; };
 		53F3D4E51E948DC3001DA83A /* FileOperationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileOperationVC.m; sourceTree = "<group>"; };
+		53F3D4E71E94D591001DA83A /* LHZDownLoadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZDownLoadModel.h; sourceTree = "<group>"; };
+		53F3D4EA1E94D740001DA83A /* LHZDownLoadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZDownLoadOperation.h; sourceTree = "<group>"; };
+		53F3D4EB1E94D740001DA83A /* LHZDownLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHZDownLoadOperation.m; sourceTree = "<group>"; };
+		53F3D4ED1E94E03F001DA83A /* LHZDownLoadOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZDownLoadOperationManager.h; sourceTree = "<group>"; };
+		53F3D4EE1E94E03F001DA83A /* LHZDownLoadOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHZDownLoadOperationManager.m; sourceTree = "<group>"; };
+		53F3D4F01E94E37D001DA83A /* DownloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadCell.h; sourceTree = "<group>"; };
+		53F3D4F11E94E37D001DA83A /* DownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
 		53F3EE891E7FA53100ABFBFD /* JZTRulerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRulerScrollView.h; sourceTree = "<group>"; };
 		53F3EE8A1E7FA53100ABFBFD /* JZTRulerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRulerScrollView.m; sourceTree = "<group>"; };
 		53F3EE8B1E7FA53100ABFBFD /* JZTRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRulerView.h; sourceTree = "<group>"; };
@@ -227,6 +257,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		53465D291E977AD100BFC2FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53465D2E1E977AD100BFC2FA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53BFC9891E0B6765005217BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +316,27 @@
 				5342925C1E5C25C7008AEE1D /* BlueViewController.m */,
 			);
 			name = "蓝牙连接";
+			sourceTree = "<group>";
+		};
+		53465D2F1E977AD100BFC2FA /* ttt */ = {
+			isa = PBXGroup;
+			children = (
+				53465D321E977AD100BFC2FA /* SourceEditorExtension.h */,
+				53465D331E977AD100BFC2FA /* SourceEditorExtension.m */,
+				53465D351E977AD100BFC2FA /* SourceEditorCommand.h */,
+				53465D361E977AD100BFC2FA /* SourceEditorCommand.m */,
+				53465D381E977AD100BFC2FA /* Info.plist */,
+				53465D301E977AD100BFC2FA /* Supporting Files */,
+			);
+			path = ttt;
+			sourceTree = "<group>";
+		};
+		53465D301E977AD100BFC2FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53465D311E977AD100BFC2FA /* ttt.entitlements */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		534956AC1E5D79C40093A5AC /* TabBar */ = {
@@ -375,6 +434,7 @@
 				53BFC98E1E0B6765005217BB /* LHZTestIOS */,
 				53BFC9A81E0B6765005217BB /* LHZTestIOSTests */,
 				53BFC9B31E0B6765005217BB /* LHZTestIOSUITests */,
+				53465D2F1E977AD100BFC2FA /* ttt */,
 				53BFC98D1E0B6765005217BB /* Products */,
 				DBB7246E6BCF8BDA48B37106 /* Pods */,
 				648CF866C7A340E23573FCBF /* Frameworks */,
@@ -387,6 +447,7 @@
 				53BFC98C1E0B6765005217BB /* LHZTestIOS.app */,
 				53BFC9A51E0B6765005217BB /* LHZTestIOSTests.xctest */,
 				53BFC9B01E0B6765005217BB /* LHZTestIOSUITests.xctest */,
+				53465D2C1E977AD100BFC2FA /* ttt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -457,6 +518,8 @@
 		53BFC9C71E0B70F3005217BB /* MyCategroy */ = {
 			isa = PBXGroup;
 			children = (
+				53465D221E97700D00BFC2FA /* UIViewController+Tracker.h */,
+				53465D231E97700D00BFC2FA /* UIViewController+Tracker.m */,
 				534956B71E5D7A1F0093A5AC /* UIColor+Common.h */,
 				534956B81E5D7A1F0093A5AC /* UIColor+Common.m */,
 				53BFC9C81E0B7117005217BB /* UIView+Extension.h */,
@@ -472,6 +535,8 @@
 				53BFC9961E0B6765005217BB /* ViewController.m */,
 				53BFC9D31E0B7D48005217BB /* MyBaseViewController.h */,
 				53BFC9D41E0B7D48005217BB /* MyBaseViewController.m */,
+				53465D251E97751100BFC2FA /* JZTTrackModel.h */,
+				53465D261E97751100BFC2FA /* JZTTrackModel.m */,
 				53F3D4E31E948D7E001DA83A /* 文件读写操作 */,
 				53E508401E8E53280064985D /* 动力行为 */,
 				5382951C1E6560EE00BBCA3D /* 标尺 */,
@@ -561,10 +626,19 @@
 			children = (
 				53F2982A1E46CCC8005DA8C4 /* NetWorkViewController.h */,
 				53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */,
+				530857031E973CDC0050D408 /* LHZDownExampleModel.h */,
+				530857041E973CDC0050D408 /* LHZDownExampleModel.m */,
+				53F3D4F01E94E37D001DA83A /* DownloadCell.h */,
+				53F3D4F11E94E37D001DA83A /* DownloadCell.m */,
 				53F2982D1E46D398005DA8C4 /* LHZHttpManager.h */,
 				53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */,
 				53F3D4E01E9489F3001DA83A /* LHZDownLoadStore.h */,
 				53F3D4E11E9489F3001DA83A /* LHZDownLoadStore.m */,
+				53F3D4E71E94D591001DA83A /* LHZDownLoadModel.h */,
+				53F3D4EA1E94D740001DA83A /* LHZDownLoadOperation.h */,
+				53F3D4EB1E94D740001DA83A /* LHZDownLoadOperation.m */,
+				53F3D4ED1E94E03F001DA83A /* LHZDownLoadOperationManager.h */,
+				53F3D4EE1E94E03F001DA83A /* LHZDownLoadOperationManager.m */,
 			);
 			name = "网络请求";
 			sourceTree = "<group>";
@@ -615,6 +689,7 @@
 				5304381E1E71236F00C849A3 /* libicucore.A.tbd */,
 				5304381C1E71235E00C849A3 /* libicucore.tbd */,
 				4DB43408CA40C88AB631FA93 /* libPods-LHZTestIOS.a */,
+				53465D2D1E977AD100BFC2FA /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -631,6 +706,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		53465D2B1E977AD100BFC2FA /* ttt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53465D391E977AD100BFC2FA /* Build configuration list for PBXNativeTarget "ttt" */;
+			buildPhases = (
+				53465D281E977AD100BFC2FA /* Sources */,
+				53465D291E977AD100BFC2FA /* Frameworks */,
+				53465D2A1E977AD100BFC2FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ttt;
+			productName = ttt;
+			productReference = 53465D2C1E977AD100BFC2FA /* ttt.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 		53BFC98B1E0B6765005217BB /* LHZTestIOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53BFC9B91E0B6765005217BB /* Build configuration list for PBXNativeTarget "LHZTestIOS" */;
@@ -696,6 +788,10 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = dazhuanjia;
 				TargetAttributes = {
+					53465D2B1E977AD100BFC2FA = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
 					53BFC98B1E0B6765005217BB = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = FF6GZS7777;
@@ -729,11 +825,19 @@
 				53BFC98B1E0B6765005217BB /* LHZTestIOS */,
 				53BFC9A41E0B6765005217BB /* LHZTestIOSTests */,
 				53BFC9AF1E0B6765005217BB /* LHZTestIOSUITests */,
+				53465D2B1E977AD100BFC2FA /* ttt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		53465D2A1E977AD100BFC2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53BFC98A1E0B6765005217BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,6 +923,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		53465D281E977AD100BFC2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53465D341E977AD100BFC2FA /* SourceEditorExtension.m in Sources */,
+				53465D371E977AD100BFC2FA /* SourceEditorCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53BFC9881E0B6765005217BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -827,11 +940,13 @@
 				53F3EE8D1E7FA53100ABFBFD /* JZTRulerScrollView.m in Sources */,
 				53E61C061E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.m in Sources */,
 				53BFC9D91E0B7E2E005217BB /* WeakAndStrongViewController.m in Sources */,
+				53F3D4EF1E94E03F001DA83A /* LHZDownLoadOperationManager.m in Sources */,
 				53BFC9971E0B6765005217BB /* ViewController.m in Sources */,
 				534956C51E5D7A550093A5AC /* JZTAnchorVC.m in Sources */,
 				53F3D4E61E948DC3001DA83A /* FileOperationVC.m in Sources */,
 				5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */,
 				534956B61E5D79EE0093A5AC /* JZTTabBarVC.m in Sources */,
+				530857051E973CDC0050D408 /* LHZDownExampleModel.m in Sources */,
 				5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */,
 				534956C71E5D7A550093A5AC /* JZTCategoryVC.m in Sources */,
 				53BFC9D51E0B7D48005217BB /* MyBaseViewController.m in Sources */,
@@ -841,6 +956,7 @@
 				534956B41E5D79EE0093A5AC /* JZTNavigationVC.m in Sources */,
 				53BFC9941E0B6765005217BB /* AppDelegate.m in Sources */,
 				53F3EE8E1E7FA53100ABFBFD /* JZTRulerView.m in Sources */,
+				53465D271E97751100BFC2FA /* JZTTrackModel.m in Sources */,
 				53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */,
 				53F3D4E21E9489F3001DA83A /* LHZDownLoadStore.m in Sources */,
 				53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */,
@@ -851,6 +967,7 @@
 				53D7D03A1E2337A000A97664 /* CoreAnimationVC.m in Sources */,
 				53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */,
 				53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */,
+				53465D241E97700D00BFC2FA /* UIViewController+Tracker.m in Sources */,
 				53F3EE941E7FA5C200ABFBFD /* JZTRulerCellModel.m in Sources */,
 				534956B51E5D79EE0093A5AC /* JZTTabBar.m in Sources */,
 				53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */,
@@ -871,9 +988,11 @@
 				53A761321E13B581005DB357 /* UserInfo+CoreDataClass.m in Sources */,
 				53F3EE911E7FA59C00ABFBFD /* JZTRulerCell.m in Sources */,
 				53E61C2A1E14EAFE007CFAE6 /* UIScrollView+RefreshView.m in Sources */,
+				53F3D4EC1E94D740001DA83A /* LHZDownLoadOperation.m in Sources */,
 				534956C61E5D7A550093A5AC /* JZTBangDanVC.m in Sources */,
 				53F2982C1E46CCC8005DA8C4 /* NetWorkViewController.m in Sources */,
 				53A7610C1E1350CB005DB357 /* LZTCoreDataManager.m in Sources */,
+				53F3D4F21E94E37D001DA83A /* DownloadCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,6 +1039,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		53465D3A1E977AD100BFC2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_ENTITLEMENTS = ttt/ttt.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ttt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = rainsoft.com.ttt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		53465D3B1E977AD100BFC2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_ENTITLEMENTS = ttt/ttt.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ttt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = rainsoft.com.ttt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		53BFC9B71E0B6765005217BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1093,6 +1248,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		53465D391E977AD100BFC2FA /* Build configuration list for PBXNativeTarget "ttt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53465D3A1E977AD100BFC2FA /* Debug */,
+				53465D3B1E977AD100BFC2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		53BFC9871E0B6765005217BB /* Build configuration list for PBXProject "LHZTestIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

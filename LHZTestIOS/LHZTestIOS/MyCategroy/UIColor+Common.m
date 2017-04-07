@@ -7,7 +7,7 @@
 //
 
 #import "UIColor+Common.h"
-#import <YYKit/UIColor+YYAdd.h>
+
 @implementation UIColor (Common)
 + (UIColor *)navTitleColor{
     return [self randomColor];

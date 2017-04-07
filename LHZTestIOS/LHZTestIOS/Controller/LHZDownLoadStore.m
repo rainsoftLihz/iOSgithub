@@ -120,7 +120,7 @@ NSString *storeFileNamed(id URL){
     return [[NSFileManager defaultManager]removeItemAtPath:filePath error:nil];
 }
 
-#pragma mark --- 某个下载文件对应的大小
+#pragma mark --- 某个下载文件对应的大小 M
 + (double)fileSizeWithURL:(id)URL{
     NSString *fileName = storeFileNamed(URL);
     
@@ -132,6 +132,34 @@ NSString *storeFileNamed(id URL){
     unsigned long long fileSize = [attrs fileSize];
     return fileSize / (1024.0 * 1024.0);
 }
+
+#pragma mark --- 文件大小转换
++ (NSString *)fileStrSizeWithURL:(id)URL
+{
+    NSString *fileName = storeFileNamed(URL);
+    
+    if (!fileName) {
+        return nil;
+    }
+    NSString *filePath = [fileStoreDirectory() stringByAppendingPathComponent:fileName];
+    NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
+    unsigned long long fileSize = [attrs fileSize];
+    
+    return [self CountBytesBy:fileSize];
+}
+
++ (NSString *)CountBytesBy:(unsigned long long)bytes{
+    NSString * bytesStr = nil;
+    if (!(bytes / 1024)) {
+        bytesStr = [NSString stringWithFormat:@"%lldB",bytes];//B
+    }else if (!(bytes / 1024 / 1024)){
+        bytesStr = [NSString stringWithFormat:@"%.2fkb",(float)bytes / 1024 ];
+    }else{
+        bytesStr = [NSString stringWithFormat:@"%.2fM",(float) bytes / 1024 / 1024];
+    }
+    return  bytesStr;
+}
+
 
 
 #pragma mark --- 清除all缓存(清除缓存时候使用)

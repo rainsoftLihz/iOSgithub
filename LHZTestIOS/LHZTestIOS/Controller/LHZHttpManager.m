@@ -10,9 +10,6 @@
 
 #import "LHZDownLoadStore.h"
 
-/* 任务组 */
-static NSMutableArray *tasks;
-
 @implementation LHZHttpManager
 
 +(LHZHttpManager*)shareManager
@@ -21,7 +18,7 @@ static NSMutableArray *tasks;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[LHZHttpManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://restapi.amap.com"]];
+        manager = [[LHZHttpManager alloc] initWithBaseURL:nil];
     });
     
     return manager;
@@ -71,7 +68,7 @@ static NSMutableArray *tasks;
 }
 
 #pragma mark ---- downLoad
-- (LHZURLSessionTask*) downLoadWithUrl:(NSString *)URLString parameters:(id)parameters progress:(LHZDownloadProgress)progressBlock completion:(LHZDownLoadCompletion)completion{
+- (LHZURLDownloadSessionTask*) downLoadWithUrl:(NSString *)URLString parameters:(id)parameters progress:(LHZDownloadProgress)progressBlock completion:(LHZDownLoadCompletion)completion{
     
     /* 如果文件存在 表示已经是下载过的 无需创建task */
     if ([LHZDownLoadStore fileExistWithURL:URLString]) {
@@ -92,24 +89,20 @@ static NSMutableArray *tasks;
     
     NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     NSData *resumeData = [LHZDownLoadStore resumeDataWithKey:URLString];
-    
-    if (resumeData) {
-        return [self downLoadWithResumedata:resumeData withUrl:URLString progress:progressBlock completion:completion];
-    }
-    
-    LHZURLSessionTask *sessionTask = [self downloadTaskWithRequest:downloadRequest progress:^(NSProgress * _Nonnull downloadProgress) {
+
+    return [self downloadTaskWithRequest:downloadRequest resumeData:resumeData progress:^(NSProgress *progress) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"%@",[NSString stringWithFormat:@"文件大小:%@ 已下载:%@ %.2f%@",[LHZDownLoadStore CountBytesBy:progress.totalUnitCount],[LHZDownLoadStore CountBytesBy:progress.completedUnitCount],100.0 * progress.completedUnitCount/progress.totalUnitCount,@"%"]);
+            if (progressBlock) {
+                progressBlock(progress);
+            }
+        });
         
-        if (progressBlock) {
-            progressBlock(downloadProgress);
-        }
-        
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        
+    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        /* 文件下载后存储的路径 */
         NSURL *localUrl = [LHZDownLoadStore downLoadPathWithURL:URLString];
         return localUrl;
-
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         NSURL *localUrl = [LHZDownLoadStore downLoadPathWithURL:URLString];
         BOOL result = NO;
         if ([localUrl isEqual:filePath]) {
@@ -124,61 +117,20 @@ static NSMutableArray *tasks;
                 completion(nil,nil,error);
             }
         }
-        
     }];
-    
-    [sessionTask resume];
-    
-    return sessionTask;
+
 }
 
 
-- (LHZURLSessionTask*)downLoadWithResumedata:(NSData *)resumeData withUrl:(NSString *)URLString progress:(LHZDownloadProgress)progressBlock completion:(LHZDownLoadCompletion)completion{
+#pragma mark --- 下载
+- (LHZURLDownloadSessionTask *)downloadTaskWithRequest:(NSURLRequest *)request resumeData:(NSData *)resumeData  progress:(LHZDownloadProgress)downloadProgressBlock destination:(NSURL * (^)(NSURL * targetPath, NSURLResponse * response))destination completionHandler:(LHZDownLoadCompletion) completionHandler{
+//    if (![[AFNetworkReachabilityManager sharedManager] isReachable]) {
+//        NSError *error = [NSError errorWithDomain:@"com.jzt.error" code:1001 userInfo:@{@"error":@"用户网络不存在"}];
+//        completionHandler(nil,nil,error);
+//        return nil;
+//    }
     
-    LHZURLSessionTask *sessionTask = [self downloadTaskWithResumeData:resumeData progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-        if (progressBlock) {
-            progressBlock(downloadProgress);
-        }
-        
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        
-        NSURL *localUrl = [LHZDownLoadStore downLoadPathWithURL:URLString];
-        return localUrl;
-        
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        
-        NSURL *localUrl = [LHZDownLoadStore downLoadPathWithURL:URLString];
-        BOOL result = NO;
-        if ([localUrl isEqual:filePath]) {
-            result = YES;
-            [LHZDownLoadStore removeResumeDataWithKey:URLString];
-        }
-        if (result && completion) {
-            completion(response,filePath,error);
-        }
-        else {
-            if (completion) {
-                completion(nil,nil,error);
-            }
-        }
-        
-    }];
-    
-    [sessionTask resume];
-    
-    return sessionTask;
-}
-
-
-- (LHZURLSessionTask *)downloadTaskWithRequest:(NSURLRequest *)request resumeData:(NSData *)resumeData  progress:(LHZDownloadProgress)downloadProgressBlock destination:(NSURL * (^)(NSURL * targetPath, NSURLResponse * response))destination completionHandler:(LHZDownLoadCompletion) completionHandler{
-    if (![[AFNetworkReachabilityManager sharedManager] isReachable]) {
-        NSError *error = [NSError errorWithDomain:@"com.jzt.error" code:1001 userInfo:@{@"error":@"用户网络不存在"}];
-        completionHandler(nil,nil,error);
-        return nil;
-    }
-    
-    LHZURLSessionTask *downloadTask = nil;
+    LHZURLDownloadSessionTask *downloadTask = nil;
     if (resumeData) {
         downloadTask = [super downloadTaskWithResumeData:resumeData progress:downloadProgressBlock destination:destination completionHandler:completionHandler];
     }else{

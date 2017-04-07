@@ -27,6 +27,12 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
     
+    self.fromPush = [NSString stringWithFormat:@"1"];
+    NSLog(@"=========%@",self.fromPush);
+    
+    self.trackModel.app_type = @"HTML5";
+    
+    
     __typeof (&*self) __weak weakSelf = self;
     [self.tableView addRefreshHeaderWithActionHandler:^{
        

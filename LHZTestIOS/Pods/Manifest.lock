@@ -24,9 +24,6 @@ PODS:
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
-  - YYKit (1.0.9):
-    - YYKit/no-arc (= 1.0.9)
-  - YYKit/no-arc (1.0.9)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -37,7 +34,6 @@ DEPENDENCIES:
   - SVProgressHUD
   - YYCache
   - YYCategories
-  - YYKit
   - YYModel
 
 SPEC CHECKSUMS:
@@ -48,9 +44,8 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
-  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 815cd396408162c34bb88189b4759342443b8c18
+PODFILE CHECKSUM: 99bad7c184ca130275407c1573cc7ac3391641d6
 
 COCOAPODS: 1.2.0

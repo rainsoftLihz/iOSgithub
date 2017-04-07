@@ -24,10 +24,29 @@
     self.navigationController.navigationBar.translucent = NO;
     
     //self.navigationController.navigationBar.hidden = YES;
-    
-    
 }
 
+-(void)sendDataToServer
+{
+    NSLog(@"%@:sendDataToServer",[self className]);
+    
+    NSLog(@"trackModel:%@",[self.trackModel description]);
+    
+    [self.trackModel sendDataToServer];
+}
+
+
+-(JZTTrackModel *)trackModel
+{
+    if (!_trackModel) {
+        _trackModel = [JZTTrackModel new];
+        _trackModel.app_id = @"qmyApp";
+        _trackModel.app_type = @"iOS_APP";
+    }
+    return _trackModel;
+}
+
+-(void)configParams:(id)params{}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

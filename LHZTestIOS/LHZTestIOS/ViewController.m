@@ -38,6 +38,12 @@
 
 #import "UIDynamicViewController.h"
 
+#import "LHZDownLoadOperationManager.h"
+
+#import "LHZDownLoadModel.h"
+
+#import "LHZDownLoadStore.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView* tableView;
@@ -59,7 +65,24 @@
     self.navigationItem.title = @"IOS";
   
     [self fileTest];
+    
+    [self testDownLoad];
 
+}
+
+#pragma mark ---- TEST DOWNLOAD
+-(void)testDownLoad
+{
+    /*
+    LHZDownLoadModel* model = [[LHZDownLoadModel alloc] init];
+    model.downloadURL = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E5%A4%A7%E4%B8%93%E5%AE%B6.COM%E4%BB%8B%E7%BB%8D%E7%89%87118.mp4";
+    model.downloadName = @"下载测试";
+    model.progressHandle = ^(NSProgress* progress){
+        
+    };
+    
+    [LHZDownLoadOperationManager manager].downLoadModels = [NSMutableArray arrayWithArray:@[model]];
+     */
 }
 
 #pragma mark --- 正则表达式

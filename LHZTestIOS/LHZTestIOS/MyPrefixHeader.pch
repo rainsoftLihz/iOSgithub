@@ -28,8 +28,6 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-#import <YYKit/YYKit.h>
-
 #import <YYCategories/YYCategories.h>
 
 #import <YYCache/YYCache.h>
