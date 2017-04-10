@@ -78,6 +78,7 @@
 {
     [super viewWillDisappear:animated];
     self.tableView.refreshView = nil;
+    //[UIDevice identifierForVendor];
 }
 
 -(void)requestData

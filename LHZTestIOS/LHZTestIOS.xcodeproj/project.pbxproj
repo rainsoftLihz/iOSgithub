@@ -16,8 +16,6 @@
 		53465D241E97700D00BFC2FA /* UIViewController+Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D231E97700D00BFC2FA /* UIViewController+Tracker.m */; };
 		53465D271E97751100BFC2FA /* JZTTrackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D261E97751100BFC2FA /* JZTTrackModel.m */; };
 		53465D2E1E977AD100BFC2FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53465D2D1E977AD100BFC2FA /* Cocoa.framework */; };
-		53465D341E977AD100BFC2FA /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D331E977AD100BFC2FA /* SourceEditorExtension.m */; };
-		53465D371E977AD100BFC2FA /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D361E977AD100BFC2FA /* SourceEditorCommand.m */; };
 		534956AB1E5D2A410093A5AC /* PanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956AA1E5D2A410093A5AC /* PanView.m */; };
 		534956B41E5D79EE0093A5AC /* JZTNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956AF1E5D79EE0093A5AC /* JZTNavigationVC.m */; };
 		534956B51E5D79EE0093A5AC /* JZTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956B11E5D79EE0093A5AC /* JZTTabBar.m */; };
@@ -28,6 +26,7 @@
 		534956C71E5D7A550093A5AC /* JZTCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956C01E5D7A550093A5AC /* JZTCategoryVC.m */; };
 		534956C81E5D7A550093A5AC /* JZTHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956C21E5D7A550093A5AC /* JZTHomeVC.m */; };
 		534956C91E5D7A550093A5AC /* JZTRecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956C41E5D7A550093A5AC /* JZTRecommendVC.m */; };
+		5349EACB1E9B159E0057BF9D /* UIButton+Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5349EACA1E9B159E0057BF9D /* UIButton+Tracker.m */; };
 		5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5362356D1E45C35000B0CEDF /* ShoppingViewController.m */; };
 		536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235701E45C44500B0CEDF /* ShoppingCell.m */; };
 		536235741E45C79700B0CEDF /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235731E45C79700B0CEDF /* ShopModel.m */; };
@@ -84,6 +83,7 @@
 		53F3F00F1E5ABE2B009BC824 /* KeyBoardShowVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F00E1E5ABE2B009BC824 /* KeyBoardShowVController.m */; };
 		53F3F0121E5ABE9F009BC824 /* WirteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F0111E5ABE9F009BC824 /* WirteView.m */; };
 		53F70D4A1E126B9A009F1CC6 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53F70D481E126B9A009F1CC6 /* UserModel.xcdatamodeld */; };
+		53FE418E1E9B2E6400BEBD6D /* Tracker.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53FE418D1E9B2E6400BEBD6D /* Tracker.plist */; };
 		7AF3CA78EF344C641D6EA10E /* libPods-LHZTestIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB43408CA40C88AB631FA93 /* libPods-LHZTestIOS.a */; };
 /* End PBXBuildFile section */
 
@@ -122,12 +122,6 @@
 		53465D261E97751100BFC2FA /* JZTTrackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZTTrackModel.m; path = ../MyCategroy/JZTTrackModel.m; sourceTree = "<group>"; };
 		53465D2C1E977AD100BFC2FA /* ttt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ttt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		53465D2D1E977AD100BFC2FA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		53465D311E977AD100BFC2FA /* ttt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ttt.entitlements; sourceTree = "<group>"; };
-		53465D321E977AD100BFC2FA /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
-		53465D331E977AD100BFC2FA /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
-		53465D351E977AD100BFC2FA /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
-		53465D361E977AD100BFC2FA /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
-		53465D381E977AD100BFC2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534956A91E5D2A410093A5AC /* PanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanView.h; sourceTree = "<group>"; };
 		534956AA1E5D2A410093A5AC /* PanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanView.m; sourceTree = "<group>"; };
 		534956AE1E5D79EE0093A5AC /* JZTNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTNavigationVC.h; sourceTree = "<group>"; };
@@ -148,6 +142,8 @@
 		534956C21E5D7A550093A5AC /* JZTHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTHomeVC.m; sourceTree = "<group>"; };
 		534956C31E5D7A550093A5AC /* JZTRecommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTRecommendVC.h; sourceTree = "<group>"; };
 		534956C41E5D7A550093A5AC /* JZTRecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRecommendVC.m; sourceTree = "<group>"; };
+		5349EAC91E9B159E0057BF9D /* UIButton+Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Tracker.h"; sourceTree = "<group>"; };
+		5349EACA1E9B159E0057BF9D /* UIButton+Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Tracker.m"; sourceTree = "<group>"; };
 		5362356C1E45C35000B0CEDF /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
 		5362356D1E45C35000B0CEDF /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
 		5362356F1E45C44500B0CEDF /* ShoppingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCell.h; sourceTree = "<group>"; };
@@ -253,6 +249,7 @@
 		53F3F0101E5ABE9F009BC824 /* WirteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WirteView.h; sourceTree = "<group>"; };
 		53F3F0111E5ABE9F009BC824 /* WirteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WirteView.m; sourceTree = "<group>"; };
 		53F70D491E126B9A009F1CC6 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
+		53FE418D1E9B2E6400BEBD6D /* Tracker.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tracker.plist; sourceTree = "<group>"; };
 		B8AD014F7FE8A75970E3EBFB /* Pods-LHZTestIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHZTestIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHZTestIOS/Pods-LHZTestIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,27 +313,6 @@
 				5342925C1E5C25C7008AEE1D /* BlueViewController.m */,
 			);
 			name = "蓝牙连接";
-			sourceTree = "<group>";
-		};
-		53465D2F1E977AD100BFC2FA /* ttt */ = {
-			isa = PBXGroup;
-			children = (
-				53465D321E977AD100BFC2FA /* SourceEditorExtension.h */,
-				53465D331E977AD100BFC2FA /* SourceEditorExtension.m */,
-				53465D351E977AD100BFC2FA /* SourceEditorCommand.h */,
-				53465D361E977AD100BFC2FA /* SourceEditorCommand.m */,
-				53465D381E977AD100BFC2FA /* Info.plist */,
-				53465D301E977AD100BFC2FA /* Supporting Files */,
-			);
-			path = ttt;
-			sourceTree = "<group>";
-		};
-		53465D301E977AD100BFC2FA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				53465D311E977AD100BFC2FA /* ttt.entitlements */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		534956AC1E5D79C40093A5AC /* TabBar */ = {
@@ -434,7 +410,6 @@
 				53BFC98E1E0B6765005217BB /* LHZTestIOS */,
 				53BFC9A81E0B6765005217BB /* LHZTestIOSTests */,
 				53BFC9B31E0B6765005217BB /* LHZTestIOSUITests */,
-				53465D2F1E977AD100BFC2FA /* ttt */,
 				53BFC98D1E0B6765005217BB /* Products */,
 				DBB7246E6BCF8BDA48B37106 /* Pods */,
 				648CF866C7A340E23573FCBF /* Frameworks */,
@@ -466,6 +441,7 @@
 				530F5DC31E1B335200AED3F6 /* Main.storyboard */,
 				53BFC99D1E0B6765005217BB /* LaunchScreen.storyboard */,
 				53BFC9A01E0B6765005217BB /* Info.plist */,
+				53FE418D1E9B2E6400BEBD6D /* Tracker.plist */,
 				53BFC98F1E0B6765005217BB /* Supporting Files */,
 			);
 			path = LHZTestIOS;
@@ -520,6 +496,8 @@
 			children = (
 				53465D221E97700D00BFC2FA /* UIViewController+Tracker.h */,
 				53465D231E97700D00BFC2FA /* UIViewController+Tracker.m */,
+				5349EAC91E9B159E0057BF9D /* UIButton+Tracker.h */,
+				5349EACA1E9B159E0057BF9D /* UIButton+Tracker.m */,
 				534956B71E5D7A1F0093A5AC /* UIColor+Common.h */,
 				534956B81E5D7A1F0093A5AC /* UIColor+Common.m */,
 				53BFC9C81E0B7117005217BB /* UIView+Extension.h */,
@@ -855,6 +833,7 @@
 				53E73F7D1E1DDE9F00F786CC /* sy_jkcs_1.png in Resources */,
 				53E9A3021E28BECF00362CAE /* wu2.gif in Resources */,
 				53E73F821E1DDE9F00F786CC /* sy_jkcs_6.png in Resources */,
+				53FE418E1E9B2E6400BEBD6D /* Tracker.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,8 +906,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53465D341E977AD100BFC2FA /* SourceEditorExtension.m in Sources */,
-				53465D371E977AD100BFC2FA /* SourceEditorCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,6 +925,7 @@
 				534956B61E5D79EE0093A5AC /* JZTTabBarVC.m in Sources */,
 				530857051E973CDC0050D408 /* LHZDownExampleModel.m in Sources */,
 				5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */,
+				5349EACB1E9B159E0057BF9D /* UIButton+Tracker.m in Sources */,
 				534956C71E5D7A550093A5AC /* JZTCategoryVC.m in Sources */,
 				53BFC9D51E0B7D48005217BB /* MyBaseViewController.m in Sources */,
 				534956C81E5D7A550093A5AC /* JZTHomeVC.m in Sources */,
@@ -1255,6 +1233,7 @@
 				53465D3B1E977AD100BFC2FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53BFC9871E0B6765005217BB /* Build configuration list for PBXProject "LHZTestIOS" */ = {
 			isa = XCConfigurationList;

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tp</key>
+	<dict>
+		<key>tpc</key>
+		<string>1</string>
+		<key>tpa</key>
+		<string>1</string>
+		<key>tpi</key>
+		<string>1</string>
+		<key>page_type</key>
+		<string>首页</string>
+		<key>app_id</key>
+		<string>好药师APP</string>
+	</dict>
+</dict>
+</plist>

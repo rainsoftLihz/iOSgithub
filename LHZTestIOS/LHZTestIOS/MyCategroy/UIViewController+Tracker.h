@@ -24,5 +24,7 @@
  */
 @property (nonatomic,strong) JZTTrackModel* trackModel;
 
+
 -(void)sendDataToServer;
+
 @end
