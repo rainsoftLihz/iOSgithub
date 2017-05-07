@@ -20,4 +20,9 @@
 @dynamic sex;
 @dynamic authInfo;
 
+-(NSString *)phoneNo
+{
+    return @"18627810083";
+}
+
 @end

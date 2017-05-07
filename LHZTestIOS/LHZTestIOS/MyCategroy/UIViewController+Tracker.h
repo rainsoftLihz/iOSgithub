@@ -1,8 +1,8 @@
 //
-//  NSObject+JZTSwizzleClass.h
+//  NSObject+Tracker.h
 //  JK_BLB
 //
-//  Created by 朱小亮 on 16/6/22.
+//  Created by rainsoft on 16/6/22.
 //  Copyright © 2016年 com.JoinTown.jk998. All rights reserved.
 //
 
@@ -11,8 +11,7 @@
 
 #import "JZTTrackModel.h"
 
-@interface UIViewController (Tracker)
-//+ (void)swizzleOriginalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzelSelector;
+@interface UIViewController (Tracker)<UITableViewDelegate>
 
 /*!
  *

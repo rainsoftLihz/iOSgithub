@@ -81,6 +81,7 @@
         }
     }
     [LHZDownLoadStore saveModels:self.downLoadModels];
+    NSLog(@"========AppTerminate===========");
 }
 
 @end

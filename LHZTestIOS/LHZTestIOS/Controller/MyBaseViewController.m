@@ -48,6 +48,11 @@
 
 -(void)configParams:(id)params{}
 
+-(void)dealloc
+{
+   NSLog(@"%@被销毁了", self);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

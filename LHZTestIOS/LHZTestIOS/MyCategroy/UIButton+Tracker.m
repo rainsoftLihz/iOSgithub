@@ -1,8 +1,8 @@
 //
-//  UIButton+JZTHandleiOSBtnBugs.m
+//  UIButton+Tracker.m
 //  JK_BLB
 //
-//  Created by 朱小亮 on 2016/9/26.
+//  Created by rainsoft on 2016/9/26.
 //  Copyright © 2016年 com.JoinTown.jk998. All rights reserved.
 //
 
@@ -19,12 +19,10 @@
     }
 }
 
-//addTarget:self action:@selector(animation:) forControlEvents:UIControlEventTouchUpInside
-
 -(void)jztAddtarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents
 {
-    [self jztAddtarget:self action:action forControlEvents:controlEvents];
-    NSLog(@"======btnClick=======");
+    [self jztAddtarget:target action:action forControlEvents:controlEvents];
+    NSLog(@"======btnAddtarget=======");
 }
 
 + (void)swizzleOriginalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzelSelector{

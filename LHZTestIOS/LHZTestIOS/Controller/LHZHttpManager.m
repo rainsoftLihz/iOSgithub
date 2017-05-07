@@ -92,7 +92,7 @@
 
     return [self downloadTaskWithRequest:downloadRequest resumeData:resumeData progress:^(NSProgress *progress) {
         dispatch_async(dispatch_get_main_queue(), ^{
-//            NSLog(@"%@",[NSString stringWithFormat:@"文件大小:%@ 已下载:%@ %.2f%@",[LHZDownLoadStore CountBytesBy:progress.totalUnitCount],[LHZDownLoadStore CountBytesBy:progress.completedUnitCount],100.0 * progress.completedUnitCount/progress.totalUnitCount,@"%"]);
+
             if (progressBlock) {
                 progressBlock(progress);
             }

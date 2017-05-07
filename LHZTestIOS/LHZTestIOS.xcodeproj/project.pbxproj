@@ -12,6 +12,9 @@
 		530857051E973CDC0050D408 /* LHZDownExampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 530857041E973CDC0050D408 /* LHZDownExampleModel.m */; };
 		530F5DC41E1B335200AED3F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530F5DC31E1B335200AED3F6 /* Main.storyboard */; };
 		530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */; };
+		533056941EB0446000B86E4B /* PageAnnimaionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 533056931EB0446000B86E4B /* PageAnnimaionVC.m */; };
+		533056971EB0495900B86E4B /* PageMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 533056961EB0495900B86E4B /* PageMainVC.m */; };
+		5330569A1EB0496D00B86E4B /* PageSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 533056991EB0496D00B86E4B /* PageSubVC.m */; };
 		5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5342925C1E5C25C7008AEE1D /* BlueViewController.m */; };
 		53465D241E97700D00BFC2FA /* UIViewController+Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D231E97700D00BFC2FA /* UIViewController+Tracker.m */; };
 		53465D271E97751100BFC2FA /* JZTTrackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53465D261E97751100BFC2FA /* JZTTrackModel.m */; };
@@ -27,12 +30,22 @@
 		534956C81E5D7A550093A5AC /* JZTHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956C21E5D7A550093A5AC /* JZTHomeVC.m */; };
 		534956C91E5D7A550093A5AC /* JZTRecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 534956C41E5D7A550093A5AC /* JZTRecommendVC.m */; };
 		5349EACB1E9B159E0057BF9D /* UIButton+Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5349EACA1E9B159E0057BF9D /* UIButton+Tracker.m */; };
+		535EEC9B1EBEAFC3009949E3 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535EEC9A1EBEAFC3009949E3 /* CollectionViewController.m */; };
+		535EEC9E1EBEB19C009949E3 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 535EEC9D1EBEB19C009949E3 /* CollectionViewCell.m */; };
+		535EECA21EBEB59A009949E3 /* wd_dd_wssc.png in Resources */ = {isa = PBXBuildFile; fileRef = 535EECA11EBEB59A009949E3 /* wd_dd_wssc.png */; };
+		535EECA41EBEB5A8009949E3 /* wd_dd_1xsgy.png in Resources */ = {isa = PBXBuildFile; fileRef = 535EECA31EBEB5A8009949E3 /* wd_dd_1xsgy.png */; };
+		535EECA61EBEB5B4009949E3 /* wd_dd_zx.png in Resources */ = {isa = PBXBuildFile; fileRef = 535EECA51EBEB5B4009949E3 /* wd_dd_zx.png */; };
+		535EECA81EBEB5C2009949E3 /* wd_dd_gh.png in Resources */ = {isa = PBXBuildFile; fileRef = 535EECA71EBEB5C2009949E3 /* wd_dd_gh.png */; };
+		535EECAA1EBEB5CC009949E3 /* wd_dd_pz.png in Resources */ = {isa = PBXBuildFile; fileRef = 535EECA91EBEB5CC009949E3 /* wd_dd_pz.png */; };
+		535EECAC1EBEB5D2009949E3 /* wd_dd_tj.png in Resources */ = {isa = PBXBuildFile; fileRef = 535EECAB1EBEB5D2009949E3 /* wd_dd_tj.png */; };
+		535EECAF1EBEB7FD009949E3 /* EditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 535EECAE1EBEB7FD009949E3 /* EditView.m */; };
 		5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5362356D1E45C35000B0CEDF /* ShoppingViewController.m */; };
 		536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235701E45C44500B0CEDF /* ShoppingCell.m */; };
 		536235741E45C79700B0CEDF /* ShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235731E45C79700B0CEDF /* ShopModel.m */; };
 		536235771E45CE0B00B0CEDF /* ShopViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 536235761E45CE0B00B0CEDF /* ShopViewModel.m */; };
 		5382951F1E65611100BBCA3D /* BiaoChiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5382951E1E65611100BBCA3D /* BiaoChiViewController.m */; };
 		5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390441D1E0D0FB600004040 /* MasonryViewController.m */; };
+		53A423641EBC1768000ECFA2 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A423631EBC1768000ECFA2 /* UserInfoModel.m */; };
 		53A7610C1E1350CB005DB357 /* LZTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7610B1E1350CB005DB357 /* LZTCoreDataManager.m */; };
 		53A761141E136498005DB357 /* CoreDataViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A761131E136498005DB357 /* CoreDataViewcontroller.m */; };
 		53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A761261E13B26A005DB357 /* NSObject+Properties.m */; };
@@ -84,6 +97,9 @@
 		53F3F0121E5ABE9F009BC824 /* WirteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3F0111E5ABE9F009BC824 /* WirteView.m */; };
 		53F70D4A1E126B9A009F1CC6 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53F70D481E126B9A009F1CC6 /* UserModel.xcdatamodeld */; };
 		53FE418E1E9B2E6400BEBD6D /* Tracker.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53FE418D1E9B2E6400BEBD6D /* Tracker.plist */; };
+		53FE41931E9B719000BEBD6D /* UIControl+Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FE41921E9B719000BEBD6D /* UIControl+Tracker.m */; };
+		53FE41991E9B7C2200BEBD6D /* UITableView+Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FE41981E9B7C2200BEBD6D /* UITableView+Tracker.m */; };
+		53FE419C1E9B9B6200BEBD6D /* UIGestureRecognizer+Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FE419B1E9B9B6200BEBD6D /* UIGestureRecognizer+Tracker.m */; };
 		7AF3CA78EF344C641D6EA10E /* libPods-LHZTestIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB43408CA40C88AB631FA93 /* libPods-LHZTestIOS.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +130,12 @@
 		530F5DC31E1B335200AED3F6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		530F5DC81E1B77B700AED3F6 /* MutilThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutilThreadVC.h; sourceTree = "<group>"; };
 		530F5DC91E1B77B700AED3F6 /* MutilThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutilThreadVC.m; sourceTree = "<group>"; };
+		533056921EB0446000B86E4B /* PageAnnimaionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageAnnimaionVC.h; sourceTree = "<group>"; };
+		533056931EB0446000B86E4B /* PageAnnimaionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageAnnimaionVC.m; sourceTree = "<group>"; };
+		533056951EB0495900B86E4B /* PageMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageMainVC.h; sourceTree = "<group>"; };
+		533056961EB0495900B86E4B /* PageMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageMainVC.m; sourceTree = "<group>"; };
+		533056981EB0496D00B86E4B /* PageSubVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageSubVC.h; sourceTree = "<group>"; };
+		533056991EB0496D00B86E4B /* PageSubVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageSubVC.m; sourceTree = "<group>"; };
 		5342925B1E5C25C7008AEE1D /* BlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueViewController.h; sourceTree = "<group>"; };
 		5342925C1E5C25C7008AEE1D /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
 		53465D221E97700D00BFC2FA /* UIViewController+Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracker.h"; sourceTree = "<group>"; };
@@ -144,6 +166,18 @@
 		534956C41E5D7A550093A5AC /* JZTRecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTRecommendVC.m; sourceTree = "<group>"; };
 		5349EAC91E9B159E0057BF9D /* UIButton+Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Tracker.h"; sourceTree = "<group>"; };
 		5349EACA1E9B159E0057BF9D /* UIButton+Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Tracker.m"; sourceTree = "<group>"; };
+		535EEC991EBEAFC3009949E3 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		535EEC9A1EBEAFC3009949E3 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		535EEC9C1EBEB19C009949E3 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		535EEC9D1EBEB19C009949E3 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		535EECA11EBEB59A009949E3 /* wd_dd_wssc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wd_dd_wssc.png; sourceTree = "<group>"; };
+		535EECA31EBEB5A8009949E3 /* wd_dd_1xsgy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wd_dd_1xsgy.png; sourceTree = "<group>"; };
+		535EECA51EBEB5B4009949E3 /* wd_dd_zx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wd_dd_zx.png; sourceTree = "<group>"; };
+		535EECA71EBEB5C2009949E3 /* wd_dd_gh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wd_dd_gh.png; sourceTree = "<group>"; };
+		535EECA91EBEB5CC009949E3 /* wd_dd_pz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wd_dd_pz.png; sourceTree = "<group>"; };
+		535EECAB1EBEB5D2009949E3 /* wd_dd_tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wd_dd_tj.png; sourceTree = "<group>"; };
+		535EECAD1EBEB7FD009949E3 /* EditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditView.h; sourceTree = "<group>"; };
+		535EECAE1EBEB7FD009949E3 /* EditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditView.m; sourceTree = "<group>"; };
 		5362356C1E45C35000B0CEDF /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
 		5362356D1E45C35000B0CEDF /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
 		5362356F1E45C44500B0CEDF /* ShoppingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCell.h; sourceTree = "<group>"; };
@@ -156,6 +190,8 @@
 		5382951E1E65611100BBCA3D /* BiaoChiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiaoChiViewController.m; sourceTree = "<group>"; };
 		5390441C1E0D0FB600004040 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		5390441D1E0D0FB600004040 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		53A423621EBC1768000ECFA2 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		53A423631EBC1768000ECFA2 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
 		53A7610A1E1350CB005DB357 /* LZTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTCoreDataManager.h; sourceTree = "<group>"; };
 		53A7610B1E1350CB005DB357 /* LZTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTCoreDataManager.m; sourceTree = "<group>"; };
 		53A761121E136498005DB357 /* CoreDataViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewcontroller.h; sourceTree = "<group>"; };
@@ -250,6 +286,12 @@
 		53F3F0111E5ABE9F009BC824 /* WirteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WirteView.m; sourceTree = "<group>"; };
 		53F70D491E126B9A009F1CC6 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		53FE418D1E9B2E6400BEBD6D /* Tracker.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tracker.plist; sourceTree = "<group>"; };
+		53FE41911E9B719000BEBD6D /* UIControl+Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Tracker.h"; sourceTree = "<group>"; };
+		53FE41921E9B719000BEBD6D /* UIControl+Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Tracker.m"; sourceTree = "<group>"; };
+		53FE41971E9B7C2200BEBD6D /* UITableView+Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Tracker.h"; sourceTree = "<group>"; };
+		53FE41981E9B7C2200BEBD6D /* UITableView+Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Tracker.m"; sourceTree = "<group>"; };
+		53FE419A1E9B9B6200BEBD6D /* UIGestureRecognizer+Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Tracker.h"; sourceTree = "<group>"; };
+		53FE419B1E9B9B6200BEBD6D /* UIGestureRecognizer+Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Tracker.m"; sourceTree = "<group>"; };
 		B8AD014F7FE8A75970E3EBFB /* Pods-LHZTestIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHZTestIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHZTestIOS/Pods-LHZTestIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -306,6 +348,19 @@
 			name = "多线程";
 			sourceTree = "<group>";
 		};
+		533056911EB0441F00B86E4B /* VC分页效果 */ = {
+			isa = PBXGroup;
+			children = (
+				533056921EB0446000B86E4B /* PageAnnimaionVC.h */,
+				533056931EB0446000B86E4B /* PageAnnimaionVC.m */,
+				533056951EB0495900B86E4B /* PageMainVC.h */,
+				533056961EB0495900B86E4B /* PageMainVC.m */,
+				533056981EB0496D00B86E4B /* PageSubVC.h */,
+				533056991EB0496D00B86E4B /* PageSubVC.m */,
+			);
+			name = "VC分页效果";
+			sourceTree = "<group>";
+		};
 		5342925A1E5C256D008AEE1D /* 蓝牙连接 */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +409,25 @@
 			path = "首页";
 			sourceTree = "<group>";
 		};
+		535EEC981EBEAF8C009949E3 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				535EECAB1EBEB5D2009949E3 /* wd_dd_tj.png */,
+				535EECA91EBEB5CC009949E3 /* wd_dd_pz.png */,
+				535EECA71EBEB5C2009949E3 /* wd_dd_gh.png */,
+				535EECA51EBEB5B4009949E3 /* wd_dd_zx.png */,
+				535EECA31EBEB5A8009949E3 /* wd_dd_1xsgy.png */,
+				535EECA11EBEB59A009949E3 /* wd_dd_wssc.png */,
+				535EEC991EBEAFC3009949E3 /* CollectionViewController.h */,
+				535EEC9A1EBEAFC3009949E3 /* CollectionViewController.m */,
+				535EEC9C1EBEB19C009949E3 /* CollectionViewCell.h */,
+				535EEC9D1EBEB19C009949E3 /* CollectionViewCell.m */,
+				535EECAD1EBEB7FD009949E3 /* EditView.h */,
+				535EECAE1EBEB7FD009949E3 /* EditView.m */,
+			);
+			name = UICollectionView;
+			sourceTree = "<group>";
+		};
 		5362356B1E45C32B00B0CEDF /* 购物车 */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +467,15 @@
 				5390441D1E0D0FB600004040 /* MasonryViewController.m */,
 			);
 			name = "Masonry约束";
+			sourceTree = "<group>";
+		};
+		53A423611EBC1733000ECFA2 /* MJExtensionTest */ = {
+			isa = PBXGroup;
+			children = (
+				53A423621EBC1768000ECFA2 /* UserInfoModel.h */,
+				53A423631EBC1768000ECFA2 /* UserInfoModel.m */,
+			);
+			name = MJExtensionTest;
 			sourceTree = "<group>";
 		};
 		53A761111E136469005DB357 /* CoreData */ = {
@@ -498,6 +581,12 @@
 				53465D231E97700D00BFC2FA /* UIViewController+Tracker.m */,
 				5349EAC91E9B159E0057BF9D /* UIButton+Tracker.h */,
 				5349EACA1E9B159E0057BF9D /* UIButton+Tracker.m */,
+				53FE41911E9B719000BEBD6D /* UIControl+Tracker.h */,
+				53FE41921E9B719000BEBD6D /* UIControl+Tracker.m */,
+				53FE41971E9B7C2200BEBD6D /* UITableView+Tracker.h */,
+				53FE41981E9B7C2200BEBD6D /* UITableView+Tracker.m */,
+				53FE419A1E9B9B6200BEBD6D /* UIGestureRecognizer+Tracker.h */,
+				53FE419B1E9B9B6200BEBD6D /* UIGestureRecognizer+Tracker.m */,
 				534956B71E5D7A1F0093A5AC /* UIColor+Common.h */,
 				534956B81E5D7A1F0093A5AC /* UIColor+Common.m */,
 				53BFC9C81E0B7117005217BB /* UIView+Extension.h */,
@@ -509,12 +598,15 @@
 		53BFC9CB1E0B76F5005217BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				535EEC981EBEAF8C009949E3 /* UICollectionView */,
 				53BFC9951E0B6765005217BB /* ViewController.h */,
 				53BFC9961E0B6765005217BB /* ViewController.m */,
 				53BFC9D31E0B7D48005217BB /* MyBaseViewController.h */,
 				53BFC9D41E0B7D48005217BB /* MyBaseViewController.m */,
 				53465D251E97751100BFC2FA /* JZTTrackModel.h */,
 				53465D261E97751100BFC2FA /* JZTTrackModel.m */,
+				53A423611EBC1733000ECFA2 /* MJExtensionTest */,
+				533056911EB0441F00B86E4B /* VC分页效果 */,
 				53F3D4E31E948D7E001DA83A /* 文件读写操作 */,
 				53E508401E8E53280064985D /* 动力行为 */,
 				5382951C1E6560EE00BBCA3D /* 标尺 */,
@@ -821,9 +913,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E9A3041E28BED800362CAE /* wu1.gif in Resources */,
+				535EECAA1EBEB5CC009949E3 /* wd_dd_pz.png in Resources */,
 				53E73F801E1DDE9F00F786CC /* sy_jkcs_4.png in Resources */,
 				53E73F7F1E1DDE9F00F786CC /* sy_jkcs_3.png in Resources */,
+				535EECA81EBEB5C2009949E3 /* wd_dd_gh.png in Resources */,
 				53DB2A041E55549800C9BF7B /* sy_jktt.png in Resources */,
+				535EECA61EBEB5B4009949E3 /* wd_dd_zx.png in Resources */,
 				53BFC99F1E0B6765005217BB /* LaunchScreen.storyboard in Resources */,
 				53BFC99C1E0B6765005217BB /* Assets.xcassets in Resources */,
 				53E73F7E1E1DDE9F00F786CC /* sy_jkcs_2.png in Resources */,
@@ -831,9 +926,12 @@
 				530F5DC41E1B335200AED3F6 /* Main.storyboard in Resources */,
 				53E9A3061E28C04600362CAE /* 1111.gif in Resources */,
 				53E73F7D1E1DDE9F00F786CC /* sy_jkcs_1.png in Resources */,
+				535EECAC1EBEB5D2009949E3 /* wd_dd_tj.png in Resources */,
 				53E9A3021E28BECF00362CAE /* wu2.gif in Resources */,
 				53E73F821E1DDE9F00F786CC /* sy_jkcs_6.png in Resources */,
+				535EECA21EBEB59A009949E3 /* wd_dd_wssc.png in Resources */,
 				53FE418E1E9B2E6400BEBD6D /* Tracker.plist in Resources */,
+				535EECA41EBEB5A8009949E3 /* wd_dd_1xsgy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,14 +1011,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FE41991E9B7C2200BEBD6D /* UITableView+Tracker.m in Sources */,
 				53A761331E13B581005DB357 /* UserInfo+CoreDataProperties.m in Sources */,
+				535EECAF1EBEB7FD009949E3 /* EditView.m in Sources */,
 				53F3EE8D1E7FA53100ABFBFD /* JZTRulerScrollView.m in Sources */,
 				53E61C061E149ED9007CFAE6 /* AuthInfo+CoreDataProperties.m in Sources */,
 				53BFC9D91E0B7E2E005217BB /* WeakAndStrongViewController.m in Sources */,
 				53F3D4EF1E94E03F001DA83A /* LHZDownLoadOperationManager.m in Sources */,
+				535EEC9E1EBEB19C009949E3 /* CollectionViewCell.m in Sources */,
 				53BFC9971E0B6765005217BB /* ViewController.m in Sources */,
 				534956C51E5D7A550093A5AC /* JZTAnchorVC.m in Sources */,
 				53F3D4E61E948DC3001DA83A /* FileOperationVC.m in Sources */,
+				53FE419C1E9B9B6200BEBD6D /* UIGestureRecognizer+Tracker.m in Sources */,
 				5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */,
 				534956B61E5D79EE0093A5AC /* JZTTabBarVC.m in Sources */,
 				530857051E973CDC0050D408 /* LHZDownExampleModel.m in Sources */,
@@ -931,11 +1033,13 @@
 				534956C81E5D7A550093A5AC /* JZTHomeVC.m in Sources */,
 				536235771E45CE0B00B0CEDF /* ShopViewModel.m in Sources */,
 				53D7D03D1E23421400A97664 /* CircleView.m in Sources */,
+				535EEC9B1EBEAFC3009949E3 /* CollectionViewController.m in Sources */,
 				534956B41E5D79EE0093A5AC /* JZTNavigationVC.m in Sources */,
 				53BFC9941E0B6765005217BB /* AppDelegate.m in Sources */,
 				53F3EE8E1E7FA53100ABFBFD /* JZTRulerView.m in Sources */,
 				53465D271E97751100BFC2FA /* JZTTrackModel.m in Sources */,
 				53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */,
+				533056971EB0495900B86E4B /* PageMainVC.m in Sources */,
 				53F3D4E21E9489F3001DA83A /* LHZDownLoadStore.m in Sources */,
 				53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */,
 				536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */,
@@ -948,12 +1052,15 @@
 				53465D241E97700D00BFC2FA /* UIViewController+Tracker.m in Sources */,
 				53F3EE941E7FA5C200ABFBFD /* JZTRulerCellModel.m in Sources */,
 				534956B51E5D79EE0093A5AC /* JZTTabBar.m in Sources */,
+				5330569A1EB0496D00B86E4B /* PageSubVC.m in Sources */,
 				53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */,
 				53BFC9CA1E0B7117005217BB /* UIView+Extension.m in Sources */,
+				53A423641EBC1768000ECFA2 /* UserInfoModel.m in Sources */,
 				53DB29FE1E55459900C9BF7B /* UIView+Corner.m in Sources */,
 				534956C91E5D7A550093A5AC /* JZTRecommendVC.m in Sources */,
 				53E73F761E1DD2E600F786CC /* JZTHealthTestView.m in Sources */,
 				536235741E45C79700B0CEDF /* ShopModel.m in Sources */,
+				53FE41931E9B719000BEBD6D /* UIControl+Tracker.m in Sources */,
 				53BFC9911E0B6765005217BB /* main.m in Sources */,
 				53BFC9D21E0B776F005217BB /* PropertyTestViewController.m in Sources */,
 				530F5DCA1E1B77B700AED3F6 /* MutilThreadVC.m in Sources */,
@@ -962,6 +1069,7 @@
 				5362356E1E45C35000B0CEDF /* ShoppingViewController.m in Sources */,
 				5382951F1E65611100BBCA3D /* BiaoChiViewController.m in Sources */,
 				534956AB1E5D2A410093A5AC /* PanView.m in Sources */,
+				533056941EB0446000B86E4B /* PageAnnimaionVC.m in Sources */,
 				53E61C051E149ED9007CFAE6 /* AuthInfo+CoreDataClass.m in Sources */,
 				53A761321E13B581005DB357 /* UserInfo+CoreDataClass.m in Sources */,
 				53F3EE911E7FA59C00ABFBFD /* JZTRulerCell.m in Sources */,

@@ -1,8 +1,8 @@
 //
-//  UIButton+JZTHandleiOSBtnBugs.h
+//  UIButton+Tracker.h
 //  JK_BLB
 //
-//  Created by 朱小亮 on 2016/9/26.
+//  Created by rainsoft on 2016/9/26.
 //  Copyright © 2016年 com.JoinTown.jk998. All rights reserved.
 //
 

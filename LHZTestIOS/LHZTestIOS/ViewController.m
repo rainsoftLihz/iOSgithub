@@ -44,6 +44,16 @@
 
 #import "LHZDownLoadStore.h"
 
+#import "LHZDownExampleModel.h"
+
+#import "PageAnnimaionVC.h"
+
+#import "UserInfoModel.h"
+
+#import "CollectionViewController.h"
+
+#import <sys/utsname.h>
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView* tableView;
@@ -54,7 +64,23 @@
 
 @property (nonatomic,strong)UIImageView* barImageView;
 
+@property (nonatomic,strong)NSString* testStr;
+
 @end
+
+typedef NSString* (^kBlock)(NSString*);
+
+typedef NS_ENUM(NSInteger,kBlockType){
+    
+    kBlockTypeString
+    
+};
+
+typedef enum {
+    
+    kTypeShow
+    
+}kType;
 
 @implementation ViewController
 
@@ -63,26 +89,335 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.tableView];
     self.navigationItem.title = @"IOS";
-  
-    [self fileTest];
     
-    [self testDownLoad];
+    //NSLog(@"网络类型:%@",[self networkType]);
 
+    //[self fileTest];
+    
+    //[self testDownLoad];
+
+    //[self imgClick];
+    
+    //NSLog(@"%d",[self respondsToSelector:@selector(tableView: didSelectRowAtIndexPath:)]);
+    
+    NSString* teSt = @"";
+    if (teSt.length) {
+        NSLog(@"======  lenth =======");
+    }
+    
+    [self testMJ];
+    
+}
+
+-(NSString *)testStr
+{
+    if (_testStr) {
+        return _testStr;
+    }
+    return @"test";
+}
+
+#pragma mark --- TEST MJ
+-(void)testMJ
+{
+    NSDictionary *dict = @{
+                           @"name" : @"Jack",
+                           @"icon" : @"lufy.png",
+                           @"age" : @20,
+                           @"height" : @"1.55",
+                           @"money" : @100.9,
+                           @"sex" : @(SexFemale)
+                           };
+    
+    NSArray *userPersonArray = @[
+                           @{
+                               @"name" : @"Jack",
+                               @"icon" : @"lufy.png",
+                               @"age" : @20,
+                               @"height" : @"1.35",
+                               @"money" : @60.9,
+                               @"sex" : @(SexFemale)
+                               },
+                           @{
+                               @"name" : @"Rose",
+                               @"icon" : @"nami.png",
+                               @"age" : @21,
+                               @"height" : @"1.55",
+                               @"money" : @100.9,
+                               @"sex" : @(SexFemale)
+                               }
+                           ];
+    
+    NSDictionary* userdict = @{ @"user":dict,
+                                
+                               @"money":@"1111",
+                                
+                                @"userArr":userPersonArray
+                               };
+    
+    /**
+     
+     字典转模型
+     
+    */
+    
+    UserInfoModel* model = [UserInfoModel mj_objectWithKeyValues:userdict];
+    
+    
+    UserPerson* info = [UserPerson mj_objectWithKeyValues:dict];
+    
+    
+    /**
+     
+     模型转为字典
+    */
+    
+    NSDictionary *userDict = [info mj_keyValues];
+    
+    NSDictionary* userModelDic = [model mj_keyValues];
+    
+    /**
+     
+     数组转模型
+     
+    */
+    
+    NSArray *dictArray = @[
+                           @{
+                               @"name" : @"Jack",
+                               @"icon" : @"lufy.png",
+                               @"age" : @20,
+                               @"height" : @"1.35",
+                               @"money" : @60.9,
+                               @"sex" : @(SexFemale)
+                               },
+                           @{
+                               @"name" : @"Rose",
+                               @"icon" : @"nami.png",
+                               @"age" : @21,
+                               @"height" : @"1.55",
+                               @"money" : @100.9,
+                               @"sex" : @(SexFemale)
+                               }
+                           ];
+    
+    NSArray* modelArr = [UserPerson mj_objectArrayWithKeyValuesArray:dictArray];
+    for (UserPerson* person in modelArr) {
+        NSLog(@"%@",[person yy_modelDescription]);
+    }
+}
+
+#pragma mark --- TEST CODE
+-(void)testCode
+{
+    
+    kBlock block = ^(NSString* str){
+        NSLog(@"+++%@++++++",str);
+        return str;
+    };
+    
+    NSString* str = block(@"TTTTT");
+    
+    NSLog(@"+++%@+++",str);
+    
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    
+    NSString *date1 = [dateformatter stringFromDate:[NSDate date]];
+    NSLog(@"获取当前时间 = %@",date1);
+    
+    /*
+     1个1个拿，正好拿完。
+     2个2个拿，还剩1个。
+     3个3个拿，正好拿完。
+     4个4个拿，还剩1个。
+     5个5个拿，还剩4个。
+     6个6个拿，还剩3个。
+     7个7个拿，正好拿完。
+     8个8个拿，还剩1个。
+     9个9个拿，正好拿完。
+     问筐里有多少鸡蛋？(请手写代码并列出第一个值是多少)
+     */
+    for (int i = 0; i < 10000; i++) {
+        if (i%2 == 1 && i%3 == 0 && i%4 == 1 && i%5 == 4 && i%6 == 3 && i%7 == 0 && i%8 == 1 && i%9 == 0 ) {
+            NSLog(@"============%d",i);
+        }
+    }
+    
+    
+    NSString *date2 = [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]*1000];
+    
+    NSLog(@"date2====%ld",(long)[[NSDate date] timeIntervalSince1970]);
+    
+    //NSAssert([num integerValue],@"num不能为空");
+    NSString* testStr = @"";
+    NSLog(@"%@",testStr);
+    NSLog(@"%ld",testStr.length);
+    if (testStr) {
+        NSLog(@"======testStr======");
+    }
+    self.testStr = @"=======hehe========";
+    NSLog(@"%@",self.testStr);
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    NSNumber* track = [NSNumber numberWithInteger:0];
+    NSNumber* track1 = nil;
+    if (track) {
+      NSLog(@"==track有==");
+    }
+    else NSLog(@"==track无==");
+    
+    if (track1) {
+        NSLog(@"==track1有==");
+    }
+    else NSLog(@"==track1无==");
+    
+    [[NSUserDefaults standardUserDefaults]setObject:track1 forKey:@"111"];
+    
+    NSLog(@"====%d",track.boolValue);
+    
+    NSNumber* track11 = [[NSUserDefaults standardUserDefaults] objectForKey:@"111"];
+    NSLog(@"track1===%d",track11.boolValue);
+}
+
+#pragma mark --- view的点击时间
+-(void)imgClick
+{
+    UIView* viee = [[UIView alloc] init];
+    viee.backgroundColor = [UIColor redColor];
+    [self.view addSubview:viee];
+    
+    
+    [viee mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+        make.centerX.mas_equalTo(self.view);
+        make.centerY.mas_equalTo(self.view);
+    }];
+    
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewCilck:)];
+    viee.userInteractionEnabled = YES;
+    [viee addGestureRecognizer:tap];
+}
+
+-(void)viewCilck:(UITapGestureRecognizer*)tap
+{
+    NSLog(@"=====viewCilck=====");
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //NSMutableArray* arr = [LHZDownLoadOperationManager manager].downLoadModels;
+
+    //[[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"设备类型 %@",[self iphoneType]] message:[NSString stringWithFormat:@"网络类型 %@",[self networkType]] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+}
+
+- (NSString *)iphoneType {
+    
+    struct utsname systemInfo;
+    
+    uname(&systemInfo);
+    
+    NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
+    
+    if ([platform isEqualToString:@"iPhone3,1"]) return @"iPhone 4";
+    
+    if ([platform isEqualToString:@"iPhone3,2"]) return @"iPhone 4";
+    
+    if ([platform isEqualToString:@"iPhone3,3"]) return @"iPhone 4";
+    
+    if ([platform isEqualToString:@"iPhone4,1"]) return @"iPhone 4S";
+    
+    if ([platform isEqualToString:@"iPhone5,1"]) return @"iPhone 5";
+    
+    if ([platform isEqualToString:@"iPhone5,2"]) return @"iPhone 5";
+    
+    if ([platform isEqualToString:@"iPhone5,3"]) return @"iPhone 5c";
+    
+    if ([platform isEqualToString:@"iPhone5,4"]) return @"iPhone 5c";
+    
+    if ([platform isEqualToString:@"iPhone6,1"]) return @"iPhone 5s";
+    
+    if ([platform isEqualToString:@"iPhone6,2"]) return @"iPhone 5s";
+    
+    if ([platform isEqualToString:@"iPhone7,1"]) return @"iPhone 6 Plus";
+    
+    if ([platform isEqualToString:@"iPhone7,2"]) return @"iPhone 6";
+    
+    if ([platform isEqualToString:@"iPhone8,1"]) return @"iPhone 6s";
+    
+    if ([platform isEqualToString:@"iPhone8,2"]) return @"iPhone 6s Plus";
+    
+    if ([platform isEqualToString:@"iPhone8,4"]) return @"iPhone SE";
+    
+    if ([platform isEqualToString:@"iPhone9,1"]) return @"iPhone 7";
+    
+    if ([platform isEqualToString:@"iPhone9,2"]) return @"iPhone 7 Plus";
+    
+    return @"iphone";
+    
+}
+
+#pragma mark --- 获取当前网络类型
+-(NSString*)networkType
+{
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *children = [[[app valueForKeyPath:@"statusBar"]valueForKeyPath:@"foregroundView"]subviews];
+    NSString *state = [[NSString alloc]init];
+    int netType = 0;
+    //获取到网络返回码
+    for (id child in children) {
+        if ([child isKindOfClass:NSClassFromString(@"UIStatusBarDataNetworkItemView")]) {
+            //获取到状态栏
+            netType = [[child valueForKeyPath:@"dataNetworkType"]intValue];
+            
+            switch (netType) {
+                case 0:
+                    state = @"无网络";
+                    //无网模式
+                    break;
+                case 1:
+                    state =  @"2G";
+                    break;
+                case 2:
+                    state =  @"3G";
+                    break;
+                case 3:
+                    state =   @"4G";
+                    break;
+                case 5:
+                {
+                    state =  @"wifi";
+                    break;
+                default:
+                    break;
+                }
+            }
+            //根据状态选择
+            return state;
+        }
+        
+    }
+    return @"无网络";
 }
 
 #pragma mark ---- TEST DOWNLOAD
 -(void)testDownLoad
 {
-    /*
-    LHZDownLoadModel* model = [[LHZDownLoadModel alloc] init];
-    model.downloadURL = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E5%A4%A7%E4%B8%93%E5%AE%B6.COM%E4%BB%8B%E7%BB%8D%E7%89%87118.mp4";
-    model.downloadName = @"下载测试";
-    model.progressHandle = ^(NSProgress* progress){
-        
-    };
-    
-    [LHZDownLoadOperationManager manager].downLoadModels = [NSMutableArray arrayWithArray:@[model]];
-     */
+
+//    LHZDownExampleModel* model = [[LHZDownExampleModel alloc] init];
+//    model.downloadURL = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E5%A4%A7%E4%B8%93%E5%AE%B6.COM%E4%BB%8B%E7%BB%8D%E7%89%87118.mp4";
+//    
+//    LHZDownExampleModel* model1 = [[LHZDownExampleModel alloc] init];
+//    model1.downloadURL = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E6%88%91%E6%98%AF%E5%8C%BB%E7%94%9F%E2%80%94%E2%80%94%E9%92%9F%E5%8D%97%E5%B1%B1%C2%B7%E5%8C%BB%E8%80%85%E4%BB%81%E5%BF%83.mp4";
+//    
+//    [LHZDownLoadOperationManager manager].downLoadModels = [NSMutableArray arrayWithArray:@[model,model1]];
+//    
+//    [LHZDownLoadStore saveModels:@[model,model1]];
+   
 }
 
 #pragma mark --- 正则表达式
@@ -134,12 +469,14 @@
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
+    return @[@"CollectionView",@"分页效果",@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
 }
 
 -(NSArray *)pushVcArr
 {
-    return @[[UIDynamicViewController class],
+    return @[[CollectionViewController class],
+             [PageAnnimaionVC class],
+             [UIDynamicViewController class],
              [PropertyTestViewController class],
              [WeakAndStrongViewController class],
              [MasonryViewController class],

@@ -20,6 +20,10 @@
 
 #import "UIButton+Tracker.h"
 
+#import "UIControl+Tracker.h"
+
+#import "UITableView+Tracker.h"
+
 #import <Masonry/Masonry.h>
 
 #import <SDWebImage/UIImage+GIF.h>
@@ -35,5 +39,7 @@
 #import <YYCache/YYCache.h>
 
 #import <YYModel/YYModel.h>
+
+#import <MJExtension/MJExtension.h>
 
 #endif /* MyPrefixHeader_pch */

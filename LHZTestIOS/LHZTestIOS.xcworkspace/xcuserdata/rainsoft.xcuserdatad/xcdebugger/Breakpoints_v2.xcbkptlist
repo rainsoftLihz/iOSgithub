@@ -4,18 +4,28 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LHZTestIOS/Controller/LHZHttpManager.m"
-            timestampString = "513077266.802189"
+            filePath = "LHZTestIOS/Controller/CoreAnimationVC.m"
+            timestampString = "513504513.592775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "-downLoadWithUrl:parameters:progress:completion:"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "-positionAnimation"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,61 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LHZTestIOS/Controller/LHZHttpManager.m"
-            timestampString = "513077268.744103"
+            filePath = "LHZTestIOS/MyCategroy/UITableView+Tracker.m"
+            timestampString = "513506688.125935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "-downLoadWithUrl:parameters:progress:completion:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LHZHttpManager downLoadWithUrl:parameters:progress:completion:]"
-                  moduleName = "LHZTestIOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rainsoft/Desktop/WORKSpace/iOSTest/LHZTestIOS/LHZTestIOS/Controller/LHZHttpManager.m"
-                  timestampString = "513487374.11782"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "782">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__65-[LHZHttpManager downLoadWithUrl:parameters:progress:completion:]_block_invoke.66"
-                  moduleName = "LHZTestIOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rainsoft/Desktop/WORKSpace/iOSTest/LHZTestIOS/LHZTestIOS/Controller/LHZHttpManager.m"
-                  timestampString = "513487374.120514"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LHZTestIOS/Controller/LHZDownLoadOperation.m"
-            timestampString = "513132562.168408"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "-download"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-jztTableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +51,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LHZTestIOS/Controller/LHZDownLoadOperation.m"
-            timestampString = "513132562.168408"
+            filePath = "LHZTestIOS/MyCategroy/UIViewController+Tracker.m"
+            timestampString = "513508202.834998"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-initWithDownloadModel:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-jztTableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LHZTestIOS/MyCategroy/UIViewController+Tracker.m"
+            timestampString = "513512314.008929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-jztTableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LHZTestIOS/Controller/NetWorkViewController.m"
+            timestampString = "513663843.652887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
+            landmarkName = "-downLoadData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,45 +100,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LHZTestIOS/Controller/LHZDownLoadOperationManager.m"
-            timestampString = "513133006.727408"
+            timestampString = "513674987.33826"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-handleAppTerminateSaveData:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LHZDownLoadOperationManager handleAppTerminateSaveData:]"
-                  moduleName = "LHZTestIOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rainsoft/Desktop/WORKSpace/iOSTest/LHZTestIOS/LHZTestIOS/Controller/LHZDownLoadOperationManager.m"
-                  timestampString = "513487374.133963"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LHZDownLoadOperationManager handleAppTerminateSaveData:]"
-                  moduleName = "LHZTestIOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rainsoft/Desktop/WORKSpace/iOSTest/LHZTestIOS/LHZTestIOS/Controller/LHZDownLoadOperationManager.m"
-                  timestampString = "513487374.13607"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "164">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -153,13 +115,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LHZTestIOS/Controller/LHZDownLoadOperation.m"
-            timestampString = "513137136.271115"
+            filePath = "LHZTestIOS/Controller/LHZHttpManager.m"
+            timestampString = "513675160.277825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-start"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-downloadTaskWithRequest:resumeData:progress:destination:completionHandler:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -169,13 +131,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LHZTestIOS/Controller/TableRefreshViewController.m"
-            timestampString = "513487219.068974"
+            filePath = "LHZTestIOS/Controller/LHZHttpManager.m"
+            timestampString = "513675186.756929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-downLoadWithUrl:parameters:progress:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LHZTestIOS/Controller/CollectionViewController.m"
+            timestampString = "515817319.899845"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-collectionView:layout:minimumLineSpacingForSectionAtIndex:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LHZTestIOS/Controller/CollectionViewController.m"
+            timestampString = "515817319.899845"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-collectionView:layout:insetForSectionAtIndex:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

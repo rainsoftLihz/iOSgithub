@@ -18,4 +18,9 @@
 @dynamic address;
 @dynamic relationship;
 
+-(NSString *)address
+{
+    return @"11111111";
+}
+
 @end

@@ -1,8 +1,8 @@
 //
-//  NSObject+JZTSwizzleClass.m
+//  NSObject+Tracker.m
 //  JK_BLB
 //
-//  Created by 朱小亮 on 16/6/22.
+//  Created by rainsoft on 16/6/22.
 //  Copyright © 2016年 com.JoinTown.jk998. All rights reserved.
 //
 
@@ -53,8 +53,16 @@ static char ktrackModel;
     dispatch_once(&onceToken, ^{
         [[self class] swizzleOriginalSelector:@selector(viewWillAppear:) swizzledSelector:@selector(jzt_viewWillAppear:)];
         [[self class] swizzleOriginalSelector:@selector(viewWillDisappear:) swizzledSelector:@selector(jzt_viewWillDisappear:)];
+        [[self class] swizzleOriginalSelector:@selector(tableView: didSelectRowAtIndexPath:) swizzledSelector:@selector(jztTableView: didSelectRowAtIndexPath:)];
     });
    
+}
+
+-(void)jztTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self jztTableView:tableView didSelectRowAtIndexPath:indexPath];
+    
+    NSLog(@"====tableviewSelect====");
 }
 
 - (void)jzt_viewWillAppear:(BOOL)b{

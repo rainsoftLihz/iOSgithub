@@ -22,15 +22,6 @@
 
 @implementation LHZDownLoadOperation
 
-//-(instancetype)init
-//{
-//    if (self = [super init]) {
-//        executing = NO;
-//        finished = NO;
-//        ready = YES;
-//    }
-//    return self;
-//}
 
 - (instancetype)initWithDownloadModel:(id<LHZDownLoadModel>)model{
     if (self = [super init]) {
@@ -38,7 +29,7 @@
         finished = NO;
         ready = YES;
         self.model = model;
-        self.model.state = LHZDownloadStateWaiting;
+        self.model.state = LHZDownloadStateNone;
     }
     return self;
 }
@@ -114,6 +105,7 @@
            self.model.state = LHZDownloadStateRunning;
         }
         
+        self.model.progress = progress;
         
     } completion:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         if (error) {

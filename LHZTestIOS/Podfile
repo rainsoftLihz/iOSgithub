@@ -17,4 +17,5 @@ target 'LHZTestIOS' do
     #HUD
     pod 'SVProgressHUD'
     pod 'IQKeyboardManager'
+    pod 'MJExtension'
 end

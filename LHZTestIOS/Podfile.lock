@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - IQKeyboardManager (4.0.9)
   - Masonry (1.0.2)
+  - MJExtension (3.0.13)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - AFNetworking (= 3.1.0)
   - IQKeyboardManager
   - Masonry (= 1.0.2)
+  - MJExtension
   - SDWebImage (= 3.7.1)
   - SVProgressHUD
   - YYCache
@@ -40,12 +42,13 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 99bad7c184ca130275407c1573cc7ac3391641d6
+PODFILE CHECKSUM: 3567cbdaeea1092b9a047e4c020d33e8641a05d2
 
 COCOAPODS: 1.2.0

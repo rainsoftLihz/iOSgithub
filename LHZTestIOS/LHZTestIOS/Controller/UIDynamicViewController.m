@@ -74,7 +74,7 @@
     if (_ballItem1) {
         return _ballItem1;
     }
-    _ballItem1 = [[UIImageView alloc]initWithFrame:CGRectMake(100, 150, 50, 50)];
+    _ballItem1 = [[UIImageView alloc]initWithFrame:CGRectMake(150, 150, 50, 50)];
     _ballItem1.image = [UIImage imageNamed:@"basketBall"];
     _ballItem1.layer.masksToBounds = YES;
     _ballItem1.layer.cornerRadius = 50/2.0;
@@ -140,7 +140,7 @@
 -(UISnapBehavior *)snapBehavior
 {
     if (!_snapBehavior) {
-        _snapBehavior = [[UISnapBehavior alloc] initWithItem:self.ballItem snapToPoint:CGPointMake(self.ballItem1.left, self.ballItem1.left)];
+        _snapBehavior = [[UISnapBehavior alloc] initWithItem:self.ballItem snapToPoint:CGPointMake(self.ballItem.left, self.ballItem1.left)];
     }
     return _snapBehavior;
 }
@@ -164,7 +164,7 @@
     //把重力效果 添加到 动力效果的操纵者上
     [self.animator addBehavior:self.gravityBehavior];
     [self.animator addBehavior:self.collisionBehavior];
-    //[self.animator addBehavior:self.attachmentBehavior];
+    [self.animator addBehavior:self.attachmentBehavior];
  
     
     //[self.animator addBehavior:self.snapBehavior];
@@ -192,7 +192,7 @@
     
     item.resistance = 0.3;
     
-    item.angularResistance = 0.0;
+    item.angularResistance = 0.3;
     
     item.allowsRotation = YES;
     
