@@ -38,7 +38,7 @@
     [self.contentView addSubview:self.titleLab];
     
     [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.iconImg.mas_bottom).offset(3.0);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-3.0);
         make.centerX.mas_equalTo(self.contentView.mas_centerX);
     }];
 }

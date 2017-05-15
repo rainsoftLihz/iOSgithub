@@ -8,6 +8,8 @@
 
 #import "MyBaseViewController.h"
 
-@interface CollectionViewController : MyBaseViewController
+#import "IMGShowViewControlle.h"
 
+@interface CollectionViewController : MyBaseViewController
+@property (nonatomic,strong)IMGShowViewControlle* imgV;
 @end

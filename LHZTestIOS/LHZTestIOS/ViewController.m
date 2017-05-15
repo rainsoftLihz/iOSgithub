@@ -10,6 +10,8 @@
 
 #import "PropertyTestViewController.h"
 
+#import "TitleViewController.h"
+
 #import "WeakAndStrongViewController.h"
 
 #import "MasonryViewController.h"
@@ -42,6 +44,8 @@
 
 #import "LHZDownLoadModel.h"
 
+#import "IMGShowViewControlle.h"
+
 #import "LHZDownLoadStore.h"
 
 #import "LHZDownExampleModel.h"
@@ -54,7 +58,11 @@
 
 #import <sys/utsname.h>
 
+#import "SDCycleScrollView.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong)UICollectionView* collectionView;
 
 @property (nonatomic,strong)UITableView* tableView;
 
@@ -65,6 +73,12 @@
 @property (nonatomic,strong)UIImageView* barImageView;
 
 @property (nonatomic,strong)NSString* testStr;
+
+@property (nonatomic,strong)SDCycleScrollView* scrollView;
+
+@property (nonatomic,strong)NSArray* imgArr;
+
+@property (nonatomic,strong)UIImageView* bkImageView;
 
 @end
 
@@ -100,14 +114,19 @@ typedef enum {
     
     //NSLog(@"%d",[self respondsToSelector:@selector(tableView: didSelectRowAtIndexPath:)]);
     
-    NSString* teSt = @"";
-    if (teSt.length) {
-        NSLog(@"======  lenth =======");
-    }
-    
-    [self testMJ];
-    
+//    NSString* teSt = @"";
+//    if (teSt.length) {
+//        NSLog(@"======  lenth =======");
+//    }
+//    
+//    NSArray* arr ;
+//    
+//    NSLog(@"======  %@ =======",arr[1]);
+//    
+//    [self testMJ];
+
 }
+
 
 -(NSString *)testStr
 {
@@ -313,6 +332,7 @@ typedef enum {
     //NSMutableArray* arr = [LHZDownLoadOperationManager manager].downLoadModels;
 
     //[[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"设备类型 %@",[self iphoneType]] message:[NSString stringWithFormat:@"网络类型 %@",[self networkType]] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+    
 }
 
 - (NSString *)iphoneType {
@@ -469,12 +489,14 @@ typedef enum {
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"CollectionView",@"分页效果",@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
+    return @[@"标题视图",@"Amy",@"CollectionView",@"分页效果",@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
 }
 
 -(NSArray *)pushVcArr
 {
-    return @[[CollectionViewController class],
+    return @[[TitleViewController class],
+             [IMGShowViewControlle class],
+             [CollectionViewController class],
              [PageAnnimaionVC class],
              [UIDynamicViewController class],
              [PropertyTestViewController class],

@@ -144,31 +144,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LHZTestIOS/Controller/CollectionViewController.m"
-            timestampString = "515817319.899845"
+            timestampString = "516094932.408059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-collectionView:layout:minimumLineSpacingForSectionAtIndex:"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-collectionView:layout:insetForSectionAtIndex:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LHZTestIOS/Controller/CollectionViewController.m"
-            timestampString = "515817319.899845"
+            timestampString = "516094932.408059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "-collectionView:layout:insetForSectionAtIndex:"
             landmarkType = "7">
          </BreakpointContent>

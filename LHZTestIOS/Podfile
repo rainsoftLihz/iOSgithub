@@ -18,4 +18,6 @@ target 'LHZTestIOS' do
     pod 'SVProgressHUD'
     pod 'IQKeyboardManager'
     pod 'MJExtension'
+    # 商品大图浏览
+    pod 'MWPhotoBrowser', '~> 2.1.2'
 end

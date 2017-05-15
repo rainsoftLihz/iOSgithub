@@ -23,7 +23,14 @@
     /* 坐标系从navigationBar开始 */
     self.navigationController.navigationBar.translucent = NO;
     
+    self.navigationItem.leftBarButtonItem = [self customBackItemWithTarget:self action:@selector(goBack)];
+    
     //self.navigationController.navigationBar.hidden = YES;
+}
+
+-(void)goBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)sendDataToServer
@@ -33,6 +40,17 @@
     NSLog(@"trackModel:%@",[self.trackModel description]);
     
     [self.trackModel sendDataToServer];
+}
+
+- (UIBarButtonItem *)customBackItemWithTarget:(id)target action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"common_back_black"] forState:UIControlStateNormal];
+    button.frame =  CGRectMake(0, 0, 11, 20);
+    [button addTarget:target
+               action:action
+     forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
 

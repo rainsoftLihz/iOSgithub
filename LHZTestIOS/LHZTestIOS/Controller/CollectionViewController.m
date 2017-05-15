@@ -56,23 +56,29 @@
         layout.minimumLineSpacing = 0.0;
         layout.minimumInteritemSpacing = 0.0;
         layout.itemSize = CGSizeMake(Screen_Width/3.0, 450*kHProportion/2.0);
+        
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-64-100) collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [_collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:[CollectionViewCell className]];
+        [_collectionView registerClass:[UICollectionReusableView
+                                        class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     }
     return _collectionView;
 }
 
 #pragma mark - UICollectionViewDataSource|UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    if (section == 1) {
+        return 4;
+    }
     return self.titleArr.count;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return 8;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -89,6 +95,59 @@
     
 }
 
+#pragma mark -- 创建头视图
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionReusableView *headView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                                            withReuseIdentifier:@"header"
+                                                                                   forIndexPath:indexPath];
+    headView.backgroundColor = [UIColor redColor];
+    
+    
+    
+    return headView;
+}
+
+// 设置section头视图的参考大小，与tableheaderview类似
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout
+referenceSizeForHeaderInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return CGSizeMake(Screen_Width, 100);
+    }
+    else {
+        return CGSizeMake(Screen_Width, 10);
+    }
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+//itemSize
+- (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+
+//    if (indexPath.section == 1) {
+//        if (indexPath.row == 0) {
+//            return CGSizeMake(Screen_Width/2.0, 100*2);
+//        }
+//        if (indexPath.row == 1) {
+//            return CGSizeMake(Screen_Width/2.0, 100);
+//        }
+//        if (indexPath.row == 2) {
+//            return CGSizeMake(0, 0);
+//        }
+//        return CGSizeMake(Screen_Width/2.0, 100);
+//    }
+    return CGSizeMake(Screen_Width/3.0, 450*kHProportion/2.0);
+}
+
+//- (nullable UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    //根据indexPath获取item的attributes
+//    UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+//    return attributes;
+//}
+
 //列间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
     return 0;
@@ -98,8 +157,9 @@
     return 0;//self.lineSpace*(section+1);
 }
 
-
+//UIEdgeInsets
 - (UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    
     return UIEdgeInsetsMake(self.lineSpace*(section+1), 0, self.lineSpace*(section+1), 0);
 }
 
