@@ -11,6 +11,7 @@
 #import "MWPhotoBrowser.h"
 #import "IMGCollectionViewCell.h"
 #import "JZTPlayManager.h"
+#import "CollectionFooterView.h"
 
 @interface IMGShowViewControlle ()<UICollectionViewDelegate,UICollectionViewDataSource,MWPhotoBrowserDelegate>
 
@@ -66,7 +67,9 @@
 //    self.bkImageView.image = [UIImage imageNamed:@"timg2.jpeg"];
 //    
 //    self.collectionView.center = CGPointMake(Screen_Width/2.0, Screen_Height/2.0);
-
+    
+    CollectionFooterView* playView = [[CollectionFooterView alloc] initWithFrame:CGRectMake(0, self.collectionView.bottom, Screen_Width, 128/3.0+20)];
+    [self.view addSubview:playView];
 
 }
 
@@ -110,7 +113,10 @@
         layout.minimumInteritemSpacing = 0.0;
         layout.itemSize = CGSizeMake(Screen_Width/2.0, 1280 *(Screen_Width/2.0)/960);
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-64) collectionViewLayout:layout];
+        //layout.footerReferenceSize = CGSizeMake(Screen_Width, 128/3.0+20);
+        
+        
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-64-128/3.0-20) collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -118,6 +124,8 @@
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
         [_collectionView registerClass:[IMGCollectionViewCell class] forCellWithReuseIdentifier:[IMGCollectionViewCell className]];
+        [_collectionView registerClass:[CollectionFooterView
+                                        class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"Footer"];
     }
     return _collectionView;
 }
@@ -164,6 +172,26 @@
     [self.navigationController presentViewController:nc animated:YES completion:nil];
 }
 
+// 设置headerView和footerView的
+//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+//{
+//    UICollectionReusableView *reusableView = nil;
+//    if (kind == UICollectionElementKindSectionHeader) {
+//        UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+//        reusableView = header;
+//    }
+//    reusableView.backgroundColor = [UIColor greenColor];
+//    if (kind == UICollectionElementKindSectionFooter)
+//    {
+//        CollectionFooterView *footerview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"Footer" forIndexPath:indexPath];
+//        
+//        reusableView = footerview;
+//    }
+//    
+//    reusableView.userInteractionEnabled = YES;
+//    
+//    return reusableView;
+//}
 
 -(void)dealloc
 {

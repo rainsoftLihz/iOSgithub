@@ -118,6 +118,11 @@
 		53E9A3021E28BECF00362CAE /* wu2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53E9A3011E28BECF00362CAE /* wu2.gif */; };
 		53E9A3041E28BED800362CAE /* wu1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53E9A3031E28BED800362CAE /* wu1.gif */; };
 		53E9A3061E28C04600362CAE /* 1111.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53E9A3051E28C04600362CAE /* 1111.gif */; };
+		53EEDB701ECA91D100C9011D /* player_btn_pre.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EEDB6F1ECA91D100C9011D /* player_btn_pre.png */; };
+		53EEDB721ECA91F000C9011D /* player_btn_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EEDB711ECA91F000C9011D /* player_btn_next.png */; };
+		53EEDB751ECA93BE00C9011D /* CollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EEDB741ECA93BE00C9011D /* CollectionFooterView.m */; };
+		53EEDB771ECA96BB00C9011D /* player_btn_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EEDB761ECA96BB00C9011D /* player_btn_play.png */; };
+		53EEDB791ECA96E700C9011D /* player_btn_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EEDB781ECA96E700C9011D /* player_btn_pause.png */; };
 		53F2982C1E46CCC8005DA8C4 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */; };
 		53F2982F1E46D398005DA8C4 /* LHZHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F2982E1E46D398005DA8C4 /* LHZHttpManager.m */; };
 		53F3D4E21E9489F3001DA83A /* LHZDownLoadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F3D4E11E9489F3001DA83A /* LHZDownLoadStore.m */; };
@@ -342,6 +347,12 @@
 		53E9A3011E28BECF00362CAE /* wu2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wu2.gif; sourceTree = "<group>"; };
 		53E9A3031E28BED800362CAE /* wu1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wu1.gif; sourceTree = "<group>"; };
 		53E9A3051E28C04600362CAE /* 1111.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1111.gif; sourceTree = "<group>"; };
+		53EEDB6F1ECA91D100C9011D /* player_btn_pre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_btn_pre.png; sourceTree = "<group>"; };
+		53EEDB711ECA91F000C9011D /* player_btn_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_btn_next.png; sourceTree = "<group>"; };
+		53EEDB731ECA93BE00C9011D /* CollectionFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionFooterView.h; sourceTree = "<group>"; };
+		53EEDB741ECA93BE00C9011D /* CollectionFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionFooterView.m; sourceTree = "<group>"; };
+		53EEDB761ECA96BB00C9011D /* player_btn_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_btn_play.png; sourceTree = "<group>"; };
+		53EEDB781ECA96E700C9011D /* player_btn_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_btn_pause.png; sourceTree = "<group>"; };
 		53F2982A1E46CCC8005DA8C4 /* NetWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkViewController.h; sourceTree = "<group>"; };
 		53F2982B1E46CCC8005DA8C4 /* NetWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkViewController.m; sourceTree = "<group>"; };
 		53F2982D1E46D398005DA8C4 /* LHZHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZHttpManager.h; sourceTree = "<group>"; };
@@ -643,6 +654,10 @@
 		53B8CF381EC4007B00014C1B /* IMGShow */ = {
 			isa = PBXGroup;
 			children = (
+				53EEDB781ECA96E700C9011D /* player_btn_pause.png */,
+				53EEDB711ECA91F000C9011D /* player_btn_next.png */,
+				53EEDB6F1ECA91D100C9011D /* player_btn_pre.png */,
+				53EEDB761ECA96BB00C9011D /* player_btn_play.png */,
 				5351D35C1EC9B30A002698D6 /* 薛之谦-认真的雪.mp3 */,
 				5351D3581EC9AFD5002698D6 /* 蔡淳佳-陪我看日出.mp3 */,
 				5351D3591EC9AFD5002698D6 /* 张学友-每天爱你多一些.mp3 */,
@@ -650,6 +665,8 @@
 				53B8CF361EC3FFCD00014C1B /* IMGShowViewControlle.m */,
 				5351D3521EC9A1BD002698D6 /* IMGCollectionViewCell.h */,
 				5351D3531EC9A1BD002698D6 /* IMGCollectionViewCell.m */,
+				53EEDB731ECA93BE00C9011D /* CollectionFooterView.h */,
+				53EEDB741ECA93BE00C9011D /* CollectionFooterView.m */,
 				5351D3551EC9AD0A002698D6 /* JZTPlayManager.h */,
 				5351D3561EC9AD0A002698D6 /* JZTPlayManager.m */,
 			);
@@ -1090,7 +1107,9 @@
 				535EECAA1EBEB5CC009949E3 /* wd_dd_pz.png in Resources */,
 				53B8CF341EC3FB4200014C1B /* timg3.jpg in Resources */,
 				53E73F801E1DDE9F00F786CC /* sy_jkcs_4.png in Resources */,
+				53EEDB721ECA91F000C9011D /* player_btn_next.png in Resources */,
 				5351D35A1EC9AFD5002698D6 /* 蔡淳佳-陪我看日出.mp3 in Resources */,
+				53EEDB771ECA96BB00C9011D /* player_btn_play.png in Resources */,
 				53E73F7F1E1DDE9F00F786CC /* sy_jkcs_3.png in Resources */,
 				53ABF51D1EC3189100872326 /* IMG_0131.JPG in Resources */,
 				53ABF5211EC3189100872326 /* IMG_0136.JPG in Resources */,
@@ -1125,8 +1144,10 @@
 				53ABF5251EC3189100872326 /* IMG_0140.JPG in Resources */,
 				535EECA21EBEB59A009949E3 /* wd_dd_wssc.png in Resources */,
 				5351D35B1EC9AFD5002698D6 /* 张学友-每天爱你多一些.mp3 in Resources */,
+				53EEDB791ECA96E700C9011D /* player_btn_pause.png in Resources */,
 				53FE418E1E9B2E6400BEBD6D /* Tracker.plist in Resources */,
 				53ABF5281EC31A3D00872326 /* IMG_0108.JPG in Resources */,
+				53EEDB701ECA91D100C9011D /* player_btn_pre.png in Resources */,
 				535EECA41EBEB5A8009949E3 /* wd_dd_1xsgy.png in Resources */,
 				53B8CF331EC3FB4200014C1B /* timg2.jpeg in Resources */,
 			);
@@ -1245,6 +1266,7 @@
 				533056971EB0495900B86E4B /* PageMainVC.m in Sources */,
 				53ABF5041EC3178900872326 /* SDCycleScrollView.m in Sources */,
 				53F3D4E21E9489F3001DA83A /* LHZDownLoadStore.m in Sources */,
+				53EEDB751ECA93BE00C9011D /* CollectionFooterView.m in Sources */,
 				53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */,
 				5351D3571EC9AD0A002698D6 /* JZTPlayManager.m in Sources */,
 				536235711E45C44500B0CEDF /* ShoppingCell.m in Sources */,

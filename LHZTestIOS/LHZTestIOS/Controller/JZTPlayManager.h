@@ -20,4 +20,10 @@
 
 -(void)stop;
 
+-(void)playNext;
+
+-(void)playPre;
+
+-(void)pause;
+
 @end

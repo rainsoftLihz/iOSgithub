@@ -55,25 +55,55 @@
     return arr;
 }
 
+#pragma mark --- 暂停
+-(void)pause
+{
+    [self.player pause];
+}
 
+#pragma mark --- 播放
 -(void)play
 {
     [self.player prepareToPlay];//分配播放所需的资源，并将其加入内部播放队列
     [self.player play];//播放
 }
 
+#pragma mark --- 停止
 -(void)stop
 {
     [self.player stop];
 }
 
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+#pragma mark --- 下一首
+-(void)playNext
 {
     if (self.index < self.musicPathArr.count-1) {
         self.index++;
     }
     else self.index = 0;
-    
+ 
+    [self palyWithIdex];
+}
+
+#pragma mark --- 上一首
+-(void)playPre
+{
+    if (self.index == 0) {
+        self.index = self.musicPathArr.count-1;
+    }
+    else self.index --;
+
+    [self palyWithIdex];
+}
+
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    [self playNext];
+}
+
+-(void)palyWithIdex
+{
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:self.musicPathArr[self.index]] error:nil];
     [self play];
 }
