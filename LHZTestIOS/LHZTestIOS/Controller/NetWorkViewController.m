@@ -63,12 +63,12 @@
     
     //[self requestWeather];
     
-    [self configUI1];
-    [self configUI2];
-    
-    [self requestDataForWeb];
-    
-    [self downLoadData];
+//    [self configUI1];
+//    [self configUI2];
+//    
+//    [self requestDataForWeb];
+//    
+//    [self downLoadData];
 }
 
 #pragma mark --- 参数

@@ -1,0 +1,6 @@
+module Pods_SwiftT {
+  umbrella header "Pods-SwiftT-umbrella.h"
+
+  export *
+  module * { export * }
+}

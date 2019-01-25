@@ -40,6 +40,14 @@
 
 #import <YYModel/YYModel.h>
 
+#import <AAChartkit/AAChartKit.h>
+#import "AAGlobalMacro.h"
+
+#import <ReactiveObjC/ReactiveObjC.h>
+
 #import <MJExtension/MJExtension.h>
+
+#import <AsyncDisplayKit/AsyncDisplayKit.h>
+
 
 #endif /* MyPrefixHeader_pch */

@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "AppDelegate+CatchCrash.h"
+#import "LHZHttpManager.h"
+#import "uuu.h"
 @interface AppDelegate ()
 
 @end
@@ -26,17 +29,18 @@
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     self.window.rootViewController = nav;
     
-//    self.window.rootViewController = [ViewController new];
+    [uuu sayHello];
+
+    //注册消息处理函数的处理方法
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
     [self.window makeKeyAndVisible];
-    
     
     
     self.window.backgroundColor = [UIColor whiteColor];
     
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

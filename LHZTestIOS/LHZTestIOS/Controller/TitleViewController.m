@@ -176,7 +176,7 @@
 -(JZTScrollTitleView *)titleView
 {
     if (!_titleView) {
-        _titleView = [[JZTScrollTitleView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width-60, 44.0) andDataArr:self.titleArr andselectTextColor:[UIColor redColor] andTitleType:kScrollTitleTypeEqualToSpace];
+        _titleView = [[JZTScrollTitleView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width-60, 44.0) andTitleArr:self.titleArr andselectTextColor:[UIColor redColor] andTitleType:kScrollTitleTypeEqualToSpace];
     }
     return _titleView;
 }

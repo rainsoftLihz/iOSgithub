@@ -12,7 +12,7 @@
 
 #import "PanView.h"
 
-@interface UITestViewController ()
+@interface UITestViewController ()<UITextViewDelegate>
 
 @property (nonatomic,strong)PanView* panView;
 
@@ -48,10 +48,97 @@
 ////    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
 //    UIGraphicsEndImageContext();
 
-    self.panView = [[PanView alloc] initWithFrame:CGRectMake(80, 80, 100, 100)];
-    [self.view addSubview:self.panView];
+//    self.panView = [[PanView alloc] initWithFrame:CGRectMake(80, 80, 100, 100)];
+//    [self.view addSubview:self.panView];
     
-    [self cornerTest];
+//    [self cornerTest];
+    
+    [self uilabText];
+}
+
+-(void)uilabText
+{
+    UITextView* tlab = [[UITextView alloc] initWithFrame:CGRectMake(10, 88, 300, 100)];
+    //tlab.numberOfLines = 0;
+    tlab.font = [UIFont systemFontOfSize:13.0];
+    NSString* str = @" 促销活动  等连接方式拉近了分局了解到了放假了就是氮磷钾肥接受对方吉林省地方上课江东父老结束了对肌肤来说地方上的粉丝雷锋精神了江东父老说";
+    tlab.contentMode = UIViewContentModeCenter;
+    NSMutableAttributedString * attriStr = [[NSMutableAttributedString alloc] initWithString:str];
+    //修改字间距
+    //[attriStr addAttribute:NSKernAttributeName value:@3 range:NSMakeRange(0, 5)];
+    
+    //修改指定区域文字颜色
+    [attriStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, 6)];
+    
+    //修改指定区域的背景色
+    [attriStr addAttribute:NSBackgroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 6)];
+    
+    //插入图片
+    NSTextAttachment* attchImg = [[NSTextAttachment alloc] init];
+    attchImg.image = [UIImage imageNamed:@"zp"];
+    attchImg.bounds = CGRectMake(0, -2, 22, 12);
+    
+    NSAttributedString *attachmentAttrStr = [NSAttributedString attributedStringWithAttachment:attchImg];
+    //[attriStr insertAttributedString:attachmentAttrStr atIndex:0];
+    
+    //修改指定区域字体
+    [attriStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, 5)];
+    
+    //添加下划线
+    [attriStr addAttribute:NSUnderlineStyleAttributeName
+                     value:[NSNumber numberWithInteger:NSUnderlineStyleSingle]
+                     range:NSMakeRange(8, 7)];
+    
+    //下划线颜色
+    [attriStr addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:NSMakeRange(8, 7)];
+    
+    //设置链接属性
+    NSURL* url = [NSURL URLWithString:@"www.baidu.com"];
+    [attriStr addAttribute:NSLinkAttributeName
+                     value:url
+                     range:NSMakeRange(8, 7)];
+    
+    //设置行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 3;
+    
+    [attriStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, str.length)];
+    
+    tlab.attributedText = attriStr;
+    
+    //
+    tlab.contentInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    
+    [self.view addSubview:tlab];
+    
+    tlab.delegate = self;
+    
+    tlab.editable = NO;
+    
+    
+    UITextView*  text2 =  [[UITextView alloc] initWithFrame:CGRectMake(10,260 , 300, 120)];
+    
+    [attriStr insertAttributedString:attachmentAttrStr atIndex:0];
+    text2.font = [UIFont systemFontOfSize:13.0];
+    text2.attributedText = attriStr;
+
+    [self.view addSubview:text2];
+    
+    
+}
+
+//IOS 10
+-(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction
+{
+    
+    return YES;
+}
+
+//IOS 7~10
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange
+{
+    
+    return YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated

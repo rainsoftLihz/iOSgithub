@@ -8,6 +8,8 @@
 
 #import "UIDynamicViewController.h"
 
+#define Ball_W 80
+
 @interface UIDynamicViewController ()<UIDynamicAnimatorDelegate,UICollisionBehaviorDelegate>
 
 @property (nonatomic,strong)UIImageView* ballItem;
@@ -33,7 +35,7 @@
     
     [self.view addSubview:self.ballItem];
     [self.view addSubview:self.ballItem1];
-    
+    [self gravity];
 }
 #pragma mark ---- 动力效果操纵者的代理方法
 
@@ -62,11 +64,11 @@
     if (_ballItem) {
         return _ballItem;
     }
-    _ballItem = [[UIImageView alloc]initWithFrame:CGRectMake(100, 50, 50, 50)];
+    _ballItem = [[UIImageView alloc]initWithFrame:CGRectMake(100, 50, Ball_W, Ball_W)];
     _ballItem.image = [UIImage imageNamed:@"basketBall"];
     _ballItem.backgroundColor = [UIColor redColor];
     _ballItem.layer.masksToBounds = YES;
-    _ballItem.layer.cornerRadius = 50/2.0;
+    _ballItem.layer.cornerRadius = Ball_W/2.0;
     return _ballItem;
 }
 
@@ -74,10 +76,11 @@
     if (_ballItem1) {
         return _ballItem1;
     }
-    _ballItem1 = [[UIImageView alloc]initWithFrame:CGRectMake(150, 150, 50, 50)];
+    _ballItem1 = [[UIImageView alloc]initWithFrame:CGRectMake(160, 150, Ball_W, Ball_W)];
     _ballItem1.image = [UIImage imageNamed:@"basketBall"];
     _ballItem1.layer.masksToBounds = YES;
-    _ballItem1.layer.cornerRadius = 50/2.0;
+    _ballItem1.layer.cornerRadius = Ball_W/2.0;
+    _ballItem1.backgroundColor = [UIColor redColor];
     return _ballItem1;
 }
 
@@ -107,7 +110,7 @@
     //弧度 影响到重力的方向
     _gravityBehavior.angle = 90*M_PI/180;
     //    magnitude 影响下降速度
-    //_gravityBehavior.magnitude = 0.6;
+    _gravityBehavior.magnitude = 1.3;
     
     return _gravityBehavior;
 }
@@ -127,7 +130,7 @@
     return _collisionBehavior;
 }
 
-#pragma mark ---
+#pragma mark --- 吸附行为
 -(UIAttachmentBehavior *)attachmentBehavior
 {
     if (!_attachmentBehavior) {
@@ -147,7 +150,9 @@
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    self.ballItem.center = [[touches anyObject]locationInView:self.view];
+    CGPoint center = [[touches anyObject]locationInView:self.view];
+    self.ballItem.center = center;
+    self.ballItem1.center = CGPointMake(center.x+55, center.y+30);
 }
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -164,7 +169,7 @@
     //把重力效果 添加到 动力效果的操纵者上
     [self.animator addBehavior:self.gravityBehavior];
     [self.animator addBehavior:self.collisionBehavior];
-    [self.animator addBehavior:self.attachmentBehavior];
+//    [self.animator addBehavior:self.attachmentBehavior];
  
     
     //[self.animator addBehavior:self.snapBehavior];

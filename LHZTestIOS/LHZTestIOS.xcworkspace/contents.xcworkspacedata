@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AAA/AAA.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:JZTUIKit/JZTUIKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:uuu/uuu.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:LHZTestIOS.xcodeproj">
    </FileRef>
    <FileRef

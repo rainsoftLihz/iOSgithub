@@ -102,6 +102,19 @@
     [self playNext];
 }
 
+-(void)audioPlayerBeginInterruption:(AVAudioPlayer *)player
+{
+    
+}
+
+-(void)audioPlayerEndInterruption:(AVAudioPlayer *)player withFlags:(NSUInteger)flags
+{
+    NSLog(@"中断结束，恢复播放");
+    if (flags == AVAudioSessionInterruptionFlags_ShouldResume && player != nil){
+        [player play];
+    }
+}
+
 -(void)palyWithIdex
 {
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:self.musicPathArr[self.index]] error:nil];

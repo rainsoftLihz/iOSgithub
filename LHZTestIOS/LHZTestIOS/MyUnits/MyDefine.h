@@ -27,4 +27,20 @@
 
 #define IS_IPhone6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
 
+#define ISIphoneX ([[UIApplication sharedApplication]statusBarFrame].size.height == 44)
+
+#define SafeBottomArea (ISIphoneX?34:0)
+
+// 判断是否是iPhone X
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+// 状态栏高度
+#define STATUS_BAR_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height
+// 导航栏高度
+#define NAVIGATION_BAR_HEIGHT (STATUS_BAR_HEIGHT + 44)
+// tabBar高度
+#define TAB_BAR_HEIGHT (49.f + HOME_INDICATOR_HEIGHT)
+// home indicator
+#define HOME_INDICATOR_HEIGHT (iPhoneX ? 34.f : 0.f)
+
 #endif /* MyDefine_h */

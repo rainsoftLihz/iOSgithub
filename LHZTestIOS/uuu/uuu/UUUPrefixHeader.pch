@@ -1,0 +1,16 @@
+//
+//  UUUPrefixHeader.pch
+//  uuu
+//
+//  Created by rainsoft on 2018/11/15.
+//  Copyright © 2018年 jzt. All rights reserved.
+//
+
+#ifndef UUUPrefixHeader_pch
+#define UUUPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "JZTBaseViewController.h"
+#endif /* UUUPrefixHeader_pch */

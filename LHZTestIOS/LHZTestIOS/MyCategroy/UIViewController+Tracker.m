@@ -12,6 +12,11 @@ static char kfromPush;
 
 static char ktrackModel;
 
+// 无返回值的IMP
+typedef void (* _VIMP)(id,SEL, ...);
+// 有返回值的IMP
+typedef id(*_IMP)(id,SEL, ...);
+
 @implementation UIViewController (Tracker)
 
 @dynamic fromPush;
@@ -50,10 +55,26 @@ static char ktrackModel;
 + (void)load{
     
     static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        [[self class] swizzleOriginalSelector:@selector(viewWillAppear:) swizzledSelector:@selector(jzt_viewWillAppear:)];
+//        [[self class] swizzleOriginalSelector:@selector(viewWillDisappear:) swizzledSelector:@selector(jzt_viewWillDisappear:)];
+//        [[self class] swizzleOriginalSelector:@selector(tableView: didSelectRowAtIndexPath:) swizzledSelector:@selector(jztTableView: didSelectRowAtIndexPath:)];
+//    });
+    
     dispatch_once(&onceToken, ^{
-        [[self class] swizzleOriginalSelector:@selector(viewWillAppear:) swizzledSelector:@selector(jzt_viewWillAppear:)];
-        [[self class] swizzleOriginalSelector:@selector(viewWillDisappear:) swizzledSelector:@selector(jzt_viewWillDisappear:)];
-        [[self class] swizzleOriginalSelector:@selector(tableView: didSelectRowAtIndexPath:) swizzledSelector:@selector(jztTableView: didSelectRowAtIndexPath:)];
+        
+        // 获取原始方法
+        Method viewDidLoad = class_getInstanceMethod(self, @selector(viewDidLoad));
+        // 获取原始方法的实现指针(IMP)
+        _VIMP viewDidLoad_IMP = (_VIMP)method_getImplementation(viewDidLoad);
+        
+        // 重新设置方法的实现
+        method_setImplementation(viewDidLoad, imp_implementationWithBlock(^(id target, SEL action) {
+            // 调用系统的原生方法
+            viewDidLoad_IMP(target, @selector(viewDidLoad));
+            // 新增的功能代码
+            NSLog(@"%@ did load", target);
+        }));
     });
    
 }

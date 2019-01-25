@@ -9,11 +9,7 @@
 
 #import "JZTScrollTitleView.h"
 
-#define BTN_WIDTH (Screen_Width/5.0) //等间距默认值
-
-#define LINE_HEIGHT 2 //线条宽度
-
-#define BTN_SPACE IS_IPHONE5?6:12.0 //按钮间距默认值
+#define LINE_HEIGHT 2 //线条高度度
 
 #define BTN_TAG 1667 //按钮TAG值
 
@@ -34,59 +30,67 @@
 
 @implementation JZTScrollTitleView
 
--(instancetype)initWithFrame:(CGRect)frame andDataArr:(NSArray*)dataArr andselectTextColor:(UIColor*)textColor
+-(instancetype)initWithFrame:(CGRect)frame andTitleArr:(NSArray*)titleArr andselectTextColor:(UIColor*)textColor
 {
     if (self = [super initWithFrame:frame]) {
-        self.selectIndex = -1;
-        self.showsHorizontalScrollIndicator = NO;
-        self.showsVerticalScrollIndicator = NO;
-        [self setUIWithDataArr:dataArr andSelectTextColor:textColor];
+        [self configDefaultValue];
+        [self setUIWithTitleArr:titleArr andSelectTextColor:textColor];
     }
     return self;
 }
 
+#pragma mark ---  设置默认值
+-(void)configDefaultValue
+{
+    self.selectIndex = -1;
+    self.showsHorizontalScrollIndicator = NO;
+    self.showsVerticalScrollIndicator = NO;
+    //设置默认值
+    self.equalWidth = Screen_Width/5.0;
+    self.equalSpace = 10.0;
+    self.contentInset = UIEdgeInsetsMake(0, 5, 0, 5);
+}
 
--(instancetype)initWithFrame:(CGRect)frame andDataArr:(NSArray*)dataArr andselectTextColor:(UIColor*)textColor andTitleType:(kScrollTitleType)type
+
+-(instancetype)initWithFrame:(CGRect)frame andTitleArr:(NSArray*)titleArr andselectTextColor:(UIColor*)textColor andTitleType:(kScrollTitleType)type
 {
     if (self = [super initWithFrame:frame]) {
-        self.selectIndex = -1;
-        self.showsHorizontalScrollIndicator = NO;
-        self.showsVerticalScrollIndicator = NO;
+        [self configDefaultValue];
         self.type = type;
-        [self setUIWithDataArr:dataArr andSelectTextColor:textColor];
+        [self setUIWithTitleArr:titleArr andSelectTextColor:textColor];
     }
     return self;
 }
 
--(void)setUIWithDataArr:(NSArray*)dataArr andSelectTextColor:(UIColor*)textColor
+-(void)setUIWithTitleArr:(NSArray*)titleArr andSelectTextColor:(UIColor*)textColor
 {
-    if (dataArr.count < 1) {
+    if (titleArr.count < 1) {
         return;
     }
     
     self.btnWithArr = [NSMutableArray array];
     
-    self.titleArr = [dataArr copy];
+    self.titleArr = [titleArr copy];
     
     float origX = 0; //纪录初始位置
     float origY = 0;
     
-    for (NSString* titleStr in dataArr) {
-        float width =[self stringWithWidthText:titleStr andFont:[UIFont systemFontOfSize:14]]+10.0; //保留一定的间距
+    for (NSString* titleStr in titleArr) {
+        float width =[self stringWithWidthText:titleStr andFont:[UIFont systemFontOfSize:14]]; //保留一定的间距
         
         /** 按钮等宽 **/
         if (self.type == kScrollTitleTypeEqualToWidth) {
-            width = BTN_WIDTH;
+            width = self.equalWidth;
         }
        
         [self.btnWithArr addObject:[NSString stringWithFormat:@"%f",width]];
     }
 
     //做成等间距
-    CGFloat space = BTN_SPACE;
-    /** 按钮等宽 **/
-    if (self.type == kScrollTitleTypeEqualToWidth) {
-        space = 0;
+    CGFloat space = 0;
+    /** 按钮等间距 **/
+    if (self.type == kScrollTitleTypeEqualToSpace) {
+        space = self.equalSpace;
     }
     
     for (int i = 0; i < self.titleArr.count; i++) {
@@ -169,7 +173,6 @@
     }
 
     [self setContentOffset:CGPointMake(left, 0) animated:YES];
-    
     
     self.line.width = [self.btnWithArr[index] floatValue]; //改变线条的宽度
     self.line.centerX = button.centerX; //改变线条的位置

@@ -20,4 +20,6 @@
 
 -(void)configParams:(id)params;
 
+-(void)print;
+
 @end

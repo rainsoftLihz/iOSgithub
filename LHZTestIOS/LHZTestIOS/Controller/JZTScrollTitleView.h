@@ -22,12 +22,16 @@ typedef NS_ENUM(NSInteger,kScrollTitleType) {
 typedef void (^ClickBtnBack)(NSInteger segIndex);
 
 @interface JZTScrollTitleView : UIScrollView
-
+//点击事件
 @property (nonatomic,strong)ClickBtnBack clickBack;
+//等间距视图
+@property (nonatomic,assign)CGFloat  equalSpace;
+//等宽度视图
+@property (nonatomic,assign)CGFloat equalWidth;
 
--(instancetype)initWithFrame:(CGRect)frame andDataArr:(NSArray*)dataArr andselectTextColor:(UIColor*)textColor;
+-(instancetype)initWithFrame:(CGRect)frame andTitleArr:(NSArray*)titleArr andselectTextColor:(UIColor*)textColor;
 
--(instancetype)initWithFrame:(CGRect)frame andDataArr:(NSArray*)dataArr andselectTextColor:(UIColor*)textColor andTitleType:(kScrollTitleType)type;
+-(instancetype)initWithFrame:(CGRect)frame andTitleArr:(NSArray*)titleArr andselectTextColor:(UIColor*)textColor andTitleType:(kScrollTitleType)type;
 
 -(void)setSelectedIndex:(NSInteger)selectedIndex; //滑动事件
 @end

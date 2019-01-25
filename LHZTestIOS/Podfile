@@ -1,12 +1,18 @@
 #source 'https://github.com/CocoaPods/Specs.git'
 #project 'LHZTestIOS.xcodeproj'
 target 'LHZTestIOS' do
-   platform:ios,'8.0'
+   platform:ios,'9.0'
 #   xcodeproj 'LHZTestIOS.xcodeproj'
     #自动布局
     pod 'Masonry','1.0.2'
     #网络请求
     pod 'AFNetworking','3.1.0'
+    
+    #RAC
+    pod 'ReactiveObjC'
+    #图表
+    pod 'AAChartKit', '~> 2.1.6'    
+    pod 'CCEmptyDataSet'
     #图片下载
     pod 'SDWebImage','3.7.1'
     #YYKIT
@@ -20,4 +26,12 @@ target 'LHZTestIOS' do
     pod 'MJExtension'
     # 商品大图浏览
     pod 'MWPhotoBrowser', '~> 2.1.2'
+    #socket
+    pod  'CocoaAsyncSocket'
+    #facebook 开源框架
+    pod 'AsyncDisplayKit', '~> 2.2.1'
+
+    pod 'RATreeView', '~> 2.1.2'
+    
+#    pod 'YYFPSLabel'
 end

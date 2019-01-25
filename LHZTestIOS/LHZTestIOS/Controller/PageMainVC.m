@@ -92,7 +92,11 @@
         [webView loadRequest:navigationAction.request];
     }
     
-    decisionHandler(WKNavigationActionPolicyAllow);
+    if ([urlString containsString:@"http://www.timetimetime.net/"]) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+    
+    decisionHandler(WKNavigationActionPolicyCancel);
 }
 
 -(UIView *)contView

@@ -42,14 +42,20 @@
     [self.trackModel sendDataToServer];
 }
 
+-(void)print{
+    NSLog(@"It's me====%@",self.className);
+}
+
 - (UIBarButtonItem *)customBackItemWithTarget:(id)target action:(SEL)action
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"common_back_black"] forState:UIControlStateNormal];
-    button.frame =  CGRectMake(0, 0, 11, 20);
+    [button setImage:[UIImage imageNamed:@"come_back"] forState:UIControlStateNormal];
+    button.frame =  CGRectMake(0, STATUS_BAR_HEIGHT, 11, 20);
     [button addTarget:target
                action:action
      forControlEvents:UIControlEventTouchUpInside];
+//    return  [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"come_back"] style:UIBarButtonItemStylePlain target:target action:action];
+   
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 

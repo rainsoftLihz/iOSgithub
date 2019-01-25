@@ -1,0 +1,6 @@
+module Pods_LHZTestIOS [system] {
+  umbrella header "Pods-LHZTestIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,9 +6,28 @@
 //  Copyright © 2016年 dazhuanjia. All rights reserved.
 //
 
+
 #import "ViewController.h"
 
+#import "ASDisplayVController.h"
+
+#import "TTTViewController.h"
+
+#import "JZTOpenVController.h"
+
+#import "MoreMoveController.h"
+
+#import <netdb.h>
+
+#import <sys/socket.h>
+
+#import "LHZViewController.h"
+
+#import "ChartViewController.h"
+
 #import "PropertyTestViewController.h"
+
+#import "SocketViewController.h"
 
 #import "TitleViewController.h"
 
@@ -56,9 +75,20 @@
 
 #import "CollectionViewController.h"
 
+#import "GCDViewController.h"
+
+#import "JZTPickViewController.h"
+
+#import "StepViewController.h"
+
 #import <sys/utsname.h>
 
+//#import "ModelViewController.h"
+
+#import "RunTimeVController.h"
+
 #import "SDCycleScrollView.h"
+#import "CrashLogVC.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -96,14 +126,56 @@ typedef enum {
     
 }kType;
 
+typedef NS_ENUM(NSUInteger, JZTResponseStatus) {
+    JZTResponseStatusSuccess = 0
+};
+
 @implementation ViewController
+@synthesize myStr = _myStr;
+
+-(void)setMyStr:(NSString*)myStr{
+    _myStr = myStr;
+}
+
+-(NSString*)myStr{
+    return @"111";
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.myStr = @"222";
+    NSLog(@"=====>%@",self.myStr);
+    NSLog(@"=====>%@",_myStr);
+    
+//    NSMutableArray* nameArr = [[NSMutableArray array] copy];
+//    [nameArr addObject:@"123"];
+    
+    NSString *webPath = [[NSBundle mainBundle] pathForResource:@"AAChartView.html" ofType:nil];
+    
+    NSDictionary* dic = @{@"hh":@"kk"};
+    NSLog(@"object:%@",[dic objectForKey:@"111"]);
+    NSLog(@"value:%@",[dic valueForKey:@"111"]);
+    NSLog(@"object:%@",[dic objectForKey:@"hh"]);
+    NSLog(@"value:%@",[dic valueForKey:@"hh"]);
+    
+    NSLog(@"@key:%@",dic[@"111"][@"333"]);
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.tableView];
     self.navigationItem.title = @"IOS";
     
+    for (int i = 0 ; i < 10 ; i++) {
+        NSLog(@"fibonacci(%d)=%d",i,fib(i));
+    }
+    
+    JZTResponseStatus state = 3;
+    NSLog(@"====%ld",state);
+    NSString* timeStr;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeStr.longLongValue/1000];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.dateFormat = @"YYYY-MM-dd";
+    //[formatter stringFromDate:date];
+    NSLog(@"===%@",[formatter stringFromDate:date]);
     //NSLog(@"网络类型:%@",[self networkType]);
 
     //[self fileTest];
@@ -124,8 +196,106 @@ typedef enum {
 //    NSLog(@"======  %@ =======",arr[1]);
 //    
 //    [self testMJ];
+    
+    //NSRunLoop runLoop = [NSRunLoop r];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        /* 异步请求数据 */
+        NSLog(@"异步请求数据");
+        
+        //[self testSocket];
+        
+       
+    });
 
 }
+
+#pragma mark --- socket
+-(void)testSocket {
+    NSString* host = @"10.2.158.90";
+    int port  = 9090;
+    
+    //创建socket
+    int sockerTileDes = socket(AF_INET, SOCK_STREAM, 0);
+    if (-1 == sockerTileDes) {
+        NSLog(@"创建失败...");
+        return;
+    }
+    
+    //获取ip地址
+    struct hostent* remoteHost = gethostbyname([host UTF8String]);
+    if (NULL == remoteHost) {
+        NSLog(@"无法解析服务器主机名");
+        return;
+    }
+    
+    struct in_addr * remoteAddr = (struct in_addr *)remoteHost->h_addr_list[0];
+    
+    //设置socket参数
+    struct sockaddr_in socketParameters;
+    socketParameters.sin_family = AF_INET;
+    socketParameters.sin_addr = *remoteAddr;
+    socketParameters.sin_port = htons(port);
+    
+    //连接socket
+    int ret = connect(sockerTileDes, (struct sockaddr *) &socketParameters, sizeof(socketParameters));
+    if (-1 == ret) {
+        close(sockerTileDes);
+        
+        NSString * errorInfo = [NSString stringWithFormat:@" >> Failed to connect to %@:%d", host, port];
+        
+        return;
+    }
+    
+    //接受数据
+    NSMutableData * data = [[NSMutableData alloc] init];
+    BOOL waitingForData = YES;
+    
+    
+    
+    // Continually receive data until we reach the end of the data
+    //
+    int maxCount = 5;
+    int i = 0;
+    while (waitingForData && i < maxCount) {
+        const char * buffer[1024];
+        int length = sizeof(buffer);
+        
+        // Read a buffer's amount of data from the socket; the number of bytes read is returned
+        //
+        int result = recv(sockerTileDes, &buffer, length, 0);
+        if (result > 0) {
+            [data appendBytes:buffer length:result];
+        }
+        else {
+            // if we didn't get any data, stop the receive loop
+            //
+            waitingForData = NO;
+        }
+        
+        ++i;
+    }
+    
+    close(sockerTileDes);
+    
+    NSString * resultsString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@" >> Received string: '%@'", resultsString);
+}
+
+
+#pragma mark --- 递归
+int fib(int n)
+{
+    if (n == 0) {
+        return 1;
+    }
+    if (n == 1) {
+        return 2;
+    }
+    return fib(n-2)+fib(n-1);
+}
+
+
 
 
 -(NSString *)testStr
@@ -226,6 +396,8 @@ typedef enum {
     }
 }
 
+
+
 #pragma mark --- TEST CODE
 -(void)testCode
 {
@@ -279,27 +451,27 @@ typedef enum {
     NSLog(@"%@",self.testStr);
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
-    NSNumber* track = [NSNumber numberWithInteger:0];
-    NSNumber* track1 = nil;
-    if (track) {
-      NSLog(@"==track有==");
-    }
-    else NSLog(@"==track无==");
-    
-    if (track1) {
-        NSLog(@"==track1有==");
-    }
-    else NSLog(@"==track1无==");
-    
-    [[NSUserDefaults standardUserDefaults]setObject:track1 forKey:@"111"];
-    
-    NSLog(@"====%d",track.boolValue);
-    
-    NSNumber* track11 = [[NSUserDefaults standardUserDefaults] objectForKey:@"111"];
-    NSLog(@"track1===%d",track11.boolValue);
-}
+//-(void)viewDidAppear:(BOOL)animated
+//{
+//    NSNumber* track = [NSNumber numberWithInteger:0];
+//    NSNumber* track1 = nil;
+//    if (track) {
+//      NSLog(@"==track有==");
+//    }
+//    else NSLog(@"==track无==");
+//    
+//    if (track1) {
+//        NSLog(@"==track1有==");
+//    }
+//    else NSLog(@"==track1无==");
+//    
+//    [[NSUserDefaults standardUserDefaults]setObject:track1 forKey:@"111"];
+//    
+//    NSLog(@"====%d",track.boolValue);
+//    
+//    NSNumber* track11 = [[NSUserDefaults standardUserDefaults] objectForKey:@"111"];
+//    NSLog(@"track1===%d",track11.boolValue);
+//}
 
 #pragma mark --- view的点击时间
 -(void)imgClick
@@ -427,16 +599,15 @@ typedef enum {
 #pragma mark ---- TEST DOWNLOAD
 -(void)testDownLoad
 {
-
-//    LHZDownExampleModel* model = [[LHZDownExampleModel alloc] init];
-//    model.downloadURL = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E5%A4%A7%E4%B8%93%E5%AE%B6.COM%E4%BB%8B%E7%BB%8D%E7%89%87118.mp4";
-//    
-//    LHZDownExampleModel* model1 = [[LHZDownExampleModel alloc] init];
-//    model1.downloadURL = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E6%88%91%E6%98%AF%E5%8C%BB%E7%94%9F%E2%80%94%E2%80%94%E9%92%9F%E5%8D%97%E5%B1%B1%C2%B7%E5%8C%BB%E8%80%85%E4%BB%81%E5%BF%83.mp4";
-//    
-//    [LHZDownLoadOperationManager manager].downLoadModels = [NSMutableArray arrayWithArray:@[model,model1]];
-//    
-//    [LHZDownLoadStore saveModels:@[model,model1]];
+    LHZDownExampleModel* model = [[LHZDownExampleModel alloc] init];
+    model.downloadURL = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E5%A4%A7%E4%B8%93%E5%AE%B6.COM%E4%BB%8B%E7%BB%8D%E7%89%87118.mp4";
+    
+    LHZDownExampleModel* model1 = [[LHZDownExampleModel alloc] init];
+    model1.downloadURL = @"https://dzj-shared.oss-cn-shanghai.aliyuncs.com/video/%E6%88%91%E6%98%AF%E5%8C%BB%E7%94%9F%E2%80%94%E2%80%94%E9%92%9F%E5%8D%97%E5%B1%B1%C2%B7%E5%8C%BB%E8%80%85%E4%BB%81%E5%BF%83.mp4";
+    
+    [LHZDownLoadOperationManager manager].downLoadModels = [NSMutableArray arrayWithArray:@[model,model1]];
+    
+    [LHZDownLoadStore saveModels:@[model,model1]];
    
 }
 
@@ -489,17 +660,29 @@ typedef enum {
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"标题视图",@"Amy",@"CollectionView",@"分页效果",@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
+    return @[@"Runtime",@"MVVM",@"GCD测试",@"ASDisplay测试",@"展开收起",@"多级联动",@"图片选择",@"图表",@"VC跳转",@"socket长连接",@"计步器注入",@"崩溃日志分析",@"标题视图",@"CC",@"CollectionView",@"分页效果",@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
 }
 
 -(NSArray *)pushVcArr
 {
-    return @[[TitleViewController class],
+    return @[[RunTimeVController class],
+             //[ModelViewController class],
+             [GCDViewController class],
+             [ASDisplayVController class],
+             [JZTOpenVController class],
+             [MoreMoveController class],
+             [JZTPickViewController class],
+             [ChartViewController class],
+             [LHZViewController class],
+             [SocketViewController class],
+             [StepViewController class],
+             [CrashLogVC class],
+             [TitleViewController class],
              [IMGShowViewControlle class],
              [CollectionViewController class],
              [PageAnnimaionVC class],
              [UIDynamicViewController class],
-             [PropertyTestViewController class],
+             [UITestViewController class],
              [WeakAndStrongViewController class],
              [MasonryViewController class],
              [CoreDataViewcontroller class],
@@ -511,7 +694,7 @@ typedef enum {
              [UITestViewController class],
              [KeyBoardShowVController class],
              [BlueViewController class],
-             [JZTTabBarVC class],
+             [JZTLHZTabBarVController class],
              [BiaoChiViewController class]];
 }
 
@@ -519,7 +702,7 @@ typedef enum {
 -(UITableView *)tableView
 {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height-64.0) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, Screen_Height-STATUS_BAR_HEIGHT - 44 ) style:UITableViewStylePlain];
         _tableView.backgroundColor = UIColorFromRGB(0xf2f2f2);
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
@@ -558,11 +741,11 @@ typedef enum {
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
     NSString* str = self.titleArr[indexPath.row];
     
     if ([str isEqualToString:@"TabBar"]) {
-        JZTTabBarVC* vc = [[JZTTabBarVC alloc] init];
+        JZTLHZTabBarVController* vc = [[JZTLHZTabBarVController alloc] init];
         //[vc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
           /* 动画 */
 //        CATransition *animation = [CATransition animation];

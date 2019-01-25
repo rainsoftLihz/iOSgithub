@@ -23,7 +23,7 @@
         [self setBackgroundImage:[UIImage imageNamed:@"tabbar_bg"]];
         [self setShadowImage:[UIImage new]];
         
-        [self setupPlayBtn];
+        //[self setupPlayBtn];
     }
     return self;
 }
@@ -34,40 +34,43 @@
         [self setBackgroundImage:[UIImage imageNamed:@"tabbar_bg"]];
         [self setShadowImage:[UIImage new]];
         
-        [self setupPlayBtn];
+        //[self setupPlayBtn];
     }
     return self;
 }
 
 - (void)setupPlayBtn{
-    UIImageView *bgImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tabbar_np_normal"]];
-    [self addSubview:bgImageView];
-    [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.centerX.equalTo(self);
-    }];
-    UIImageView *shadowImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tabbar_np_shadow"]];
-    [self addSubview:shadowImageView];
-    [shadowImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.centerX.equalTo(self);
-    }];
+//    UIImageView *bgImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tabbar_np_normal"]];
+//    [self addSubview:bgImageView];
+//    [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self);
+//        make.bottom.equalTo(self).offset(-SafeBottomArea);
+//    }];
+//    UIImageView *shadowImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tabbar_np_shadow"]];
+//    [self addSubview:shadowImageView];
+//    [shadowImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.bottom.equalTo(self);
+//        //make.bottom.equalTo(self).offset(-SafeBottomArea);
+//    }];
     
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_np_playshadow"] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:@"tabbar_np_play"] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:@"tabbar_np_playnon"] forState:UIControlStateSelected];
-    btn.adjustsImageWhenHighlighted = NO;
-    [btn addTarget:self action:@selector(playButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_playBtn = btn];
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self);
-        make.top.equalTo(bgImageView).offset(8);
-    }];
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_np_playshadow"] forState:UIControlStateNormal];
+//    [btn setImage:[UIImage imageNamed:@"tabbar_np_play"] forState:UIControlStateNormal];
+//    [btn setImage:[UIImage imageNamed:@"tabbar_np_playnon"] forState:UIControlStateSelected];
+//    btn.adjustsImageWhenHighlighted = NO;
+//    [btn addTarget:self action:@selector(playButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+//    [self addSubview:_playBtn = btn];
+//    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self);
+//        make.top.equalTo(bgImageView).offset(8);
+//    }];
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    CGFloat tabBarItemWidth = self.frame.size.width / 5 - 4;
+    //CGFloat tabBarItemWidth = self.frame.size.width / 5 - 4;
+    CGFloat tabBarItemWidth = self.frame.size.width / 4 - 4;
     CGFloat tabBarItemIndex = 0;
     for (UIView *childItem in self.subviews) {
         if ([childItem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
@@ -76,9 +79,9 @@
             frame.origin.x = tabBarItemIndex * (tabBarItemWidth + 4) + 2;
             childItem.frame = frame;
             tabBarItemIndex ++;
-            if (tabBarItemIndex == 2) {
-                tabBarItemIndex ++;
-            }
+//            if (tabBarItemIndex == 2) {
+//                tabBarItemIndex ++;
+//            }
         } else if ([childItem isKindOfClass:NSClassFromString(@"_UIBarBackground")]) {
             childItem.layer.shadowOffset = CGSizeZero;
             childItem.layer.shadowColor = [UIColor blackColor].CGColor;

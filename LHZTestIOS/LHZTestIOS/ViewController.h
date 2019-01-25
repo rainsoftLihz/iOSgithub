@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JZTLHZTabBarVController.h"
 @interface ViewController : UIViewController
-
-
+@property (nonatomic,strong)NSString* myStr;
 @end
 

@@ -28,7 +28,7 @@
 - (void)configSubControllers {
  
     JZTTabBar *tabBar = [[JZTTabBar alloc] init];
-    tabBar.delegate = self;
+    tabBar.delegates = self;
     //取消tabBar的透明效果
     //tabBar.translucent = NO;
     

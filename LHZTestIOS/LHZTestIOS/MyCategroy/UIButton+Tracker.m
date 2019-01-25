@@ -14,7 +14,7 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue]>=5.0) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            [[self class] swizzleOriginalSelector:@selector(addTarget: action: forControlEvents:) swizzledSelector:@selector(jztAddtarget: action: forControlEvents:)];
+           // [[self class] swizzleOriginalSelector:@selector(addTarget: action: forControlEvents:) swizzledSelector:@selector(jztAddtarget: action: forControlEvents:)];
         });
     }
 }

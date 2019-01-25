@@ -38,35 +38,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self confgUI];
-    
+
     [[JZTPlayManager shareManager] play];
+    
+    [self confgUI];
 }
 
 
 -(void)confgUI
 {
-//    UIImageView* img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IMG_0126.JPG"]];
-//    [self.view addSubview:img];
-//    self.scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 20, Screen_Width, 1280 * (Screen_Width)/960) imageNamesGroup:@[@"IMG_0108.JPG",@"IMG_0110.JPG",@"IMG_0126.JPG",@"IMG_0128.JPG",@"IMG_0129.JPG",@"IMG_0130.JPG",@"IMG_0131.JPG",@"IMG_0132.JPG",@"IMG_0134.JPG",@"IMG_0135.JPG",@"IMG_0136.JPG",@"IMG_0137.JPG",@"IMG_0138.JPG",@"IMG_0139.JPG",@"IMG_0140.JPG"]];
-    //[self.view addSubview:self.scrollView];
+   /*
+   self.scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 20, Screen_Width, 1280 * (Screen_Width)/960) imageNamesGroup:@[@"IMG_0108.JPG",@"IMG_0110.JPG",@"IMG_0126.JPG",@"IMG_0128.JPG",@"IMG_0129.JPG",@"IMG_0130.JPG",@"IMG_0131.JPG",@"IMG_0132.JPG",@"IMG_0134.JPG",@"IMG_0135.JPG",@"IMG_0136.JPG",@"IMG_0137.JPG",@"IMG_0138.JPG",@"IMG_0139.JPG",@"IMG_0140.JPG"]];
+    [self.view addSubview:self.scrollView];
+    self.collectionView.center = CGPointMake(Screen_Width/2.0, Screen_Height/2.0);
+    */
     
-//    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.mas_equalTo(self.view.mas_centerX);
-//        make.centerY.mas_equalTo(self.view.mas_centerY);
-//        make.width.mas_equalTo(Screen_Width);
-//        make.height.mas_equalTo(1280 * (Screen_Width)/960);
-//    }];
-
-    
-//    self.bkImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
-//    [self.view addSubview:self.bkImageView];
-//    
-//    
     [self.view addSubview:self.collectionView];
-//    self.bkImageView.image = [UIImage imageNamed:@"timg2.jpeg"];
-//    
-//    self.collectionView.center = CGPointMake(Screen_Width/2.0, Screen_Height/2.0);
     
     CollectionFooterView* playView = [[CollectionFooterView alloc] initWithFrame:CGRectMake(0, self.collectionView.bottom, Screen_Width, 128/3.0+20)];
     [self.view addSubview:playView];
@@ -75,7 +62,12 @@
 
 -(NSArray *)imgArr
 {
-    return @[@"IMG_0108.JPG",@"IMG_0110.JPG",@"IMG_0126.JPG",@"IMG_0128.JPG",@"IMG_0129.JPG",@"IMG_0130.JPG",@"IMG_0131.JPG",@"IMG_0132.JPG",@"IMG_0134.JPG",@"IMG_0135.JPG",@"IMG_0136.JPG",@"IMG_0137.JPG",@"IMG_0138.JPG",@"IMG_0140.JPG"];
+    NSMutableArray* arr = [NSMutableArray array];
+    for (int i = 1; i<16; i++) {
+        NSString* str = [NSString stringWithFormat:@"%d.jpg",i];
+        [arr addObject:str];
+    }
+    return [arr copy];
 }
 
 -(NSArray *)photosArr
@@ -164,6 +156,7 @@
         _browser.alwaysShowControls = NO;
         _browser.zoomPhotosToFill = YES;
         _browser.enableSwipeToDismiss = YES;
+        _browser.autoPlayOnAppear = YES;
         _browser.delegate = self;
     }
     [_browser setCurrentPhotoIndex:indexPath.item];

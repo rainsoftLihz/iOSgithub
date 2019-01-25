@@ -19,7 +19,7 @@
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
     Method replacementMethod = class_getInstanceMethod(class, replacementSelector);
     
-    method_exchangeImplementations(originalMethod, replacementMethod);
+    //method_exchangeImplementations(originalMethod, replacementMethod);
 }
 
 /** 切面统计  */
