@@ -44,13 +44,21 @@
     
 }
 
+-(void)sendDataToServer{
+    // 连上马上发一条信息给服务器
+    NSString *firstMes = [NSString stringWithFormat:@"%@",self.messageTextF.text?:@"2323"];
+    NSData  *data = [self.messageTextF.text dataUsingEncoding:NSUTF8StringEncoding];
+    [self.clientSocket writeData:data withTimeout:- 1 tag:0];
+    
+}
+
 // 添加计时器
 - (void)addTimer
 {
     // 长连接定时器
-    self.connectTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(longConnectToSocket) userInfo:nil repeats:YES];
-    // 把定时器添加到当前运行循环,并且调为通用模式
-    [[NSRunLoop currentRunLoop] addTimer:self.connectTimer forMode:NSRunLoopCommonModes];
+//    self.connectTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(longConnectToSocket) userInfo:nil repeats:YES];
+//    // 把定时器添加到当前运行循环,并且调为通用模式
+//    [[NSRunLoop currentRunLoop] addTimer:self.connectTimer forMode:NSRunLoopCommonModes];
 }
 
 
@@ -58,13 +66,13 @@
 - (void)longConnectToSocket
 {
     // 发送固定格式的数据,指令@"longConnect"
-    float version = [[UIDevice currentDevice] systemVersion].floatValue;
-    int arcNum = arc4random_uniform(2388238);
-    NSString *longConnect = [NSString stringWithFormat:@"===%d:%f",arcNum,version];
-    
-    NSData  *data = [longConnect dataUsingEncoding:NSUTF8StringEncoding];
-    NSLog(@"重复执行%d",arcNum);
-    [self.clientSocket writeData:data withTimeout:- 1 tag:0];
+//    float version = [[UIDevice currentDevice] systemVersion].floatValue;
+//    int arcNum = arc4random_uniform(2388238);
+//    NSString *longConnect = [NSString stringWithFormat:@"===%d:%f",arcNum,version];
+//
+//    NSData  *data = [longConnect dataUsingEncoding:NSUTF8StringEncoding];
+//    NSLog(@"重复执行%d",arcNum);
+//    [self.clientSocket writeData:data withTimeout:- 1 tag:0];
 }
 
 /**
@@ -78,12 +86,6 @@
     NSLog(@"链接成功");
     [self showMessageWithStr:@"链接成功"];
     [self showMessageWithStr:[NSString stringWithFormat:@"服务器IP: %@-------端口: %d", host,port]];
-    
-    // 连上马上发一条信息给服务器
-    //    float version = [[UIDevice currentDevice] systemVersion].floatValue;
-    //    NSString *firstMes = [NSString stringWithFormat:@"123%f",version];
-    //    NSData  *data = [firstMes dataUsingEncoding:NSUTF8StringEncoding];
-    //    [self.clientSocket writeData:data withTimeout:- 1 tag:0];
     
     // 连接成功开启定时器
     [self addTimer];
@@ -101,12 +103,18 @@
  */
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-    
-    NSString *text = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    [self showMessageWithStr:text];
-    
     // 读取到服务器数据值后,能再次读取
     [self.clientSocket readDataWithTimeout:- 1 tag:0];
+    
+    NSString *text = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+
+    if ([text isEqualToString:@"\n"]) {
+        NSLog(@"回车。。。。");
+        return;
+    }
+    [self showMessageWithStr:text];
+    
+    
 }
 
 
@@ -129,7 +137,7 @@
     NSLog(@"断开原因:%@",[err localizedDescription]);
     [self showMessageWithStr:@"断开连接"];
     self.clientSocket.delegate = nil;
-    //    [self.clientSocket disconnect];
+    [self.clientSocket disconnect];
     self.clientSocket = nil;
     self.connected = NO;
     [self.connectTimer invalidate];
@@ -139,10 +147,10 @@
 {
     UILabel* addrLab = [self createLabWith:@"IP地址:"];
     self.addressTextF = [self createTextF];
-    self.addressTextF.text = @"10.2.158.90";
+    self.addressTextF.text = @"127.0.0.1";
     UILabel* portLab = [self createLabWith:@"端口号:"];
     self.portTextF = [self createTextF];
-    self.portTextF.text = @"9090";
+    self.portTextF.text = @"6969";
     UILabel* sendTextLab = [self createLabWith:@"发送消息:"];
     self.messageTextF = [self createTextF];
     UILabel* receivedTextLab = [self createLabWith:@"接受消息:"];
@@ -255,6 +263,10 @@
     {
         NSLog(@"与服务器连接已建立");
         [self showMessageWithStr:@"与服务器连接已建立"];
+        
+        
+        // 连上马上发一条信息给服务器
+        [self sendDataToServer];
     }
 }
 

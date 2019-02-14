@@ -83,13 +83,14 @@
 
 #import <sys/utsname.h>
 
-//#import "ModelViewController.h"
+#import "MVVMViewController.h"
 
 #import "RunTimeVController.h"
 
 #import "SDCycleScrollView.h"
 #import "CrashLogVC.h"
 
+#import "BlockViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UICollectionView* collectionView;
@@ -660,13 +661,14 @@ int fib(int n)
 
 #pragma mark --- 初始化
 -(NSArray *)titleArr{
-    return @[@"Runtime",@"MVVM",@"GCD测试",@"ASDisplay测试",@"展开收起",@"多级联动",@"图片选择",@"图表",@"VC跳转",@"socket长连接",@"计步器注入",@"崩溃日志分析",@"标题视图",@"CC",@"CollectionView",@"分页效果",@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
+    return @[@"Blcok",@"Runtime",@"MVVM",@"GCD测试",@"ASDisplay测试",@"展开收起",@"多级联动",@"图片选择",@"图表",@"VC跳转",@"socket长连接",@"计步器注入",@"崩溃日志分析",@"标题视图",@"CC",@"CollectionView",@"分页效果",@"动力行为",@"property属性",@"weak与strong",@"Mansory约束",@"coreData",@"下拉刷新",@"多线程",@"Core Animation",@"购物车",@"网络加载",@"UI细节处理+视图拖拽",@"键盘弹出动画",@"蓝牙连接",@"TabBar",@"标尺"];
 }
 
 -(NSArray *)pushVcArr
 {
-    return @[[RunTimeVController class],
-             //[ModelViewController class],
+    return @[[BlockViewController class],
+             [RunTimeVController class],
+             [MVVMViewController class],
              [GCDViewController class],
              [ASDisplayVController class],
              [JZTOpenVController class],
