@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530379DD21FAAA7A00321616 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 530379DC21FAAA7A00321616 /* Model.m */; };
+		530379E021FAAA9100321616 /* BaselVMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 530379DF21FAAA9100321616 /* BaselVMModel.m */; };
+		530379E321FAAAA600321616 /* MVVModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 530379E221FAAAA600321616 /* MVVModel.m */; };
+		530379E621FAAAE900321616 /* MVVMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 530379E521FAAAE900321616 /* MVVMView.m */; };
+		530379E921FAAAFE00321616 /* MVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530379E821FAAAFE00321616 /* MVVMViewController.m */; };
 		5304381D1E71235E00C849A3 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304381C1E71235E00C849A3 /* libicucore.tbd */; };
 		5304381F1E71236F00C849A3 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304381E1E71236F00C849A3 /* libicucore.A.tbd */; };
 		530857051E973CDC0050D408 /* LHZDownExampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 530857041E973CDC0050D408 /* LHZDownExampleModel.m */; };
@@ -96,7 +101,9 @@
 		536B869B1F023CC7002F30F7 /* StepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 536B869A1F023CC7002F30F7 /* StepViewController.m */; };
 		536B869F1F024593002F30F7 /* JZTHealthKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 536B869E1F024593002F30F7 /* JZTHealthKit.m */; };
 		536B86A41F024C75002F30F7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536B86A31F024C75002F30F7 /* HealthKit.framework */; };
+		536CE3592215104C00DC3B18 /* libJZTUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536CE3582215104C00DC3B18 /* libJZTUIKit.a */; };
 		537299A21FA99EAB00BB366A /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537299A11FA99EAB00BB366A /* SocketViewController.m */; };
+		53809AA62213F3DA00127827 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53809AA52213F3DA00127827 /* BlockViewController.m */; };
 		5382951F1E65611100BBCA3D /* BiaoChiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5382951E1E65611100BBCA3D /* BiaoChiViewController.m */; };
 		5390441E1E0D0FB600004040 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390441D1E0D0FB600004040 /* MasonryViewController.m */; };
 		53A1503D219286AC00A0812C /* libuuu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1503C219286AC00A0812C /* libuuu.a */; };
@@ -106,7 +113,6 @@
 		53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A761261E13B26A005DB357 /* NSObject+Properties.m */; };
 		53A761321E13B581005DB357 /* UserInfo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7612F1E13B581005DB357 /* UserInfo+CoreDataClass.m */; };
 		53A761331E13B581005DB357 /* UserInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A761311E13B581005DB357 /* UserInfo+CoreDataProperties.m */; };
-		53A7A58C21E2F1F900F9BA36 /* libJZTUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A7A58B21E2F1F900F9BA36 /* libJZTUIKit.a */; };
 		53ABF4FF1EC3178900872326 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ABF4F21EC3178900872326 /* TAAbstractDotView.m */; };
 		53ABF5001EC3178900872326 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ABF4F41EC3178900872326 /* TAAnimatedDotView.m */; };
 		53ABF5011EC3178900872326 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ABF4F61EC3178900872326 /* TADotView.m */; };
@@ -211,6 +217,16 @@
 /* Begin PBXFileReference section */
 		1C5EC96DB6839DA9B1D7CAD6 /* Pods-LHZTestIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHZTestIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LHZTestIOS/Pods-LHZTestIOS.release.xcconfig"; sourceTree = "<group>"; };
 		4DB43408CA40C88AB631FA93 /* libPods-LHZTestIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHZTestIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		530379DB21FAAA7A00321616 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		530379DC21FAAA7A00321616 /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		530379DE21FAAA9100321616 /* BaselVMModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaselVMModel.h; sourceTree = "<group>"; };
+		530379DF21FAAA9100321616 /* BaselVMModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaselVMModel.m; sourceTree = "<group>"; };
+		530379E121FAAAA600321616 /* MVVModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVModel.h; sourceTree = "<group>"; };
+		530379E221FAAAA600321616 /* MVVModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVModel.m; sourceTree = "<group>"; };
+		530379E421FAAAE900321616 /* MVVMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMView.h; sourceTree = "<group>"; };
+		530379E521FAAAE900321616 /* MVVMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMView.m; sourceTree = "<group>"; };
+		530379E721FAAAFE00321616 /* MVVMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewController.h; sourceTree = "<group>"; };
+		530379E821FAAAFE00321616 /* MVVMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewController.m; sourceTree = "<group>"; };
 		5304381C1E71235E00C849A3 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		5304381E1E71236F00C849A3 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
 		530857031E973CDC0050D408 /* LHZDownExampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHZDownExampleModel.h; sourceTree = "<group>"; };
@@ -353,8 +369,11 @@
 		536B869E1F024593002F30F7 /* JZTHealthKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTHealthKit.m; sourceTree = "<group>"; };
 		536B86A01F024B31002F30F7 /* LHZTestIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LHZTestIOS.entitlements; sourceTree = "<group>"; };
 		536B86A31F024C75002F30F7 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		536CE3582215104C00DC3B18 /* libJZTUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libJZTUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		537299A01FA99EAB00BB366A /* SocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketViewController.h; sourceTree = "<group>"; };
 		537299A11FA99EAB00BB366A /* SocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketViewController.m; sourceTree = "<group>"; };
+		53809AA42213F3DA00127827 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		53809AA52213F3DA00127827 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		5382951D1E65611100BBCA3D /* BiaoChiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiaoChiViewController.h; sourceTree = "<group>"; };
 		5382951E1E65611100BBCA3D /* BiaoChiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiaoChiViewController.m; sourceTree = "<group>"; };
 		5390441C1E0D0FB600004040 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
@@ -535,7 +554,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53A7A58C21E2F1F900F9BA36 /* libJZTUIKit.a in Frameworks */,
+				536CE3592215104C00DC3B18 /* libJZTUIKit.a in Frameworks */,
 				53A1503D219286AC00A0812C /* libuuu.a in Frameworks */,
 				534D916820A2F9740007683A /* libAAChartKit.a in Frameworks */,
 				5304381F1E71236F00C849A3 /* libicucore.A.tbd in Frameworks */,
@@ -565,6 +584,16 @@
 		530379DA21FAA99D00321616 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				530379DB21FAAA7A00321616 /* Model.h */,
+				530379DC21FAAA7A00321616 /* Model.m */,
+				530379DE21FAAA9100321616 /* BaselVMModel.h */,
+				530379DF21FAAA9100321616 /* BaselVMModel.m */,
+				530379E121FAAAA600321616 /* MVVModel.h */,
+				530379E221FAAAA600321616 /* MVVModel.m */,
+				530379E421FAAAE900321616 /* MVVMView.h */,
+				530379E521FAAAE900321616 /* MVVMView.m */,
+				530379E721FAAAFE00321616 /* MVVMViewController.h */,
+				530379E821FAAAFE00321616 /* MVVMViewController.m */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -789,6 +818,15 @@
 				537299A11FA99EAB00BB366A /* SocketViewController.m */,
 			);
 			name = "TCP／UDP长链接";
+			sourceTree = "<group>";
+		};
+		53809AA32213F04D00127827 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				53809AA42213F3DA00127827 /* BlockViewController.h */,
+				53809AA52213F3DA00127827 /* BlockViewController.m */,
+			);
+			name = Block;
 			sourceTree = "<group>";
 		};
 		5382951C1E6560EE00BBCA3D /* 标尺 */ = {
@@ -1031,6 +1069,7 @@
 		53BFC9CB1E0B76F5005217BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				53809AA32213F04D00127827 /* Block */,
 				530379DA21FAA99D00321616 /* MVVM */,
 				53D9B50D21EDBDC300584156 /* RunTime */,
 				533F03E421ECB6D000C831EC /* GCD */,
@@ -1273,6 +1312,7 @@
 		648CF866C7A340E23573FCBF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				536CE3582215104C00DC3B18 /* libJZTUIKit.a */,
 				53A7A58B21E2F1F900F9BA36 /* libJZTUIKit.a */,
 				53A1503C219286AC00A0812C /* libuuu.a */,
 				53A14FDB2192834D00A0812C /* libddd.a */,
@@ -1594,6 +1634,7 @@
 				534956B61E5D79EE0093A5AC /* JZTTabBarVC.m in Sources */,
 				530857051E973CDC0050D408 /* LHZDownExampleModel.m in Sources */,
 				532FAD9620900CA400E40593 /* LHZViewController.m in Sources */,
+				530379E921FAAAFE00321616 /* MVVMViewController.m in Sources */,
 				5342925D1E5C25C7008AEE1D /* BlueViewController.m in Sources */,
 				5349EACB1E9B159E0057BF9D /* UIButton+Tracker.m in Sources */,
 				534956C71E5D7A550093A5AC /* JZTCategoryVC.m in Sources */,
@@ -1615,12 +1656,15 @@
 				53465D271E97751100BFC2FA /* JZTTrackModel.m in Sources */,
 				53E61C271E14E9F7007CFAE6 /* TableRefreshViewController.m in Sources */,
 				53ABF5031EC3178900872326 /* SDCollectionViewCell.m in Sources */,
+				530379DD21FAAA7A00321616 /* Model.m in Sources */,
 				533056971EB0495900B86E4B /* PageMainVC.m in Sources */,
 				53ABF5041EC3178900872326 /* SDCycleScrollView.m in Sources */,
 				53CE16B32123D4D000D75DA1 /* JZTshowTableCell.m in Sources */,
 				53F3D4E21E9489F3001DA83A /* LHZDownLoadStore.m in Sources */,
 				53EEDB751ECA93BE00C9011D /* CollectionFooterView.m in Sources */,
+				530379E621FAAAE900321616 /* MVVMView.m in Sources */,
 				53FF0A6A1EF7B69800A9AB9B /* AppDelegate+CatchCrash.m in Sources */,
+				53809AA62213F3DA00127827 /* BlockViewController.m in Sources */,
 				531430D520C7DCE700A596CF /* JZTChartModel.m in Sources */,
 				53DD631520D2105000F69918 /* ChineseString.m in Sources */,
 				53DB2A021E55465F00C9BF7B /* UITestViewController.m in Sources */,
@@ -1629,6 +1673,7 @@
 				5331859A20AAC8200012AB92 /* JZTDropDownTableMenu.m in Sources */,
 				531721C8208DC99600E6A7BD /* JZTMulButtonsCollectionView.m in Sources */,
 				53F3F0121E5ABE9F009BC824 /* WirteView.m in Sources */,
+				530379E021FAAA9100321616 /* BaselVMModel.m in Sources */,
 				53D9B51021EDBDDD00584156 /* RunTimeVController.m in Sources */,
 				536B869F1F024593002F30F7 /* JZTHealthKit.m in Sources */,
 				53D5E7FD21265820007F104B /* UITextField+Fix.m in Sources */,
@@ -1639,6 +1684,7 @@
 				537299A21FA99EAB00BB366A /* SocketViewController.m in Sources */,
 				53DD631220D20E9500F69918 /* LanguageTool.m in Sources */,
 				53332F701EFA483400432D6F /* SortViewController.m in Sources */,
+				530379E321FAAAA600321616 /* MVVModel.m in Sources */,
 				53A761271E13B26A005DB357 /* NSObject+Properties.m in Sources */,
 				53465D241E97700D00BFC2FA /* UIViewController+Tracker.m in Sources */,
 				53F3EE941E7FA5C200ABFBFD /* JZTRulerCellModel.m in Sources */,
